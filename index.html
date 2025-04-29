@@ -447,11 +447,314 @@
         .hidden-content.show {
             max-height: 2000px; /* Large enough to show all content */
         }
+
+        /* Print button styling */
+        .print-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #06b6d4, #0d9488);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(8, 145, 178, 0.3);
+            cursor: pointer;
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
+
+        .print-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(8, 145, 178, 0.4);
+        }
+
+        .print-tooltip {
+            position: absolute;
+            right: 70px;
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .print-button:hover .print-tooltip {
+            opacity: 1;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            /* General print styles */
+            body {
+                background-color: white !important;
+                color: black !important;
+                font-size: 12pt;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Hide non-printable elements */
+            .navbar, 
+            .print-button, 
+            .scroll-progress, 
+            .parallax-bg, 
+            .parallax-mid, 
+            .blob, 
+            .particle,
+            footer,
+            #mobile-menu-button,
+            #mobile-menu {
+                display: none !important;
+            }
+
+            /* Reset parallax container */
+            .parallax-container {
+                height: auto;
+                overflow: visible;
+                perspective: none;
+                transform-style: flat;
+            }
+
+            .parallax-layer, .parallax-front {
+                position: static;
+                transform: none;
+            }
+
+            /* Reset animations and transitions */
+            * {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+                opacity: 1 !important;
+            }
+
+            /* Show all hidden content */
+            .hidden-content {
+                max-height: none !important;
+                display: block !important;
+            }
+
+            /* Reset card styles for print */
+            .card, .skill-category, .project-card {
+                box-shadow: none !important;
+                background: white !important;
+                border: 1px solid #ddd !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            /* Project cards print style */
+            .project-card {
+                height: auto !important;
+                background: white !important;
+            }
+
+            .project-card .project-content {
+                position: static !important;
+                transform: none !important;
+                background: white !important;
+                color: black !important;
+            }
+
+            /* Section page breaks */
+            section {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+
+            /* Gradient text for print */
+            .gradient-text {
+                background: none !important;
+                -webkit-background-clip: initial !important;
+                background-clip: initial !important;
+                color: #0891b2 !important;
+            }
+
+            /* Skill progress bars for print */
+            .skill-progress-container {
+                border: 1px solid #ddd;
+            }
+
+            .skill-progress-bar {
+                background: #0891b2 !important;
+            }
+
+            /* Timeline for print */
+            .timeline-item::before {
+                background: #0891b2 !important;
+            }
+
+            .timeline-item::after {
+                background: #ddd !important;
+            }
+
+            /* Skill tags for print */
+            .skill-tag {
+                background: white !important;
+                border: 1px solid #0891b2 !important;
+                box-shadow: none !important;
+            }
+
+            /* Add page title for print */
+            body::before {
+                content: "Maruf Hossain - Senior Software Engineer Portfolio";
+                display: block;
+                text-align: center;
+                font-size: 18pt;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #0891b2;
+            }
+
+            /* Adjust layout for print */
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            /* Adjust grid for print */
+            .grid {
+                display: block !important;
+            }
+
+            /* Show URL for links */
+            a[href^="http"]::after {
+                content: " (" attr(href) ")";
+                font-size: 10pt;
+                color: #666;
+            }
+
+            /* Ensure proper page breaks */
+            h2 {
+                page-break-before: always;
+            }
+
+            h2:first-of-type {
+                page-break-before: avoid;
+            }
+        }
+
+        /* Print preview modal */
+        .print-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .print-modal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .print-modal-content {
+            background-color: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .print-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .print-options {
+            margin-top: 20px;
+        }
+
+        .print-option {
+            margin-bottom: 15px;
+        }
+
+        .print-action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
     <!-- Scroll Progress Indicator -->
     <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Print Button -->
+    <div class="print-button" id="print-button">
+        <i class="fas fa-print fa-lg"></i>
+        <span class="print-tooltip">Print Resume</span>
+    </div>
+
+    <!-- Print Modal -->
+    <div class="print-modal" id="print-modal">
+        <div class="print-modal-content">
+            <div class="print-modal-close" id="print-modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-4">Print Options</h2>
+            <p class="text-gray-600 mb-6">Customize your print version before printing or saving as PDF.</p>
+            
+            <div class="print-options">
+                <div class="print-option">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="include-all-projects" class="mr-2" checked>
+                        <span>Include all projects</span>
+                    </label>
+                </div>
+                <div class="print-option">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="include-all-experience" class="mr-2" checked>
+                        <span>Include all experience</span>
+                    </label>
+                </div>
+                <div class="print-option">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="include-skills" class="mr-2" checked>
+                        <span>Include detailed skills section</span>
+                    </label>
+                </div>
+                <div class="print-option">
+                    <label class="flex items-center">
+                        <input type="checkbox" id="include-interests" class="mr-2" checked>
+                        <span>Include interests section</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="print-action-buttons">
+                <button id="cancel-print" class="px-6 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all">
+                    Cancel
+                </button>
+                <button id="confirm-print" class="px-6 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-lg hover:shadow-lg transition-all">
+                    <i class="fas fa-print mr-2"></i> Print / Save as PDF
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- Parallax Container -->
     <div class="parallax-container">
@@ -1607,6 +1910,32 @@
                         viewMoreProjects.querySelector('i').classList.remove('fa-minus-circle');
                         viewMoreProjects.querySelector('i').classList.add('fa-project-diagram');
                     }
+                });
+            }
+
+            // Print functionality
+            const printButton = document.getElementById('print-button');
+            const printModal = document.getElementById('print-modal');
+            const printModalClose = document.getElementById('print-modal-close');
+            const confirmPrint = document.getElementById('confirm-print');
+            const cancelPrint = document.getElementById('cancel-print');
+
+            if (printButton && printModal && printModalClose && confirmPrint && cancelPrint) {
+                printButton.addEventListener('click', () => {
+                    printModal.classList.add('show');
+                });
+
+                printModalClose.addEventListener('click', () => {
+                    printModal.classList.remove('show');
+                });
+
+                cancelPrint.addEventListener('click', () => {
+                    printModal.classList.remove('show');
+                });
+
+                confirmPrint.addEventListener('click', () => {
+                    printModal.classList.remove('show');
+                    window.print();
                 });
             }
         });
