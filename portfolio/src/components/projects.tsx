@@ -46,17 +46,7 @@ const Projects = ({ data }: ProjectsProps) => {
         </h2>
 
         {/* Project Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <button
-            className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
-              activeFilter === "all"
-                ? "bg-cyan-600 text-white"
-                : "bg-white text-cyan-700 border border-cyan-200 hover:bg-cyan-50"
-            }`}
-            onClick={() => setActiveFilter("all")}
-          >
-            All
-          </button>
+        <div className="flex flex-wrap justify-center gap-4 mb-12">          
           {data.categories.map((category, index) => (
             <button
               key={index}
