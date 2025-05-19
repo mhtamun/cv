@@ -382,3 +382,78 @@ body {
 .project-card:hover .project-content {
   transform: translateY(0);
 }
+
+/* Print Styles */
+@media print {
+  /* Hide elements that shouldn't be printed */
+  .navbar,
+  .scroll-progress,
+  .parallax-bg,
+  .parallax-mid,
+  .parallax-front,
+  .parallax-container {
+    display: none !important;
+  }
+
+  /* Reset page margins and background */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure proper page breaks */
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Adjust text colors for better printing */
+  .text-gray-600,
+  .text-gray-700 {
+    color: #333 !important;
+  }
+
+  /* Ensure links are visible */
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  /* Adjust spacing for print */
+  .print-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  /* Ensure proper background colors */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide the main content when printing */
+  .parallax-container {
+    display: none !important;
+  }
+
+  /* Show only the print view */
+  .print\:block {
+    display: block !important;
+  }
+}

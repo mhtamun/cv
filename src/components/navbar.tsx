@@ -27,14 +27,21 @@ const Navbar = ({ navItems }: NavbarProps) => {
     };
   }, []);
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
-    <nav id="navbar" className={`navbar fixed top-0 left-0 right-0 z-50 py-4 px-6 ${isScrolled ? "scrolled" : ""}`}>
+    <nav
+      id="navbar"
+      className={`navbar fixed top-0 left-0 right-0 z-50 py-4 px-6 ${isScrolled ? "scrolled" : ""}`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <Link href="#" className="text-2xl font-bold gradient-text">
           Maruf Hossain
         </Link>
 
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item, index) => (
             <Link
               key={index}
@@ -44,6 +51,13 @@ const Navbar = ({ navItems }: NavbarProps) => {
               {item.label}
             </Link>
           ))}
+          <button
+            onClick={handlePrint}
+            className="flex items-center space-x-2 text-gray-700 hover:text-cyan-600 transition-colors duration-300"
+          >
+            <i className="fas fa-print"></i>
+            <span>Print CV</span>
+          </button>
         </div>
 
         <button
@@ -73,6 +87,13 @@ const Navbar = ({ navItems }: NavbarProps) => {
               {item.label}
             </Link>
           ))}
+          <button
+            onClick={handlePrint}
+            className="flex items-center space-x-2 text-gray-700 hover:text-cyan-600 transition-colors duration-300 py-2"
+          >
+            <i className="fas fa-print"></i>
+            <span>Print CV</span>
+          </button>
         </div>
       </div>
     </nav>
