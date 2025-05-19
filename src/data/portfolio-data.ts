@@ -12,7 +12,7 @@ export const portfolioData = {
     name: "Maruf Hossain",
     title: "Senior Software Engineer L-3",
     description:
-      "Full-stack developer with 8+ years of experience specializing in Java, JavaScript frameworks, TypeScript, and system design.",
+      "Full-stack developer with 8+ years of experience specializing in Java, JavaScript, and system design.",
     ctaButtons: {
       primary: {
         text: "View Experience",
