@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
 const nextConfig = {
   output: "export",
   eslint: {
@@ -10,8 +12,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/portfolio" : "",
-  basePath: process.env.NODE_ENV === "production" ? "/portfolio" : "",
+  assetPrefix,
+  basePath: assetPrefix,
+  publicRuntimeConfig: {
+    assetPrefix,
+  },
 };
 
 export default nextConfig;
