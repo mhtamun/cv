@@ -37,10 +37,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "profile",
     images: {
-      url:
-        process.env.NODE_ENV === "production"
-          ? "/portfolio/assets/images/profile.png"
-          : "/assets/images/profile.png", // Place a profile.jpg in public/
+      url: "/assets/images/profile.png", // Place a profile.jpg in public/
       width: 400,
       height: 400,
       alt: portfolioData.hero.name,
@@ -53,10 +50,7 @@ export const metadata: Metadata = {
     site: "@mhtamun",
     creator: "@mhtamun",
     images: {
-      url:
-        process.env.NODE_ENV === "production"
-          ? "/portfolio/assets/images/profile.png"
-          : "/assets/images/profile.png",
+      url: "/assets/images/profile.png",
       alt: portfolioData.hero.name,
     },
   },
