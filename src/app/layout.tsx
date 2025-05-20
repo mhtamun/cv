@@ -38,7 +38,10 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/profile.png", // Place a profile.jpg in public/
+        url:
+          process.env.NODE_ENV === "production"
+            ? "/portfolio/assets/images/profile.png"
+            : "/assets/images/profile.png", // Place a profile.jpg in public/
         width: 400,
         height: 400,
         alt: portfolioData.hero.name,
@@ -53,7 +56,10 @@ export const metadata: Metadata = {
     creator: "@mhtamun",
     images: [
       {
-        url: "/profile.jpg",
+        url:
+          process.env.NODE_ENV === "production"
+            ? "/portfolio/assets/images/profile.png"
+            : "/assets/images/profile.png",
         alt: portfolioData.hero.name,
       },
     ],
@@ -63,9 +69,12 @@ export const metadata: Metadata = {
     canonical: "https://mhtamun.github.io/portfolio/", // Update to your real domain
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico",
+    shortcut: process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico",
+    apple:
+      process.env.NODE_ENV === "production"
+        ? "/portfolio/apple-touch-icon.png"
+        : "/apple-touch-icon.png",
   },
   themeColor: "#0891b2",
 };
