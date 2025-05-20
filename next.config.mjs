@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NODE_ENV === "production" ? "/mhtamun" : "";
 
 const nextConfig = {
   output: "export",
@@ -11,11 +10,6 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-  },
-  assetPrefix,
-  basePath: assetPrefix,
-  publicRuntimeConfig: {
-    assetPrefix,
   },
 };
 
