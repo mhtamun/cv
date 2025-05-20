@@ -16,10 +16,10 @@ export default function PrintView() {
             <i className="fas fa-envelope mr-2"></i>
             {portfolioData.summary.contactInfo.email}
           </p>
-          <p className="flex items-center">
+          {/* <p className="flex items-center">
             <i className="fab fa-linkedin mr-2"></i>
             {portfolioData.summary.contactInfo.linkedin}
-          </p>
+          </p> */}
           <p className="flex items-center">
             <i className="fab fa-github mr-2"></i>
             {portfolioData.summary.contactInfo.github}
@@ -28,111 +28,45 @@ export default function PrintView() {
       </div>
 
       {/* Summary */}
-      <section className="mb-8">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-3">Professional Summary</h2>
         <p className="text-gray-700 leading-relaxed">{portfolioData.summary.text}</p>
-      </section>
+      </div>
 
       {/* Experience */}
-      <section className="mb-8">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">
           Professional Experience
         </h2>
-        {portfolioData.experience.items.map(
-          (exp, index) =>
-            !exp.isHidden && (
-              <div key={index} className="mb-6">
-                <div className="flex justify-between items-start mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold">{exp.title}</h3>
-                    <p className="text-gray-600 font-medium">{exp.company}</p>
-                  </div>
-                  <p className="text-gray-600 font-medium">{exp.period}</p>
-                </div>
-                {exp.description && (
-                  <p className="text-gray-700 leading-relaxed mb-2">{exp.description}</p>
-                )}
-                {exp.responsibilities && (
-                  <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    {exp.responsibilities.map((resp, idx) => (
-                      <li key={idx} className="leading-relaxed">
-                        {resp}
-                      </li>
-                    ))}
-                  </ul>
-                )}
+        {portfolioData.experience.items.map((exp, index) => (
+          <div key={index} className="mb-6">
+            <div className="flex justify-between items-start mb-2">
+              <div>
+                <h3 className="text-xl font-bold">{exp.title}</h3>
+                <p className="text-gray-600 font-medium">{exp.company}</p>
               </div>
-            )
-        )}
-      </section>
-
-      {/* Skills */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Technical Skills</h2>
-        <div className="grid grid-cols-2 gap-6">
-          {portfolioData.skills.categories.map((category, index) => (
-            <div key={index} className="mb-4">
-              <h3 className="text-lg font-bold mb-3 flex items-center">
-                <i className={`fas ${category.icon} mr-2 text-gray-600`}></i>
-                {category.title}
-              </h3>
-              <div className="space-y-3">
-                {category.mainSkills.map((skill, idx) => (
-                  <div key={idx} className="flex justify-between items-center">
-                    <span className="font-medium">{skill.name}</span>
-                    <div className="w-24 h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gray-600 rounded-full"
-                        style={{ width: `${skill.percentage}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {category.otherSkills.map((otherSkill, idx) => (
-                <div key={idx} className="mt-3">
-                  <h4 className="font-semibold text-gray-700 mb-1">{otherSkill.title}</h4>
-                  <p className="text-gray-600 text-sm">{otherSkill.skills.join(" • ")}</p>
-                </div>
-              ))}
+              <p className="text-gray-600 font-medium">{exp.period}</p>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Projects */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Projects</h2>
-        <div className="grid grid-cols-2 gap-6">
-          {portfolioData.projects.items.map(
-            (project, index) =>
-              !project.isHidden && (
-                <div key={index} className="mb-4 p-4 border border-gray-200 rounded-lg">
-                  <h3 className="text-lg font-bold mb-2 flex items-center">
-                    <i className={`fas ${project.icon} mr-2 text-gray-600`}></i>
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-700 mb-2">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )
-          )}
-        </div>
-      </section>
+            {exp.description && (
+              <p className="text-gray-700 leading-relaxed mb-2">{exp.description}</p>
+            )}
+            {exp.responsibilities && (
+              <ul className="list-disc list-inside text-gray-700 space-y-1">
+                {exp.responsibilities.map((resp, idx) => (
+                  <li key={idx} className="leading-relaxed">
+                    {resp}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
 
       {/* Education */}
-      <section className="mb-8">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Education</h2>
-        {portfolioData.education.items.map((edu, index) => (
+        {portfolioData.education.items.slice(0, 2).map((edu, index) => (
           <div key={index} className="mb-4">
             <div className="flex justify-between items-start">
               <div>
@@ -146,10 +80,48 @@ export default function PrintView() {
             </div>
           </div>
         ))}
-      </section>
+      </div>
+
+      {/* Skills */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Technical Skills</h2>
+        <ul className="grid grid-cols-1 gap-2 text-sm">
+          {portfolioData.skills.categories.map((category, index) => (
+            <li key={index} className="mb-1">
+              <span className="font-semibold">{category.title}:</span>{" "}
+              {category.mainSkills.map((skill) => skill.name).join(", ")}
+              {", "}
+              {category.otherSkills.map((otherSkill) => otherSkill.skills.join(", "))}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Projects */}
+      {/* <div className="mb-8">
+        <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Projects</h2>
+        <div className="grid grid-cols-2 gap-6">
+          {portfolioData.projects.items.map((project, index) => (
+            <div key={index} className="mb-4 p-4 border border-gray-200 rounded-lg">
+              <h3 className="text-lg font-bold mb-2 flex items-center">
+                <i className={`fas ${project.icon} mr-2 text-gray-600`}></i>
+                {project.title}
+              </h3>
+              <p className="text-gray-700 mb-2">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag, idx) => (
+                  <span key={idx} className="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div> */}
 
       {/* Interests */}
-      <section>
+      <div>
         <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">Interests</h2>
         <div className="flex flex-wrap gap-4">
           {portfolioData.interests.items.map((interest, index) => (
@@ -159,7 +131,32 @@ export default function PrintView() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
+
+      {/* References */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-bold border-b-2 border-gray-300 mb-4">References</h2>
+        <div className="space-y-4 text-gray-700 text-sm">
+          <div>
+            <span className="font-semibold">Moinul Islam</span>
+            <br />
+            Co-founder & CEO, Green Feather Technologies
+            <br />
+            P: +880 1711-325673
+            <br />
+            E: moinul.islam@greenfeather.tech
+          </div>
+          <div>
+            <span className="font-semibold">Mushraful Haque (Anik)</span>
+            <br />
+            DoT, Dynamic Solution Innovators Ltd.
+            <br />
+            P: +880 1622-688231
+            <br />
+            E: mushraful.hoque@dsinnovators.com
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -488,15 +488,14 @@ export const portfolioData = {
         title: "Frontend Development",
         icon: "fa-laptop-code",
         mainSkills: [
-          { name: "React.js / Next.js", percentage: 95 },
+          { name: "React.js / Next.js", percentage: 90 },
           { name: "TypeScript", percentage: 90 },
           { name: "Tailwind CSS", percentage: 85 },
-          { name: "Redux", percentage: 90 },
         ],
         otherSkills: [
           {
             title: "Other Frontend Skills",
-            skills: ["Styled Components", "Formik/Yup", "Webpack", "FlexBox"],
+            skills: ["Svelte", "Preact.js", "Vue.js"],
           },
         ],
       },
@@ -504,15 +503,14 @@ export const portfolioData = {
         title: "Backend Development",
         icon: "fa-server",
         mainSkills: [
-          { name: "Node.js", percentage: 90 },
-          { name: "NestJS", percentage: 85 },
-          { name: "Spring Boot", percentage: 80 },
-          { name: "GraphQL", percentage: 75 },
+          { name: "Express.js / NestJS", percentage: 85 },
+          { name: "GraphQL", percentage: 50 },
+          { name: "Spring Boot", percentage: 50 },
         ],
         otherSkills: [
           {
             title: "Other Backend Skills",
-            skills: ["HapiJS", "Jersey (Java API)", "PHP (Laravel)"],
+            skills: ["HapiJS", "Fastify", "Django", "FastAPI", "Laravel"],
           },
         ],
       },
@@ -520,15 +518,14 @@ export const portfolioData = {
         title: "Mobile Development",
         icon: "fa-mobile-alt",
         mainSkills: [
-          { name: "Android SDK (Java)", percentage: 90 },
-          { name: "Retrofit", percentage: 85 },
-          { name: "Room", percentage: 80 },
-          { name: "RXJava/RXAndroid", percentage: 75 },
+          { name: "Android (Java)", percentage: 90 },
+          { name: "React Native", percentage: 20 },
+          { name: "Flutter", percentage: 20 },
         ],
         otherSkills: [
           {
             title: "Other Mobile Skills",
-            skills: ["Dagger (DI)", "Volley", "Google Map SDK"],
+            skills: ["Ionic", "Cordova"],
           },
         ],
       },
@@ -554,7 +551,7 @@ export const portfolioData = {
         title: "Tools & DevOps",
         icon: "fa-tools",
         mainSkills: [
-          { name: "Docker", percentage: 85 },
+          { name: "Docker", percentage: 80 },
           { name: "Git / GitHub", percentage: 95 },
         ],
         otherSkills: [
@@ -606,6 +603,12 @@ export const portfolioData = {
         period: "April 2009 – May 2011",
         icon: "fa-school",
       },
+      {
+        degree: "Secondary School Certificate (SSC)",
+        institution: "Tanjimul Ummah Cadet Madrasah",
+        period: "January 2007 – March 2009",
+        icon: "fa-school",
+      },
     ],
   },
 
@@ -634,9 +637,11 @@ export const portfolioData = {
     ],
   },
 
+  // reference
+
   footer: {
     name: "Maruf Hossain",
-    title: "Senior Software Engineer",
+    title: "Senior Software Engineer L-3",
     social: {
       linkedin: "mhtamun",
       github: "mhtamun",

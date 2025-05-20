@@ -37,11 +37,14 @@ const Projects = ({ data }: ProjectsProps) => {
         </h2>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+          id="projects-grid"
+        >
           {data.items.map((project, index) => {
             const CardContent = (
-              <div className="project-card animate-on-scroll bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 ">
-                <div className="p-6">
+              <div className="project-card animate-on-scroll bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
+                <div className="p-6 flex flex-col flex-1 min-h-[340px]">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center mr-4">
                       <i className={`fas ${project.icon} text-white text-xl`}></i>
@@ -56,8 +59,10 @@ const Projects = ({ data }: ProjectsProps) => {
                       {project.timeline.start} - {project.timeline.end}
                     </p>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <p className="text-gray-600 text-sm mb-4 flex-1 overflow-auto">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
@@ -67,24 +72,30 @@ const Projects = ({ data }: ProjectsProps) => {
                       </span>
                     ))}
                   </div>
+                  {project.url && (
+                    <span className="mt-auto pt-2 block">
+                      Visit Project <i className="fas fa-external-link-alt ml-1"></i>
+                    </span>
+                  )}
                 </div>
               </div>
             );
-
             return project.url ? (
               <Link
                 key={index}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block cursor-pointer"
+                className="block cursor-pointer h-full"
                 tabIndex={0}
                 aria-label={`Visit project: ${project.title}`}
               >
                 {CardContent}
               </Link>
             ) : (
-              <div key={index}>{CardContent}</div>
+              <div key={index} className="h-full">
+                {CardContent}
+              </div>
             );
           })}
         </div>
