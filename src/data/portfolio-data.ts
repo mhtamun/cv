@@ -50,12 +50,8 @@ export const portfolioData = {
         title: "Tech Lead (Remote Consultant)",
         company: "Ahsan Technologies Ltd.",
         period: "December 2020 – Present",
-        responsibilities: [
-          "Led the design and architecture of in-house and client products.",
-          "Managed teams using Agile methodology for efficient collaboration and delivery.",
-          "Researched and disseminated industry best practices among the software team.",
-          "Technical Proficiency: React.js, NestJs, PostgreSQL, MongoDB.",
-        ],
+        description:
+          "Leading the design and architecture of in-house and client products, managing teams using Agile methodology for efficient collaboration and delivery, researching and disseminating industry best practices among the software team, and demonstrating technical proficiency in React.js, Next.js, NestJs, PostgreSQL, and MongoDB.",
       },
       {
         title: "Senior Software Engineer",
