@@ -36,17 +36,15 @@ export const metadata: Metadata = {
     siteName: portfolioData.hero.name,
     locale: "en_US",
     type: "profile",
-    images: [
-      {
-        url:
-          process.env.NODE_ENV === "production"
-            ? "/portfolio/assets/images/profile.png"
-            : "/assets/images/profile.png", // Place a profile.jpg in public/
-        width: 400,
-        height: 400,
-        alt: portfolioData.hero.name,
-      },
-    ],
+    images: {
+      url:
+        process.env.NODE_ENV === "production"
+          ? "/portfolio/assets/images/profile.png"
+          : "/assets/images/profile.png", // Place a profile.jpg in public/
+      width: 400,
+      height: 400,
+      alt: portfolioData.hero.name,
+    },
   },
   twitter: {
     card: "summary_large_image",
@@ -54,15 +52,13 @@ export const metadata: Metadata = {
     description: portfolioData.hero.description,
     site: "@mhtamun",
     creator: "@mhtamun",
-    images: [
-      {
-        url:
-          process.env.NODE_ENV === "production"
-            ? "/portfolio/assets/images/profile.png"
-            : "/assets/images/profile.png",
-        alt: portfolioData.hero.name,
-      },
-    ],
+    images: {
+      url:
+        process.env.NODE_ENV === "production"
+          ? "/portfolio/assets/images/profile.png"
+          : "/assets/images/profile.png",
+      alt: portfolioData.hero.name,
+    },
   },
   metadataBase: new URL("https://mhtamun.github.io/portfolio/"), // Update to your real domain
   alternates: {
