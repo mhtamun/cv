@@ -85,14 +85,76 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/android-chrome-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/android-chrome-16x16.png" />
-        <link rel="icon" type="image/png" sizes="128x128" href="/android-chrome-128x128.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link
+          rel="icon"
+          href={process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico"}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/android-chrome-32x32.png"
+              : "/android-chrome-32x32.png"
+          }
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/android-chrome-16x16.png"
+              : "/android-chrome-16x16.png"
+          }
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="128x128"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/android-chrome-128x128.png"
+              : "/android-chrome-128x128.png"
+          }
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/android-chrome-192x192.png"
+              : "/android-chrome-192x192.png"
+          }
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/android-chrome-512x512.png"
+              : "/android-chrome-512x512.png"
+          }
+        />
+        <link
+          rel="apple-touch-icon"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/apple-touch-icon.png"
+              : "/apple-touch-icon.png"
+          }
+        />
+        <link
+          rel="manifest"
+          href={
+            process.env.NODE_ENV === "production"
+              ? "/portfolio/site.webmanifest"
+              : "/site.webmanifest"
+          }
+        />
         <meta name="theme-color" content="#0891b2" />
         {/* Structured Data for Person */}
         <script

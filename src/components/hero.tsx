@@ -59,7 +59,11 @@ const Hero = ({ data }: HeroProps) => {
             <div className="absolute inset-12 bg-gradient-to-br from-cyan-200 to-teal-200 rounded-full opacity-50 animate-pulse-slow delay-900"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <img
-                src="/assets/images/profile.png"
+                src={
+                  process.env.NODE_ENV === "production"
+                    ? "/portfolio/assets/images/profile.png"
+                    : "/assets/images/profile.png"
+                }
                 alt={data.name}
                 className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-white shadow-xl object-cover animate-scale-up border-4 border-white"
                 loading="eager"
