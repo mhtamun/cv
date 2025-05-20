@@ -49,10 +49,7 @@ export const metadata: Metadata = {
     description: portfolioData.hero.description,
     site: "@mhtamun",
     creator: "@mhtamun",
-    images: {
-      url: "/assets/images/profile.png",
-      alt: portfolioData.hero.name,
-    },
+    images: "/assets/images/profile.png",
   },
   metadataBase: new URL("https://mhtamun.github.io/portfolio/"), // Update to your real domain
   alternates: {
