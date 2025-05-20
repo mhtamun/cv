@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: portfolioData.hero.name + " - " + portfolioData.hero.title,
     description: portfolioData.hero.description,
-    url: "https://mhtamun.github.io/portfolio/", // Update to your real domain
+    url: "https://mhtamun.github.io/mhtamun/", // Update to your real domain
     siteName: portfolioData.hero.name,
     locale: "en_US",
     type: "profile",
@@ -51,16 +51,16 @@ export const metadata: Metadata = {
     creator: "@mhtamun",
     images: "/assets/images/profile.png",
   },
-  metadataBase: new URL("https://mhtamun.github.io/portfolio/"), // Update to your real domain
+  metadataBase: new URL("https://mhtamun.github.io/mhtamun/"), // Update to your real domain
   alternates: {
-    canonical: "https://mhtamun.github.io/portfolio/", // Update to your real domain
+    canonical: "https://mhtamun.github.io/mhtamun/", // Update to your real domain
   },
   icons: {
-    icon: process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico",
-    shortcut: process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico",
+    icon: process.env.NODE_ENV === "production" ? "/mhtamun/favicon.ico" : "/favicon.ico",
+    shortcut: process.env.NODE_ENV === "production" ? "/mhtamun/favicon.ico" : "/favicon.ico",
     apple:
       process.env.NODE_ENV === "production"
-        ? "/portfolio/apple-touch-icon.png"
+        ? "/mhtamun/apple-touch-icon.png"
         : "/apple-touch-icon.png",
   },
   themeColor: "#0891b2",
@@ -83,7 +83,7 @@ export default function RootLayout({
         />
         <link
           rel="icon"
-          href={process.env.NODE_ENV === "production" ? "/portfolio/favicon.ico" : "/favicon.ico"}
+          href={process.env.NODE_ENV === "production" ? "/mhtamun/favicon.ico" : "/favicon.ico"}
         />
         <link
           rel="icon"
@@ -91,7 +91,7 @@ export default function RootLayout({
           sizes="32x32"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/android-chrome-32x32.png"
+              ? "/mhtamun/android-chrome-32x32.png"
               : "/android-chrome-32x32.png"
           }
         />
@@ -101,7 +101,7 @@ export default function RootLayout({
           sizes="16x16"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/android-chrome-16x16.png"
+              ? "/mhtamun/android-chrome-16x16.png"
               : "/android-chrome-16x16.png"
           }
         />
@@ -111,7 +111,7 @@ export default function RootLayout({
           sizes="128x128"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/android-chrome-128x128.png"
+              ? "/mhtamun/android-chrome-128x128.png"
               : "/android-chrome-128x128.png"
           }
         />
@@ -121,7 +121,7 @@ export default function RootLayout({
           sizes="192x192"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/android-chrome-192x192.png"
+              ? "/mhtamun/android-chrome-192x192.png"
               : "/android-chrome-192x192.png"
           }
         />
@@ -131,7 +131,7 @@ export default function RootLayout({
           sizes="512x512"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/android-chrome-512x512.png"
+              ? "/mhtamun/android-chrome-512x512.png"
               : "/android-chrome-512x512.png"
           }
         />
@@ -139,7 +139,7 @@ export default function RootLayout({
           rel="apple-touch-icon"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/apple-touch-icon.png"
+              ? "/mhtamun/apple-touch-icon.png"
               : "/apple-touch-icon.png"
           }
         />
@@ -147,7 +147,7 @@ export default function RootLayout({
           rel="manifest"
           href={
             process.env.NODE_ENV === "production"
-              ? "/portfolio/site.webmanifest"
+              ? "/mhtamun/site.webmanifest"
               : "/site.webmanifest"
           }
         />
@@ -161,7 +161,7 @@ export default function RootLayout({
               "@type": "Person",
               name: portfolioData.hero.name,
               jobTitle: portfolioData.hero.title,
-              url: "https://mhtamun.github.io/portfolio/",
+              url: "https://mhtamun.github.io/mhtamun/",
               sameAs: [
                 `https://www.linkedin.com/in/${portfolioData.summary.contactInfo.linkedin}`,
                 `https://github.com/${portfolioData.summary.contactInfo.github}`,

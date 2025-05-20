@@ -61,7 +61,7 @@ const Hero = ({ data }: HeroProps) => {
               <img
                 src={
                   process.env.NODE_ENV === "production"
-                    ? "/portfolio/assets/images/profile.png"
+                    ? "/mhtamun/assets/images/profile.png"
                     : "/assets/images/profile.png"
                 }
                 alt={data.name}

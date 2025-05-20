@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const assetPrefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+const assetPrefix = process.env.NODE_ENV === "production" ? "/mhtamun" : "";
 
 const nextConfig = {
   output: "export",
