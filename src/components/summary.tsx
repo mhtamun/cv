@@ -32,21 +32,26 @@ const Summary = ({ data }: SummaryProps) => {
                 {data.contactInfo.email}
               </a>
             </div>
-            {/* <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
-                <i className="fab fa-linkedin text-cyan-600 mr-2"></i>
-                <a href={`https://linkedin.com/in/${data.contactInfo.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-700">
-                  linkedin.com/in/{data.contactInfo.linkedin}
-                </a>
-              </div> */}
             <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
-              <i className="fab fa-github text-cyan-600 mr-2"></i>
+              <i className="fab fa-linkedin text-cyan-600 mr-2"></i>
               <a
-                href={`https://github.com/${data.contactInfo.github}`}
+                href={`${data.contactInfo.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-cyan-700"
               >
-                github.com/{data.contactInfo.github}
+                {data.contactInfo.linkedin}
+              </a>
+            </div>
+            <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
+              <i className="fab fa-github text-cyan-600 mr-2"></i>
+              <a
+                href={`${data.contactInfo.github}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-700"
+              >
+                {data.contactInfo.github}
               </a>
             </div>
           </div>

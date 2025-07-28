@@ -1,67 +1,133 @@
-import type { Metadata } from "next";
+import { portfolioData } from "@/data/portfolio-data";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import { portfolioData } from "@/data/portfolio-data";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Extract all skills for SEO keywords
+const allSkills = portfolioData.skills.categories.flatMap((cat) => [
+  ...cat.mainSkills.map((s) => s.name),
+  ...cat.otherSkills.flatMap((os) => os.skills),
+]);
+
+// Extract all technologies from projects
+const allTechnologies = portfolioData.projects.items.flatMap((project) => project.tags);
+
+// Combine unique skills and technologies
+const uniqueKeywords = Array.from(
+  new Set([
+    "Maruf Hossain",
+    "Senior Software Engineer",
+    "Full Stack Developer",
+    "Software Engineer",
+    "React Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Web Developer",
+    "Software Development",
+    "System Design",
+    "Microservices",
+    "Microfrontends",
+    portfolioData.summary.contactInfo.location,
+    ...portfolioData.skills.categories.map((cat) => cat.title),
+    ...allSkills,
+    ...allTechnologies,
+    ...portfolioData.experience.items.map((exp) => exp.company),
+    ...portfolioData.projects.items.map((project) => project.title),
+  ])
+);
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0891b2" },
+    { media: "(prefers-color-scheme: dark)", color: "#0891b2" },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: portfolioData.hero.name + " - " + portfolioData.hero.title,
-  description: portfolioData.hero.description,
+  title: {
+    default: `${portfolioData.hero.name} - ${portfolioData.hero.title}`,
+    template: `%s | ${portfolioData.hero.name}`,
+  },
+  description: portfolioData.summary.text,
   authors: [
     {
       name: portfolioData.hero.name,
-      url: `https://www.linkedin.com/in/${portfolioData.summary.contactInfo.linkedin}`,
+      url: portfolioData.summary.contactInfo.linkedin,
     },
   ],
-  keywords: [
-    "Maruf Hossain",
-    "Senior Software Engineer",
-    "Portfolio",
-    "Java",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "TypeScript",
-    "System Design",
-    ...portfolioData.skills.categories.flatMap((cat) => [
-      cat.title,
-      ...cat.mainSkills.map((s) => s.name),
-    ]),
-  ],
+  creator: portfolioData.hero.name,
+  publisher: portfolioData.hero.name,
+  keywords: uniqueKeywords,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: portfolioData.hero.name + " - " + portfolioData.hero.title,
-    description: portfolioData.hero.description,
-    url: "https://mhtamun.github.io", // Update to your real domain
-    siteName: portfolioData.hero.name,
-    locale: "en_US",
     type: "profile",
-    images: {
-      url: "/assets/images/profile.png", // Place a profile.jpg in public/
-      width: 400,
-      height: 400,
-      alt: portfolioData.hero.name,
-    },
+    title: `${portfolioData.hero.name} - ${portfolioData.hero.title}`,
+    description: portfolioData.summary.text,
+    url: portfolioData.summary.contactInfo.portfolio,
+    siteName: `${portfolioData.hero.name} Portfolio`,
+    locale: "en_US",
+    images: [
+      {
+        url: "/assets/images/profile.png",
+        width: 1200,
+        height: 630,
+        alt: `${portfolioData.hero.name} - ${portfolioData.hero.title}`,
+        type: "image/png",
+      },
+      {
+        url: "/assets/images/profile.png",
+        width: 400,
+        height: 400,
+        alt: portfolioData.hero.name,
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: portfolioData.hero.name + " - " + portfolioData.hero.title,
-    description: portfolioData.hero.description,
-    site: "@mhtamun",
+    title: `${portfolioData.hero.name} - ${portfolioData.hero.title}`,
+    description: portfolioData.summary.text,
     creator: "@mhtamun",
-    images: "/assets/images/profile.png",
+    images: ["/assets/images/profile.png"],
   },
-  metadataBase: new URL("https://mhtamun.github.io"), // Update to your real domain
+  metadataBase: new URL(portfolioData.summary.contactInfo.portfolio),
   alternates: {
-    canonical: "https://mhtamun.github.io", // Update to your real domain
+    canonical: portfolioData.summary.contactInfo.portfolio,
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
     shortcut: "/favicon.ico",
-    apple:
-      "/apple-touch-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/android-chrome-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
-  themeColor: "#0891b2",
+  manifest: "/site.webmanifest",
+  category: "technology",
+  classification: "portfolio",
 };
 
 export default function RootLayout({
@@ -79,63 +145,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <link
-          rel="icon"
-          href={"/favicon.ico"}
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href={
-            "/android-chrome-32x32.png"
-          }
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href={
-            "/android-chrome-16x16.png"
-          }
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="128x128"
-          href={
-            "/android-chrome-128x128.png"
-          }
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href={
-            "/android-chrome-192x192.png"
-          }
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href={
-            "/android-chrome-512x512.png"
-          }
-        />
-        <link
-          rel="apple-touch-icon"
-          href={
-            "/apple-touch-icon.png"
-          }
-        />
-        <link
-          rel="manifest"
-          href={
-            "/site.webmanifest"
-          }
-        />
-        <meta name="theme-color" content="#0891b2" />
+
         {/* Structured Data for Person */}
         <script
           type="application/ld+json"
@@ -145,17 +155,94 @@ export default function RootLayout({
               "@type": "Person",
               name: portfolioData.hero.name,
               jobTitle: portfolioData.hero.title,
-              url: "https://mhtamun.github.io",
+              description: portfolioData.summary.text,
+              url: portfolioData.summary.contactInfo.portfolio,
               sameAs: [
-                `https://www.linkedin.com/in/${portfolioData.summary.contactInfo.linkedin}`,
-                `https://github.com/${portfolioData.summary.contactInfo.github}`,
+                portfolioData.summary.contactInfo.linkedin,
+                portfolioData.summary.contactInfo.github,
               ],
               email: portfolioData.summary.contactInfo.email,
               address: {
                 "@type": "PostalAddress",
-                addressLocality: portfolioData.summary.contactInfo.location,
+                addressLocality: portfolioData.summary.contactInfo.location.split(", ")[0],
                 addressCountry: "BD",
               },
+              alumniOf: {
+                "@type": "Organization",
+                name: portfolioData.education.items[0].institution,
+              },
+              worksFor: {
+                "@type": "Organization",
+                name: portfolioData.experience.items[0].company,
+              },
+              knowsAbout: allSkills,
+              hasCredential: portfolioData.education.items.map((edu) => ({
+                "@type": "EducationalOccupationalCredential",
+                credentialCategory: edu.degree,
+                educationalLevel: edu.degree,
+                recognizedBy: {
+                  "@type": "Organization",
+                  name: edu.institution,
+                },
+              })),
+            }),
+          }}
+        />
+
+        {/* Structured Data for Portfolio Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Portfolio",
+              name: `${portfolioData.hero.name} Portfolio`,
+              description: portfolioData.hero.description,
+              url: portfolioData.summary.contactInfo.portfolio,
+              author: {
+                "@type": "Person",
+                name: portfolioData.hero.name,
+                jobTitle: portfolioData.hero.title,
+              },
+              mainEntity: {
+                "@type": "Person",
+                name: portfolioData.hero.name,
+              },
+              about: portfolioData.skills.categories.map((cat) => ({
+                "@type": "Thing",
+                name: cat.title,
+              })),
+            }),
+          }}
+        />
+
+        {/* Structured Data for Professional Service */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: `${portfolioData.hero.name} - Software Engineering Services`,
+              description: portfolioData.summary.text,
+              provider: {
+                "@type": "Person",
+                name: portfolioData.hero.name,
+                jobTitle: portfolioData.hero.title,
+              },
+              areaServed: {
+                "@type": "Place",
+                name: portfolioData.summary.contactInfo.location,
+              },
+              serviceType: [
+                "Software Development",
+                "Web Development",
+                "Frontend Development",
+                "Backend Development",
+                "Full Stack Development",
+                "System Design",
+                "Technical Consulting",
+              ],
             }),
           }}
         />

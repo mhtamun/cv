@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 interface FooterData {
   name: string;
   title: string;
@@ -15,11 +13,7 @@ interface FooterProps {
 }
 
 const Footer = ({ data }: FooterProps) => {
-  const [currentYear, setCurrentYear] = useState("");
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear().toString());
-  }, []);
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-12 px-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white">
@@ -60,7 +54,9 @@ const Footer = ({ data }: FooterProps) => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center">
-          <p>&copy; {currentYear} {data.name}. All rights reserved.</p>
+          <p>
+            &copy; {currentYear} {data.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
