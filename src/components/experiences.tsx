@@ -22,11 +22,11 @@ interface ExperienceProps {
 const Experience = ({ data }: ExperienceProps) => {
   const [showHidden, setShowHidden] = useState(false);
 
-  const visibleItems = data.items.filter(item => !item.isHidden);
-  const hiddenItems = data.items.filter(item => item.isHidden);
+  const visibleItems = data.items.filter((item) => !item.isHidden);
+  const hiddenItems = data.items.filter((item) => item.isHidden);
 
   return (
-    <section id="experience" className="py-20 px-4 bg-gradient-to-b from-white to-cyan-50">
+    <section id="experiences" className="py-20 px-4 bg-gradient-to-b from-white to-cyan-50">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="gradient-text">Professional Experience</span>
@@ -64,7 +64,7 @@ const Experience = ({ data }: ExperienceProps) => {
 
           {/* Hidden Experience Items */}
           {hiddenItems.length > 0 && (
-            <div id="hidden-experience" className={`hidden-content ${showHidden ? 'show' : ''}`}>
+            <div id="hidden-experience" className={`hidden-content ${showHidden ? "show" : ""}`}>
               {hiddenItems.map((item, index) => (
                 <div key={index} className="timeline-item animate-on-scroll">
                   <div className="card p-6">
@@ -103,8 +103,8 @@ const Experience = ({ data }: ExperienceProps) => {
                 onClick={() => setShowHidden(!showHidden)}
                 className="px-6 py-3 bg-white text-cyan-700 border border-cyan-200 rounded-full font-medium hover:shadow-lg hover:bg-cyan-50 transition-all duration-300 flex items-center mx-auto"
               >
-                <i className={`fas ${showHidden ? 'fa-minus-circle' : 'fa-plus-circle'} mr-2`}></i>
-                <span>{showHidden ? 'Show Less' : 'View More Experience'}</span>
+                <i className={`fas ${showHidden ? "fa-minus-circle" : "fa-plus-circle"} mr-2`}></i>
+                <span>{showHidden ? "Show Less" : "View More Experience"}</span>
               </button>
             </div>
           )}

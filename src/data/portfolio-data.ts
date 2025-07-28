@@ -1,7 +1,7 @@
 export const portfolioData = {
   navItems: [
     { label: "Summary", href: "#summary" },
-    { label: "Experience", href: "#experience" },
+    { label: "Experiences", href: "#experiences" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
     { label: "Education", href: "#education" },
@@ -10,13 +10,13 @@ export const portfolioData = {
 
   hero: {
     name: "Maruf Hossain",
-    title: "Senior Software Engineer L-3",
+    title: "Senior Software Engineer",
     description:
-      "Full-stack developer with 8+ years of experience specializing in Java, JavaScript, and system design.",
+      "Senior Software Engineer passionate about designing scalable frontend systems and leading cross-functional teams. Seeking impactful roles in SaaS or product-based companies.",
     ctaButtons: {
       primary: {
-        text: "View Experience",
-        href: "#experience",
+        text: "View Experiences",
+        href: "#experiences",
         icon: "fa-briefcase",
       },
       secondary: {
@@ -28,12 +28,13 @@ export const portfolioData = {
   },
 
   summary: {
-    text: "Highly qualified software developer with 8+ years of experience, a B.Sc. in CSE, and expertise in Java, Android, JavaScript, Node.js, Hapi.js, Nest.js, React.js, and Next.js. Possesses a proven track record in system design, automation, and large-scale deployment optimization. Skilled in Agile development, team building, and collaboration, recognized for innovative problem-solving and positive attitude.",
+    text: "Fullstack JavaScript Engineer with 8+ years of experience building scalable web platforms using React, Next.js, Node.js, Nest.js, and TypeScript. Proven track record leading frontend and backend teams in fast-paced SaaS and government projects. Skilled in designing microservice and microfrontend architectures, optimizing performance, and delivering high-quality code across the stack. Comfortable deploying apps on AWS, Docker, and serverless environments with hands-on experience in CI/CD, load testing, and infrastructure automation. Passionate about clean code, modern DevOps practices, and building impactful user-first solutions.",
     contactInfo: {
       location: "Dhaka, Bangladesh",
       email: "mhtamun@gmail.com",
-      linkedin: "mhtamun",
-      github: "mhtamun",
+      linkedin: "https://linkedin.com/in/mhtamun",
+      github: "https://github.com/mhtamun",
+      portfolio: "https://mhtamun.github.io",
     },
   },
 
@@ -44,42 +45,36 @@ export const portfolioData = {
         company: "Vivasoft Ltd.",
         period: "March 2024 – Present",
         description:
-          "Currently developing the frontend for the Eniro project using React, Next.js, Tailwind, TypeScript within a Turborepo monorepo structure, focusing on maintainability and scalability. Previously led the frontend team in revamping PiHr, a SaaS HR software, using React and microfrontend technology, contributing to architecture and integration with a C# backend.",
+          "Led the frontend architecture of the PiHr SaaS platform using React, microfrontends, and C# integration, resulting in a 40% improvement in development speed. Currently developing scalable UI components for the Eniro project in a monorepo setup (Turborepo, Next.js, Tailwind). Focused on system maintainability and frontend performance.",
       },
       {
-        title: "Tech Lead (Remote Consultant)",
+        title: "Tech Lead (Part-time Consultant)",
         company: "Ahsan Technologies Ltd.",
         period: "December 2020 – Present",
         description:
-          "Leading the design and architecture of in-house and client products, managing teams using Agile methodology for efficient collaboration and delivery, researching and disseminating industry best practices among the software team, and demonstrating technical proficiency in React.js, Next.js, NestJs, PostgreSQL, and MongoDB.",
+          "Designed system architecture and managed a distributed team using Agile methodologies. Mentored junior developers and implemented CI/CD pipelines for client projects using React.js, NestJS, and PostgreSQL. Championed adoption of scalable backend patterns and clean code principles.",
       },
       {
         title: "Senior Software Engineer",
         company: "Dynamic Solution Innovators Ltd.",
         period: "November 2016 – March 2024",
-        responsibilities: [
-          "Designed and developed mission-critical software solutions for clients.",
-          "Improved code quality and productivity via TDD/BDD, refactoring, and Agile techniques.",
-          "Participated in product development decision-making processes.",
-          "Technical Skills: Java, Android, Javascript, Node.js, Hapi.js, React.js, PostgreSQL, MongoDB.",
-        ],
+        description:
+          "Delivered mission-critical applications for enterprise clients. Increased codebase stability by introducing TDD and refactoring legacy modules. Collaborated closely with product teams on solution architecture and business logic. Spearheaded team-wide adoption of Agile best practices.",
       },
       {
         title: "Junior Software Engineer",
         company: "Dcastalia Limited",
         period: "September 2016 – November 2016",
-        responsibilities: [
-          "Developed and maintained Android apps for an educational digital system.",
-          "Implemented MVP, TDD, and Agile practices.",
-          "Utilized Dagger (DI), Room, Retrofit, RXJava, RXAndroid.",
-        ],
+        description:
+          "Built Android applications for an educational platform using MVP architecture. Applied TDD and used Dagger, Room, Retrofit, and RxJava to ensure scalable and testable code.",
         isHidden: true,
       },
       {
         title: "Junior Software Engineer",
         company: "AB Software Limited",
         period: "October 2015 – August 2016",
-        description: "Developed a restaurant review app using PHP and Java (Android).",
+        description:
+          "Developed a restaurant review mobile app using PHP for the backend and Java for Android. Ensured intuitive user experience through iterative UI improvements and bug fixing.",
         isHidden: true,
       },
       {
@@ -87,7 +82,7 @@ export const portfolioData = {
         company: "Aparajito Enabler Limited",
         period: "November 2014 – January 2016",
         description:
-          "Worked on website development and client-facing web applications focusing on UI/UX.",
+          "Contributed to client websites with a focus on front-end user experience. Worked closely with designers to build responsive, user-friendly UIs.",
         isHidden: true,
       },
     ],
@@ -105,7 +100,7 @@ export const portfolioData = {
       {
         title: "Eniro",
         description:
-          "Frontend development using React, Next.js, Tailwind CSS, and TypeScript within a Turborepo monorepo.",
+          "Developed the frontend for Eniro using React, Next.js, and Tailwind within a monorepo (Turborepo) structure. Integrated OpenStreetMap and custom mapping using Valhalla and Turf.js to visualize spatial offers, replacing Google Maps with full control and customization.",
         category: "frontend",
         icon: "fa-globe",
         tags: ["Next.js", "TypeScript", "TurboRepo"],
@@ -119,36 +114,46 @@ export const portfolioData = {
       {
         title: "PiHr",
         description:
-          "Led front-end team in developing UI using React and implementing micro-frontend architecture.",
+          "Led the frontend team for PiHr, a microfrontend-based HR software used by 500+ businesses in Bangladesh. Architected and developed key modules using React, TypeScript, and Vite, improving scalability and team velocity.",
         category: "frontend",
         icon: "fa-users-cog",
-        tags: ["React", "TypeScript", "Micro-frontend"],
+        tags: [
+          "React",
+          "TypeScript",
+          "Micro-frontend",
+          "Vite",
+          "Tailwind",
+          "React Query",
+          "Zustand",
+        ],
         timeline: {
           start: "Apr 2024",
           end: "Mar 2025",
         },
         company: "Vivasoft Limited",
+        url: "https://mypihr.com",
       },
       {
         title: "RJSC",
         description:
-          "Streamlined business registration platform for government sector, USAID funded.",
+          "Contributed to a government-funded registration platform under USAID. Worked as a full-stack Java Spring Boot developer on a monolithic architecture for digitalizing RJSC’s business registration processes for Bangladeshi citizens.",
         category: "fullstack",
         icon: "fa-building",
-        tags: ["Spring Boot", "Thymeleaf"],
+        tags: ["Spring Boot", "Thymeleaf", "Java", "Spring Security", "PostgreSQL"],
         timeline: {
           start: "Jun 2023",
           end: "Apr 2024",
         },
         company: "Dynamic Solution Innovators Ltd.",
+        url: "https://roc.gov.bd",
       },
       {
         title: "SSF App",
         description:
-          "Started working as a team lead of an already formed team. Design audio/video calling mechanism using a free opensource calling library.",
+          "Served as tech lead for a confidential roster management and secure communication app for Bangladesh’s Special Security Force (SSF). Integrated SIP-based voice/video calling and secure messaging using Openfire XMPP. Focused on privacy, military-grade security, and reliability.",
         category: "fullstack",
         icon: "fa-phone",
-        tags: ["Node.js", "PostgreSQL", "Android", "Java", "Team Management"],
+        tags: ["Node.js", "PostgreSQL", "Android", "Java", "Team Management", "Openfire", "XMPP"],
         timeline: {
           start: "May 2021",
           end: "Jun 2023",
@@ -156,25 +161,21 @@ export const portfolioData = {
         company: "Dynamic Solution Innovators Ltd.",
       },
       {
-        title: "Tapp Water App",
-        description:
-          "Two android mobile app solution for communication between water service provider and consumer. As well as data administration web app for water system organization. This solution made for the people live in the rural areas.",
-        category: "fullstack",
-        icon: "fa-water",
-        tags: ["Java", "Android", "PHP", "Laravel"],
-        timeline: {
-          start: "May 2020",
-          end: "Sep 2022",
-        },
-        company: "Dynamic Solution Innovators Ltd.",
-      },
-      {
         title: "DROBBOO",
         description:
-          "Manage the project and team. Design the core system with up to date technologies and frameworks as well as web services for communication between microservices. Developed the backend services and frontend web applications. Created dynamic form engine for back office panel web applications.",
+          "Spearheaded the development of DROBBOO, a scalable microservices-based eCommerce platform. Built with Next.js (frontend), Hapi.js (backend), MongoDB, PostgreSQL, and Elasticsearch. Managed full deployment pipeline and conducted load testing with Artillery. Design the core system with up to date technologies and frameworks as well as web services for communication between microservices. Created dynamic form engine for back office panel web applications.",
         category: "fullstack",
         icon: "fa-cogs",
-        tags: ["Node.js", "Next.js", "React", "PostgreSQL", "AWS Lambda"],
+        tags: [
+          "Node.js",
+          "Next.js",
+          "React",
+          "PostgreSQL",
+          "AWS Lambda",
+          "Hapi.js",
+          "MongoDB",
+          "Elasticsearch",
+        ],
         timeline: {
           start: "Dec 2020",
           end: "Aug 2022",
@@ -182,12 +183,25 @@ export const portfolioData = {
         company: "Ahsan Technologies Ltd.",
       },
       {
+        title: "Tapp Water App",
+        description:
+          "Developed two Android apps (Java) for water utility providers and rural consumers. Supported backend data integration with Laravel. Enabled mobile communication and monitoring in underserved areas.",
+        category: "fullstack",
+        icon: "fa-water",
+        tags: ["Java", "Android", "PHP", "Laravel"],
+        timeline: {
+          start: "May 2020",
+          end: "Sep 2022",
+        },
+        company: "",
+      },
+      {
         title: "bKash Business App",
         description:
-          "Revamped the new design of bKash agent app. Fixes exiting issues from the previous version.",
+          "Revamped the Android agent app for bKash—Bangladesh’s leading fintech. Rewrote legacy code using MVVM in Java, resolving stability issues and implementing the new UI based on updated design specs.",
         category: "mobile",
         icon: "fa-mobile-alt",
-        tags: ["Java", "Android", "PostgreSQL"],
+        tags: ["Java", "Android", "MVVM", "Kotlin"],
         timeline: {
           start: "Feb 2020",
           end: "Apr 2021",
@@ -197,10 +211,10 @@ export const portfolioData = {
       {
         title: "OpenCRVS",
         description:
-          "A global solution for civil registration. Making a system to ensure that every individual on the planet is recognized, protected and provided for from birth. Built a platform that does all the hard work for civil registration.",
+          "Worked on UNDP-funded OpenCRVS as a frontend developer. Built birth and death registration interfaces using React, TypeScript, Tailwind, GraphQL, and Lerna in a modular, scalable system deployed in multiple countries.",
         category: "fullstack",
         icon: "fa-id-card",
-        tags: ["Node.js", "Hapi.js", "React", "PostgreSQL"],
+        tags: ["Node.js", "Hapi.js", "React", "PostgreSQL", "GraphQL", "Lerna"],
         timeline: {
           start: "Jun 2019",
           end: "Jan 2020",
@@ -495,7 +509,7 @@ export const portfolioData = {
         otherSkills: [
           {
             title: "Other Frontend Skills",
-            skills: ["Svelte", "Preact.js", "Vue.js"],
+            skills: ["Svelte", "Vue.js", "Preact.js", "Styled Components"],
           },
         ],
       },
@@ -503,9 +517,9 @@ export const portfolioData = {
         title: "Backend Development",
         icon: "fa-server",
         mainSkills: [
-          { name: "Express.js / NestJS", percentage: 85 },
-          { name: "GraphQL", percentage: 50 },
-          { name: "Spring Boot", percentage: 50 },
+          { name: "Node.js (Express.js / NestJS)", percentage: 85 },
+          { name: "GraphQL (Apollo)", percentage: 60 },
+          { name: "Spring Boot (Java)", percentage: 50 },
         ],
         otherSkills: [
           {
@@ -519,13 +533,13 @@ export const portfolioData = {
         icon: "fa-mobile-alt",
         mainSkills: [
           { name: "Android (Java)", percentage: 90 },
-          { name: "React Native", percentage: 20 },
-          { name: "Flutter", percentage: 20 },
+          { name: "React Native", percentage: 40 },
+          { name: "Flutter", percentage: 30 },
         ],
         otherSkills: [
           {
             title: "Other Mobile Skills",
-            skills: ["Ionic", "Cordova"],
+            skills: ["Ionic", "Cordova", "Firebase SDK", "MVP Architecture"],
           },
         ],
       },
@@ -535,53 +549,57 @@ export const portfolioData = {
         mainSkills: [
           { name: "PostgreSQL", percentage: 90 },
           { name: "MongoDB", percentage: 85 },
+          { name: "MySQL", percentage: 70 },
         ],
         otherSkills: [
           {
-            title: "Databases",
-            skills: ["MySQL", "SQLite", "Oracle", "RethinkDB"],
+            title: "Other Databases",
+            skills: ["SQLite", "Oracle", "RethinkDB"],
           },
           {
-            title: "ORMs & Query Builders",
-            skills: ["PrismaJS", "SequilizeJS", "Mongoose", "Hibernate", "Supabase"],
+            title: "ORMs & Tools",
+            skills: ["Prisma", "Sequelize", "Mongoose", "Hibernate", "Supabase"],
           },
         ],
       },
       {
-        title: "Tools & DevOps",
+        title: "DevOps & Tooling",
         icon: "fa-tools",
         mainSkills: [
-          { name: "Docker", percentage: 80 },
           { name: "Git / GitHub", percentage: 95 },
+          { name: "Docker", percentage: 80 },
         ],
         otherSkills: [
           {
-            title: "Cloud & Deployment",
+            title: "CI/CD & Cloud",
             skills: ["AWS (EC2, Lambda)", "GCP", "Firebase", "Cloudflare"],
           },
           {
-            title: "Build Tools & Environments",
+            title: "Build & Runtime",
             skills: ["Vite", "Bun", "Turborepo", "Nginx", "Linux"],
           },
         ],
       },
       {
-        title: "Methodologies & Practices",
+        title: "Methodologies & Architecture",
         icon: "fa-sitemap",
         mainSkills: [
-          { name: "Agile Development", percentage: 90 },
+          { name: "Agile / Scrum", percentage: 90 },
           { name: "System Design", percentage: 85 },
         ],
         otherSkills: [
           {
             title: "Development Practices",
             skills: [
-              "TDD",
-              "BDD",
-              "Code Review",
+              "TDD / BDD",
+              "Code Reviews",
               "Microservices",
               "Microfrontends",
               "MVP (Android)",
+              "MVVM (Android)",
+              "Clean Code",
+              "Refactoring",
+              "Code Splitting",
             ],
           },
         ],
@@ -638,10 +656,9 @@ export const portfolioData = {
   },
 
   // reference
-
   footer: {
     name: "Maruf Hossain",
-    title: "Senior Software Engineer L-3",
+    title: "Senior Software Engineer",
     social: {
       linkedin: "mhtamun",
       github: "mhtamun",
