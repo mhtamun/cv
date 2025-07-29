@@ -1,10 +1,11 @@
+import { siteConfig } from "@/config/site";
 import { MetadataRoute } from "next";
 
 // Required for SSG with output: export
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const baseUrl = siteConfig.baseUrl;
 
   return {
     rules: [

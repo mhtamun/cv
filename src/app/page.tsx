@@ -1,3 +1,6 @@
+// Main Portfolio Page (SEO handled in layout.tsx)
+// This page showcases the CV/Portfolio of Maruf Hossain
+
 import ClientAnimations from "@/components/client-animations";
 import Education from "@/components/education";
 import Experience from "@/components/experiences";
