@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { AlertCircle, ChevronRight, Clock, RotateCcw } from "lucide-react";
+import { AlertCircle, CheckSquare, ChevronRight, Circle, Clock, RotateCcw } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // Type definitions
@@ -247,10 +247,28 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
 
         {/* Main Quiz Card */}
         <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-          <CardHeader className="space-y-2">
-            <Badge variant="outline" className="w-fit flex items-center justify-center gap-2">
-              <span className="text-sm">Level {q.level}</span>
-            </Badge>
+          <CardHeader className="space-y-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <Badge variant="outline" className="w-fit flex items-center justify-center gap-2">
+                <span className="text-sm">Level {q.level}</span>
+              </Badge>
+
+              {/* Answer Type Indicator */}
+              <Badge variant="outline" className="w-fit flex items-center gap-2 text-gray-600">
+                {q.multi ? (
+                  <>
+                    <CheckSquare className="h-3.5 w-3.5" />
+                    Multiple Answers
+                  </>
+                ) : (
+                  <>
+                    <Circle className="h-3.5 w-3.5" />
+                    Single Answer
+                  </>
+                )}
+              </Badge>
+            </div>
+
             <CardTitle
               ref={questionRef}
               tabIndex={-1}
@@ -258,6 +276,23 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
             >
               {q.question}
             </CardTitle>
+
+            {/* Instruction Text */}
+            <div className="text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                {q.multi ? (
+                  <>
+                    <CheckSquare className="h-4 w-4" />
+                    <span>Select all correct answers</span>
+                  </>
+                ) : (
+                  <>
+                    <Circle className="h-4 w-4" />
+                    <span>Select the best answer</span>
+                  </>
+                )}
+              </div>
+            </div>
           </CardHeader>
 
           <CardContent className="space-y-4">
@@ -273,9 +308,7 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
 
             {/* Answer Options */}
             <fieldset className="space-y-3">
-              <legend className="sr-only">
-                {q.multi ? "Select all correct answers" : "Select the correct answer"}
-              </legend>
+              <legend className="sr-only">Answer options for question {current + 1}</legend>
 
               {q.multi ? (
                 // Multiple Choice with Checkboxes
