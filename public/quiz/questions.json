@@ -1,720 +1,837 @@
 [
   {
-    "id": "q1-1",
+    "id": "js-1-1",
     "level": 1,
-    "question": "What does DNS stand for?",
+    "question": "Which of the following is a correct way to declare a variable in JavaScript that can be reassigned?",
     "options": [
-      { "id": "a", "text": "Domain Name System" },
-      { "id": "b", "text": "Dynamic Name Service" },
-      { "id": "c", "text": "Domain Number Service" },
-      { "id": "d", "text": "Direct Network System" }
+      { "id": "a", "text": "let x = 10;" },
+      { "id": "b", "text": "int x = 10;" },
+      { "id": "c", "text": "const x = 10;" },
+      { "id": "d", "text": "variable x = 10;" }
     ],
     "correct": ["a"],
     "multi": false,
-    "explanation": "DNS stands for Domain Name System, which resolves domain names to IP addresses."
+    "explanation": "'let' is used to declare block-scoped variables that can be reassigned. 'const' declares constants that cannot be reassigned. 'int' and 'variable' are not valid keywords."
   },
   {
-    "id": "q1-2",
+    "id": "web-1-2",
     "level": 1,
-    "question": "Which of the following are valid ways to declare a variable in JavaScript?",
+    "question": "What does HTML stand for?",
     "options": [
-      { "id": "a", "text": "var x = 1;" },
-      { "id": "b", "text": "let x = 1;" },
-      { "id": "c", "text": "const x = 1;" },
-      { "id": "d", "text": "int x = 1;" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "JavaScript uses var, let, and const. 'int' is not valid."
-  },
-  {
-    "id": "q1-3",
-    "level": 1,
-    "question": "What is localStorage used for?",
-    "options": [
-      { "id": "a", "text": "Store data in the browser persistently" },
-      { "id": "b", "text": "Store data for a single session only" },
-      { "id": "c", "text": "Store cookies" },
-      { "id": "d", "text": "Store server logs" }
+      { "id": "a", "text": "HyperText Markup Language" },
+      { "id": "b", "text": "High-level Text Machine Language" },
+      { "id": "c", "text": "Hyperlink and Text Markup Language" },
+      { "id": "d", "text": "Home Tool Markup Language" }
     ],
     "correct": ["a"],
     "multi": false,
-    "explanation": "localStorage stores data in the browser with no expiration time."
+    "explanation": "HTML stands for HyperText Markup Language and is the standard markup language for creating web pages."
   },
   {
-    "id": "q1-4",
+    "id": "web-1-3",
     "level": 1,
-    "question": "Which HTTP methods are idempotent?",
+    "question": "What does CSS stand for?",
     "options": [
-      { "id": "a", "text": "GET" },
-      { "id": "b", "text": "POST" },
-      { "id": "c", "text": "PUT" },
-      { "id": "d", "text": "DELETE" },
-      { "id": "e", "text": "PATCH" }
-    ],
-    "correct": ["a", "c", "d"],
-    "multi": true,
-    "explanation": "GET, PUT, DELETE are idempotent; POST and PATCH are not."
-  },
-  {
-    "id": "q1-5",
-    "level": 1,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
-    "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
-  },
-  {
-    "id": "q2-1",
-    "level": 2,
-    "question": "What will happen when you hit a website URL in your browser? (Select all that apply)",
-    "options": [
-      { "id": "a", "text": "DNS resolution" },
-      { "id": "b", "text": "TCP connection" },
-      { "id": "c", "text": "HTTP request sent" },
-      { "id": "d", "text": "Browser renders HTML" },
-      { "id": "e", "text": "All of the above" }
-    ],
-    "correct": ["a", "b", "c", "d"],
-    "multi": true,
-    "explanation": "All these steps occur: DNS, TCP, HTTP, then rendering."
-  },
-  {
-    "id": "q2-2",
-    "level": 2,
-    "question": "Which of the following are storage mechanisms in the browser?",
-    "options": [
-      { "id": "a", "text": "localStorage" },
-      { "id": "b", "text": "sessionStorage" },
-      { "id": "c", "text": "cookie" },
-      { "id": "d", "text": "IndexedDB" },
-      { "id": "e", "text": "Redis" }
-    ],
-    "correct": ["a", "b", "c", "d"],
-    "multi": true,
-    "explanation": "Redis is server-side; the rest are browser storage."
-  },
-  {
-    "id": "q2-3",
-    "level": 2,
-    "question": "What is CORS?",
-    "options": [
-      { "id": "a", "text": "Cross-Origin Resource Sharing" },
-      { "id": "b", "text": "Cookie Origin Resource Sharing" },
-      { "id": "c", "text": "Cross-Origin Request Service" },
-      { "id": "d", "text": "None of the above" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "CORS stands for Cross-Origin Resource Sharing."
-  },
-  {
-    "id": "q2-4",
-    "level": 2,
-    "question": "Which HTTP methods are safe (do not modify server state)?",
-    "options": [
-      { "id": "a", "text": "GET" },
-      { "id": "b", "text": "HEAD" },
-      { "id": "c", "text": "POST" },
-      { "id": "d", "text": "PUT" }
-    ],
-    "correct": ["a", "b"],
-    "multi": true,
-    "explanation": "GET and HEAD are safe methods."
-  },
-  {
-    "id": "q2-5",
-    "level": 2,
-    "question": "What is a REST API?",
-    "options": [
-      { "id": "a", "text": "An API that follows Representational State Transfer principles" },
-      { "id": "b", "text": "A database" },
-      { "id": "c", "text": "A UI library" },
-      { "id": "d", "text": "A CSS framework" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "REST API is an API that follows REST architectural style."
-  },
-  {
-    "id": "q3-1",
-    "level": 3,
-    "question": "Which CSS property is used for transitions?",
-    "options": [
-      { "id": "a", "text": "transition" },
-      { "id": "b", "text": "animation" },
-      { "id": "c", "text": "transform" },
-      { "id": "d", "text": "transition-duration" }
-    ],
-    "correct": ["a", "d"],
-    "multi": true,
-    "explanation": "'transition' is the shorthand, 'transition-duration' is a sub-property."
-  },
-  {
-    "id": "q3-2",
-    "level": 3,
-    "question": "What is web accessibility?",
-    "options": [
-      {
-        "id": "a",
-        "text": "Making websites usable for everyone, including people with disabilities"
-      },
-      { "id": "b", "text": "Making websites load faster" },
-      { "id": "c", "text": "Making websites mobile-friendly" },
-      { "id": "d", "text": "None of the above" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "Accessibility means everyone can use the web, including those with disabilities."
-  },
-  {
-    "id": "q3-3",
-    "level": 3,
-    "question": "Which of the following are TypeScript utility types?",
-    "options": [
-      { "id": "a", "text": "Partial" },
-      { "id": "b", "text": "Pick" },
-      { "id": "c", "text": "Omit" },
-      { "id": "d", "text": "All of the above" }
+      { "id": "a", "text": "Creative Style Sheets" },
+      { "id": "b", "text": "Computer Style Sheets" },
+      { "id": "c", "text": "Colorful Style Sheets" },
+      { "id": "d", "text": "Cascading Style Sheets" }
     ],
     "correct": ["d"],
     "multi": false,
-    "explanation": "Partial, Pick, and Omit are all TypeScript utility types."
+    "explanation": "CSS stands for Cascading Style Sheets. It's used to describe the presentation of a document written in a markup language like HTML."
   },
   {
-    "id": "q3-4",
-    "level": 3,
-    "question": "What is the difference between 'any', 'unknown', and 'never' in TypeScript? (Select all that apply)",
+    "id": "node-1-4",
+    "level": 1,
+    "question": "What is Node.js?",
     "options": [
-      { "id": "a", "text": "'any' disables type checking" },
-      { "id": "b", "text": "'unknown' is a safer alternative to 'any'" },
-      { "id": "c", "text": "'never' means a value never occurs" },
-      { "id": "d", "text": "'never' is the same as 'any'" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "'any' disables type checking, 'unknown' is safer, 'never' means no value."
-  },
-  {
-    "id": "q3-5",
-    "level": 3,
-    "question": "What is WCAG?",
-    "options": [
-      { "id": "a", "text": "Web Content Accessibility Guidelines" },
-      { "id": "b", "text": "Web CSS Animation Guide" },
-      { "id": "c", "text": "Web Client API Gateway" },
-      { "id": "d", "text": "None of the above" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "WCAG stands for Web Content Accessibility Guidelines."
-  },
-  {
-    "id": "q4-1",
-    "level": 4,
-    "question": "What is the difference between concurrency and parallelism?",
-    "options": [
-      {
-        "id": "a",
-        "text": "Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
-      },
-      { "id": "b", "text": "They are the same." },
-      { "id": "c", "text": "Concurrency is only in single-threaded systems." },
-      { "id": "d", "text": "Parallelism is only in single-threaded systems." }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "Concurrency is about structure, parallelism is about execution."
-  },
-  {
-    "id": "q4-2",
-    "level": 4,
-    "question": "How do you achieve real-time communication in a chat app? (Select all that apply)",
-    "options": [
-      { "id": "a", "text": "WebSockets" },
-      { "id": "b", "text": "Polling" },
-      { "id": "c", "text": "Server-Sent Events" },
-      { "id": "d", "text": "Email" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "WebSockets, polling, and SSE can all be used for real-time communication."
-  },
-  {
-    "id": "q4-3",
-    "level": 4,
-    "question": "What is incremental static regeneration (ISR) in Next.js?",
-    "options": [
-      {
-        "id": "a",
-        "text": "A way to update static pages after build without rebuilding the whole site"
-      },
-      { "id": "b", "text": "A way to generate CSS" },
-      { "id": "c", "text": "A way to do server-side rendering only" },
-      { "id": "d", "text": "A way to cache API responses" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "ISR allows static pages to be updated after deployment."
-  },
-  {
-    "id": "q4-4",
-    "level": 4,
-    "question": "What is tree-shaking?",
-    "options": [
-      { "id": "a", "text": "A way to remove unused code during bundling" },
-      { "id": "b", "text": "A way to optimize images" },
-      { "id": "c", "text": "A way to minify CSS" },
-      { "id": "d", "text": "A way to shake a tree" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "Tree-shaking removes unused code from bundles."
-  },
-  {
-    "id": "q4-5",
-    "level": 4,
-    "question": "What is the difference between recursion and iteration?",
-    "options": [
-      { "id": "a", "text": "Recursion is a function calling itself; iteration is looping." },
-      { "id": "b", "text": "They are the same." },
-      { "id": "c", "text": "Iteration is only in functional programming." },
-      { "id": "d", "text": "Recursion is only in OOP." }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "Recursion is when a function calls itself; iteration uses loops."
-  },
-  {
-    "id": "q5-1",
-    "level": 5,
-    "question": "What is the output?\n\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
-    "options": [
-      { "id": "a", "text": "Lydia and undefined" },
-      { "id": "b", "text": "Lydia and ReferenceError" },
-      { "id": "c", "text": "ReferenceError and 21" },
-      { "id": "d", "text": "undefined and ReferenceError" }
-    ],
-    "correct": ["d"],
-    "multi": false,
-    "explanation": "'name' is hoisted as undefined, 'age' (let) throws ReferenceError before declaration."
-  },
-  {
-    "id": "q5-2",
-    "level": 5,
-    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
-    "options": [
-      { "id": "a", "text": "margin: 0 auto;" },
-      { "id": "b", "text": "display: flex; justify-content: center;" },
-      { "id": "c", "text": "text-align: center;" },
-      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
-    ],
-    "correct": ["a", "b", "d"],
-    "multi": true,
-    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
-  },
-  {
-    "id": "q5-3",
-    "level": 5,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q5-4",
-    "level": 5,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
-    "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
+      { "id": "a", "text": "A JavaScript framework for front-end development." },
+      { "id": "b", "text": "A web browser." },
+      { "id": "c", "text": "A JavaScript runtime environment for server-side development." },
+      { "id": "d", "text": "A database management system." }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
+    "explanation": "Node.js is a back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
   },
   {
-    "id": "q5-5",
-    "level": 5,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
+    "id": "js-1-5",
+    "level": 1,
+    "question": "How do you write a single-line comment in JavaScript?",
     "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q6-1",
-    "level": 6,
-    "question": "What is the output?\n\nconst shape = { radius: 10, diameter() { return this.radius * 2; }, perimeter: () => 2 * Math.PI * this.radius };\nconsole.log(shape.diameter());\nconsole.log(shape.perimeter());",
-    "options": [
-      { "id": "a", "text": "20 and 62.83185307179586" },
-      { "id": "b", "text": "20 and NaN" },
-      { "id": "c", "text": "20 and 63" },
-      { "id": "d", "text": "NaN and 63" }
+      { "id": "a", "text": "" },
+      { "id": "b", "text": "// This is a comment" },
+      { "id": "c", "text": "/* This is a comment */" },
+      { "id": "d", "text": "# This is a comment" }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "Arrow functions don't bind 'this', so 'perimeter' is NaN."
+    "explanation": "Single-line comments in JavaScript start with `//`. `/* ... */` is for multi-line comments. `` is for HTML, and `#` is for languages like Python."
   },
   {
-    "id": "q6-2",
-    "level": 6,
-    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
+    "id": "js-2-1",
+    "level": 2,
+    "question": "What is the result of `\"5\" == 5` in JavaScript?",
     "options": [
-      { "id": "a", "text": "margin: 0 auto;" },
-      { "id": "b", "text": "display: flex; justify-content: center;" },
-      { "id": "c", "text": "text-align: center;" },
-      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
+      { "id": "a", "text": "true" },
+      { "id": "b", "text": "false" },
+      { "id": "c", "text": "TypeError" },
+      { "id": "d", "text": "undefined" }
     ],
-    "correct": ["a", "b", "d"],
-    "multi": true,
-    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "The `==` operator performs type coercion, converting the string '5' to a number before comparing. The `===` operator would return `false` because it checks for both value and type."
   },
   {
-    "id": "q6-3",
-    "level": 6,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
+    "id": "web-2-2",
+    "level": 2,
+    "question": "Which method is used to get an HTML element by its ID in JavaScript?",
     "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
+      { "id": "a", "text": "document.getElement('myId')" },
+      { "id": "b", "text": "document.querySelector('#myId')" },
+      { "id": "c", "text": "document.getElementsByClassName('myId')" },
+      { "id": "d", "text": "window.getById('myId')" }
     ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`document.querySelector('#myId')` is a modern way to select an element by its ID. `document.getElementById('myId')` is another correct, older method. Option 'b' uses a CSS selector, which is versatile."
   },
   {
-    "id": "q6-4",
-    "level": 6,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
+    "id": "node-2-3",
+    "level": 2,
+    "question": "What is `npm`?",
     "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
+      { "id": "a", "text": "Node Project Manager" },
+      { "id": "b", "text": "Node Package Manager" },
+      { "id": "c", "text": "New Project Manager" },
+      { "id": "d", "text": "Node Programming Module" }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`npm` stands for Node Package Manager. It is the default package manager for Node.js and is used to install and manage dependencies in Node.js projects."
+  },
+  {
+    "id": "sd-2-4",
+    "level": 2,
+    "question": "In web architecture, what is a 'client'?",
+    "options": [
+      { "id": "a", "text": "The computer that stores the website's files." },
+      {
+        "id": "b",
+        "text": "The software or hardware that requests services from a server, like a web browser."
+      },
+      { "id": "c", "text": "The database where user information is stored." },
+      { "id": "d", "text": "The network connection between a user and the internet." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "A client is an application or system that accesses a service made available by a server. In web development, the most common client is a web browser."
+  },
+  {
+    "id": "js-2-5",
+    "level": 2,
+    "question": "Which of the following correctly defines a function in JavaScript?",
+    "options": [
+      { "id": "a", "text": "function myFunction() { ... }" },
+      { "id": "b", "text": "const myFunction = () => { ... };" },
+      { "id": "c", "text": "def myFunction(): ..." },
+      { "id": "d", "text": "method myFunction() { ... }" }
+    ],
+    "correct": ["a", "b"],
+    "multi": true,
+    "explanation": "JavaScript supports both traditional function declarations (function keyword) and arrow function expressions. 'def' is used in Python, and 'method' is not a keyword for defining functions."
+  },
+  {
+    "id": "web-3-1",
+    "level": 3,
+    "question": "Which HTTP method is typically used to request data from a server?",
+    "options": [
+      { "id": "a", "text": "POST" },
+      { "id": "b", "text": "GET" },
+      { "id": "c", "text": "PUT" },
+      { "id": "d", "text": "DELETE" }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The `GET` method is used to request data from a specified resource. It should not be used for operations that cause side-effects on the server."
+  },
+  {
+    "id": "node-3-2",
+    "level": 3,
+    "question": "How do you include a module in a Node.js file (using CommonJS syntax)?",
+    "options": [
+      { "id": "a", "text": "import fs from 'fs';" },
+      { "id": "b", "text": "#include <fs>" },
+      { "id": "c", "text": "const fs = require('fs');" },
+      { "id": "d", "text": "using fs;" }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
+    "explanation": "In CommonJS, which is the traditional module system in Node.js, the `require` function is used to import modules. `import` is used in ES Modules (ESM)."
   },
   {
-    "id": "q6-5",
-    "level": 6,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
+    "id": "js-3-3",
+    "level": 3,
+    "question": "What will `console.log(typeof [1, 2, 3]);` output?",
     "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
+      { "id": "a", "text": "'array'" },
+      { "id": "b", "text": "'object'" },
+      { "id": "c", "text": "'array_object'" },
+      { "id": "d", "text": "'list'" }
     ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "In JavaScript, arrays are a special type of object. Therefore, the `typeof` operator returns 'object' for arrays."
   },
   {
-    "id": "q7-1",
-    "level": 7,
-    "question": "What is the output?\n\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
+    "id": "sd-3-4",
+    "level": 3,
+    "question": "What is the primary purpose of a database?",
     "options": [
-      { "id": "a", "text": "Lydia and undefined" },
-      { "id": "b", "text": "Lydia and ReferenceError" },
-      { "id": "c", "text": "ReferenceError and 21" },
-      { "id": "d", "text": "undefined and ReferenceError" }
+      { "id": "a", "text": "To execute application logic." },
+      { "id": "b", "text": "To style the user interface." },
+      { "id": "c", "text": "To store, retrieve, and manage data efficiently." },
+      { "id": "d", "text": "To handle network requests." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "A database is an organized collection of data, generally stored and accessed electronically from a computer system. Its primary purpose is to manage data."
+  },
+  {
+    "id": "js-3-5",
+    "level": 3,
+    "question": "How can you add an element to the end of an array named `myArray`?",
+    "options": [
+      { "id": "a", "text": "myArray.add('newElement');" },
+      { "id": "b", "text": "myArray.append('newElement');" },
+      { "id": "c", "text": "myArray.push('newElement');" },
+      { "id": "d", "text": "myArray[myArray.length] = 'newElement';" }
+    ],
+    "correct": ["c", "d"],
+    "multi": true,
+    "explanation": "The `push()` method is the standard way to add an element to the end of an array. Assigning a value to the index equal to the array's length also works but is less common."
+  },
+  {
+    "id": "js-4-1",
+    "level": 4,
+    "question": "What is variable scope in JavaScript?",
+    "options": [
+      { "id": "a", "text": "The data type of a variable." },
+      { "id": "b", "text": "The context in which a variable is accessible." },
+      { "id": "c", "text": "The maximum value a variable can hold." },
+      { "id": "d", "text": "A special object containing all global variables." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Scope determines the accessibility (visibility) of variables. JavaScript has global scope, function scope, and block scope (with `let` and `const`)."
+  },
+  {
+    "id": "web-4-2",
+    "level": 4,
+    "question": "What is a REST API?",
+    "options": [
+      { "id": "a", "text": "A specific software library for making API calls." },
+      { "id": "b", "text": "A programming language for servers." },
+      { "id": "c", "text": "An architectural style for designing networked applications." },
+      { "id": "d", "text": "A protocol for secure data transfer." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "REST (Representational State Transfer) is an architectural style that defines a set of constraints to be used for creating web services. It's not a protocol or a library."
+  },
+  {
+    "id": "node-4-3",
+    "level": 4,
+    "question": "What is the purpose of the `package.json` file?",
+    "options": [
+      { "id": "a", "text": "It contains the main Node.js application code." },
+      { "id": "b", "text": "It is a log file generated by npm." },
+      { "id": "c", "text": "It holds metadata about the project and its dependencies." },
+      { "id": "d", "text": "It is a configuration file for the Node.js runtime." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The `package.json` file is the heart of a Node.js project. It records project metadata (name, version, license) and lists the packages it depends on."
+  },
+  {
+    "id": "sd-4-4",
+    "level": 4,
+    "question": "What is a key difference between SQL and NoSQL databases?",
+    "options": [
+      { "id": "a", "text": "SQL is for web applications, NoSQL is for mobile applications." },
+      {
+        "id": "b",
+        "text": "SQL databases are relational (table-based), while NoSQL databases are non-relational (document, key-value, etc.)."
+      },
+      { "id": "c", "text": "SQL is free, while NoSQL databases require a license." },
+      { "id": "d", "text": "SQL uses JavaScript for queries, NoSQL uses Python." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The primary distinction is their data model. SQL databases use a structured schema with tables and rows (relational), whereas NoSQL databases have flexible schemas and use various models like document, key-value, or graph."
+  },
+  {
+    "id": "js-4-5",
+    "level": 4,
+    "question": "What does the `this` keyword refer to in a global context (outside any function)?",
+    "options": [
+      { "id": "a", "text": "The `document` object" },
+      { "id": "b", "text": "The `window` object (in browsers)" },
+      { "id": "c", "text": "`null`" },
+      { "id": "d", "text": "The `Math` object" }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "In the global execution context (outside any function), `this` refers to the global object. In a web browser environment, the global object is `window`."
+  },
+  {
+    "id": "js-5-1",
+    "level": 5,
+    "question": "What is a 'callback function' in JavaScript?",
+    "options": [
+      { "id": "a", "text": "A function that is called automatically when the script loads." },
+      {
+        "id": "b",
+        "text": "A function passed as an argument to another function, to be executed later."
+      },
+      { "id": "c", "text": "A function that can only be called once." },
+      { "id": "d", "text": "A function that returns another function." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. It's a cornerstone of asynchronous programming in JS."
+  },
+  {
+    "id": "node-5-2",
+    "level": 5,
+    "question": "Which `fs` module method is used to read a file asynchronously in Node.js?",
+    "options": [
+      { "id": "a", "text": "fs.readFileSync()" },
+      { "id": "b", "text": "fs.read()" },
+      { "id": "c", "text": "fs.readFile()" },
+      { "id": "d", "text": "fs.openFileAsync()" }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "`fs.readFile()` reads a file asynchronously and invokes a callback function when done. `fs.readFileSync()` is its synchronous counterpart, which blocks execution until the file is read."
+  },
+  {
+    "id": "js-5-3",
+    "level": 5,
+    "question": "A JavaScript `Promise` can be in one of three states. What are they?",
+    "options": [
+      { "id": "a", "text": "pending, fulfilled, rejected" },
+      { "id": "b", "text": "waiting, complete, error" },
+      { "id": "c", "text": "started, running, finished" },
+      { "id": "d", "text": "async, await, done" }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "A `Promise` starts in the `pending` state, and from there can transition to either the `fulfilled` state (representing success) or the `rejected` state (representing failure)."
+  },
+  {
+    "id": "node-5-4",
+    "level": 5,
+    "question": "What is Express.js?",
+    "options": [
+      { "id": "a", "text": "A database for Node.js." },
+      { "id": "b", "text": "A template engine." },
+      { "id": "c", "text": "A core module built into Node.js." },
+      { "id": "d", "text": "A minimal and flexible Node.js web application framework." }
     ],
     "correct": ["d"],
     "multi": false,
-    "explanation": "'name' is hoisted as undefined, 'age' (let) throws ReferenceError before declaration."
+    "explanation": "Express.js is a popular, unopinionated web framework for Node.js, used to build web applications and APIs. It is not part of the Node.js core."
   },
   {
-    "id": "q7-2",
-    "level": 7,
-    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
+    "id": "sd-5-5",
+    "level": 5,
+    "question": "In system design, what is caching?",
     "options": [
-      { "id": "a", "text": "margin: 0 auto;" },
-      { "id": "b", "text": "display: flex; justify-content: center;" },
-      { "id": "c", "text": "text-align: center;" },
-      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
+      { "id": "a", "text": "The process of encrypting data." },
+      {
+        "id": "b",
+        "text": "Storing copies of files or data in a temporary storage location so they can be accessed more quickly."
+      },
+      { "id": "c", "text": "Distributing network traffic across multiple servers." },
+      { "id": "d", "text": "A method for securing APIs." }
     ],
-    "correct": ["a", "b", "d"],
-    "multi": true,
-    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
-  },
-  {
-    "id": "q7-3",
-    "level": 7,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q7-4",
-    "level": 7,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
-    "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
-    ],
-    "correct": ["c"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
+    "explanation": "Caching involves storing frequently accessed data closer to the user (e.g., in a browser cache or a CDN) to reduce latency, server load, and network traffic."
   },
   {
-    "id": "q7-5",
-    "level": 7,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
+    "id": "js-6-1",
+    "level": 6,
+    "question": "What is the primary benefit of using `async/await` syntax?",
     "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
+      { "id": "a", "text": "It makes asynchronous code execute faster." },
+      {
+        "id": "b",
+        "text": "It allows you to write asynchronous code that looks and behaves more like synchronous code."
+      },
+      { "id": "c", "text": "It is the only way to handle errors in asynchronous operations." },
+      { "id": "d", "text": "It removes the need for Promises entirely." }
     ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q8-1",
-    "level": 8,
-    "question": "What is the output?\n\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
-    "options": [
-      { "id": "a", "text": "Lydia and undefined" },
-      { "id": "b", "text": "Lydia and ReferenceError" },
-      { "id": "c", "text": "ReferenceError and 21" },
-      { "id": "d", "text": "undefined and ReferenceError" }
-    ],
-    "correct": ["d"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "'name' is hoisted as undefined, 'age' (let) throws ReferenceError before declaration."
+    "explanation": "`async/await` is syntactic sugar built on top of Promises. It makes asynchronous, promise-based code easier to write and read by avoiding long `.then()` chains."
   },
   {
-    "id": "q8-2",
-    "level": 8,
-    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
+    "id": "node-6-2",
+    "level": 6,
+    "question": "What is middleware in the context of Express.js?",
     "options": [
-      { "id": "a", "text": "margin: 0 auto;" },
-      { "id": "b", "text": "display: flex; justify-content: center;" },
-      { "id": "c", "text": "text-align: center;" },
-      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
+      { "id": "a", "text": "Software that connects the database to the server." },
+      {
+        "id": "b",
+        "text": "Functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle."
+      },
+      { "id": "c", "text": "A special type of route handler for the root URL." },
+      { "id": "d", "text": "A tool for managing npm packages." }
     ],
-    "correct": ["a", "b", "d"],
-    "multi": true,
-    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
-  },
-  {
-    "id": "q8-3",
-    "level": 8,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q8-4",
-    "level": 8,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
-    "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
-    ],
-    "correct": ["c"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
+    "explanation": "Middleware functions are a core concept in Express. They can execute code, make changes to the request and response objects, and end the cycle or pass control to the next middleware."
   },
   {
-    "id": "q8-5",
-    "level": 8,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q9-1",
-    "level": 9,
-    "question": "What is the output?\n\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
-    "options": [
-      { "id": "a", "text": "Lydia and undefined" },
-      { "id": "b", "text": "Lydia and ReferenceError" },
-      { "id": "c", "text": "ReferenceError and 21" },
-      { "id": "d", "text": "undefined and ReferenceError" }
-    ],
-    "correct": ["d"],
-    "multi": false,
-    "explanation": "'name' is hoisted as undefined, 'age' (let) throws ReferenceError before declaration."
-  },
-  {
-    "id": "q9-2",
-    "level": 9,
-    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
-    "options": [
-      { "id": "a", "text": "margin: 0 auto;" },
-      { "id": "b", "text": "display: flex; justify-content: center;" },
-      { "id": "c", "text": "text-align: center;" },
-      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
-    ],
-    "correct": ["a", "b", "d"],
-    "multi": true,
-    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
-  },
-  {
-    "id": "q9-3",
-    "level": 9,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q9-4",
-    "level": 9,
-    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
-    "options": [
-      { "id": "a", "text": "1 1 2" },
-      { "id": "b", "text": "1 2 2" },
-      { "id": "c", "text": "0 2 2" },
-      { "id": "d", "text": "0 1 2" }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
-  },
-  {
-    "id": "q9-5",
-    "level": 9,
-    "question": "Which of the following are valid HTTP status codes for a successful response?",
-    "options": [
-      { "id": "a", "text": "200" },
-      { "id": "b", "text": "201" },
-      { "id": "c", "text": "204" },
-      { "id": "d", "text": "400" }
-    ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "200, 201, 204 are successful; 400 is client error."
-  },
-  {
-    "id": "q10-1",
-    "level": 10,
-    "question": "What is the difference between concurrency and parallelism?",
+    "id": "sd-6-3",
+    "level": 6,
+    "question": "What is the difference between vertical and horizontal scaling?",
     "options": [
       {
         "id": "a",
-        "text": "Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
+        "text": "Vertical scaling adds more machines, while horizontal scaling increases the resources (CPU, RAM) of a single machine."
       },
-      { "id": "b", "text": "They are the same." },
-      { "id": "c", "text": "Concurrency is only in single-threaded systems." },
-      { "id": "d", "text": "Parallelism is only in single-threaded systems." }
+      {
+        "id": "b",
+        "text": "Vertical scaling increases the resources (CPU, RAM) of a single machine, while horizontal scaling adds more machines to the system."
+      },
+      {
+        "id": "c",
+        "text": "Vertical scaling is for databases, horizontal scaling is for web servers."
+      },
+      { "id": "d", "text": "There is no difference; they are interchangeable terms." }
     ],
-    "correct": ["a"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "Concurrency is about structure, parallelism is about execution."
+    "explanation": "Vertical scaling (scaling up) means increasing the capacity of a single server. Horizontal scaling (scaling out) means adding more servers to your pool of resources."
   },
   {
-    "id": "q10-2",
-    "level": 10,
-    "question": "How do you achieve real-time communication in a chat app? (Select all that apply)",
+    "id": "js-6-4",
+    "level": 6,
+    "question": "What is the JavaScript `prototype` chain?",
     "options": [
-      { "id": "a", "text": "WebSockets" },
-      { "id": "b", "text": "Polling" },
-      { "id": "c", "text": "Server-Sent Events" },
-      { "id": "d", "text": "Email" }
+      { "id": "a", "text": "A list of all methods available on an object." },
+      {
+        "id": "b",
+        "text": "A mechanism for one object to inherit properties and methods from another object."
+      },
+      { "id": "c", "text": "An array that holds the object's parent and child elements." },
+      { "id": "d", "text": "A security feature to prevent object modification." }
     ],
-    "correct": ["a", "b", "c"],
-    "multi": true,
-    "explanation": "WebSockets, polling, and SSE can all be used for real-time communication."
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "When trying to access a property on an object, if it's not found on the object itself, the JavaScript engine looks at the object's prototype, then the prototype's prototype, and so on, until the property is found or the chain ends at `null`."
   },
   {
-    "id": "q10-3",
-    "level": 10,
-    "question": "What is incremental static regeneration (ISR) in Next.js?",
+    "id": "web-6-5",
+    "level": 6,
+    "question": "What is the key difference between `localStorage` and `sessionStorage`?",
+    "options": [
+      { "id": "a", "text": "`localStorage` is faster than `sessionStorage`." },
+      { "id": "b", "text": "`localStorage` can store more data than `sessionStorage`." },
+      {
+        "id": "c",
+        "text": "`localStorage` data persists even after the browser is closed and reopened, while `sessionStorage` data is cleared when the page session ends."
+      },
+      { "id": "d", "text": "`localStorage` is secure, while `sessionStorage` is not." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The main difference is persistence. `localStorage` data has no expiration time. `sessionStorage` data gets cleared when the page session ends (when the browser tab is closed)."
+  },
+  {
+    "id": "js-7-1",
+    "level": 7,
+    "question": "What is a closure in JavaScript?",
+    "options": [
+      { "id": "a", "text": "The final `return` statement in a function." },
+      { "id": "b", "text": "An object that contains all global variables." },
+      { "id": "c", "text": "A function that has been executed and is no longer in memory." },
+      {
+        "id": "d",
+        "text": "A function's ability to remember and access its lexical scope even when that function is executing outside its lexical scope."
+      }
+    ],
+    "correct": ["d"],
+    "multi": false,
+    "explanation": "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). It gives you access to an outer function's scope from an inner function."
+  },
+  {
+    "id": "sd-7-2",
+    "level": 7,
+    "question": "What is the primary function of a Load Balancer?",
+    "options": [
+      { "id": "a", "text": "To cache static assets like images and CSS." },
+      { "id": "b", "text": "To encrypt traffic between the client and the server." },
+      {
+        "id": "c",
+        "text": "To distribute incoming network traffic across multiple backend servers."
+      },
+      { "id": "d", "text": "To serve as a primary database for an application." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "A load balancer acts as a reverse proxy and distributes network or application traffic across a number of servers to improve reliability, availability, and performance."
+  },
+  {
+    "id": "node-7-3",
+    "level": 7,
+    "question": "In Node.js, what is the Event Loop?",
+    "options": [
+      { "id": "a", "text": "A `for` loop that listens for DOM events." },
+      {
+        "id": "b",
+        "text": "A security mechanism that loops through requests to check for malicious code."
+      },
+      {
+        "id": "c",
+        "text": "A design pattern that allows a single thread to handle many concurrent operations by offloading I/O to system kernels."
+      },
+      { "id": "d", "text": "A built-in function for creating custom events." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The event loop is what allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded. It offloads operations and runs their callbacks on the main thread when they are complete."
+  },
+  {
+    "id": "web-7-4",
+    "level": 7,
+    "question": "What is CORS (Cross-Origin Resource Sharing)?",
+    "options": [
+      { "id": "a", "text": "A JavaScript library for styling web pages." },
+      {
+        "id": "b",
+        "text": "A security mechanism that restricts how a resource on a different origin (domain, protocol, or port) can be requested."
+      },
+      { "id": "c", "text": "A data compression technique for faster web loading." },
+      { "id": "d", "text": "A protocol for real-time, bi-directional communication." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "CORS is an HTTP-header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading of resources."
+  },
+  {
+    "id": "node-7-5",
+    "level": 7,
+    "question": "What is a Stream in Node.js?",
+    "options": [
+      { "id": "a", "text": "A live video feed API." },
+      { "id": "b", "text": "A collection of data, similar to an array but with a fixed size." },
+      {
+        "id": "c",
+        "text": "Objects that let you read data from a source or write data to a destination in continuous chunks, without keeping it all in memory."
+      },
+      {
+        "id": "d",
+        "text": "A specific type of Promise for handling multiple asynchronous results."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Streams are a fundamental concept in Node.js for handling I/O. They enable processing large amounts of data piece-by-piece, making them very memory efficient."
+  },
+  {
+    "id": "sd-8-1",
+    "level": 8,
+    "question": "What is the primary difference between a monolithic and a microservices architecture?",
+    "options": [
+      { "id": "a", "text": "Monoliths are for front-end, microservices are for back-end." },
+      {
+        "id": "b",
+        "text": "A monolith is a single, unified application, while microservices structure an application as a collection of loosely coupled, independently deployable services."
+      },
+      { "id": "c", "text": "Monoliths use SQL databases, microservices use NoSQL databases." },
+      {
+        "id": "d",
+        "text": "Monoliths are written in one language, while microservices must be written in multiple languages."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The core idea of microservices is to break down a large application into smaller, manageable, and independent services. A monolith, in contrast, is built as a single, indivisible unit."
+  },
+  {
+    "id": "js-8-2",
+    "level": 8,
+    "question": "What is the purpose of the `Array.prototype.reduce()` method?",
     "options": [
       {
         "id": "a",
-        "text": "A way to update static pages after build without rebuilding the whole site"
+        "text": "To create a new array with the results of calling a provided function on every element."
       },
-      { "id": "b", "text": "A way to generate CSS" },
-      { "id": "c", "text": "A way to do server-side rendering only" },
-      { "id": "d", "text": "A way to cache API responses" }
+      {
+        "id": "b",
+        "text": "To execute a function for each array element and reduce the array to a single output value."
+      },
+      { "id": "c", "text": "To filter the array elements based on a condition." },
+      { "id": "d", "text": "To reduce the amount of memory the array uses." }
     ],
-    "correct": ["a"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "ISR allows static pages to be updated after deployment."
+    "explanation": "The `reduce()` method applies a 'reducer' function against an accumulator and each element in the array (from left-to-right) to reduce it to a single value."
   },
   {
-    "id": "q10-4",
-    "level": 10,
-    "question": "What is tree-shaking?",
+    "id": "web-8-3",
+    "level": 8,
+    "question": "When would you prefer WebSockets over traditional HTTP?",
     "options": [
-      { "id": "a", "text": "A way to remove unused code during bundling" },
-      { "id": "b", "text": "A way to optimize images" },
-      { "id": "c", "text": "A way to minify CSS" },
-      { "id": "d", "text": "A way to shake a tree" }
+      { "id": "a", "text": "For retrieving static content like a web page." },
+      { "id": "b", "text": "For submitting a form that only needs to be sent once." },
+      {
+        "id": "c",
+        "text": "For applications requiring low-latency, real-time, bi-directional communication."
+      },
+      { "id": "d", "text": "For making a one-time request to a REST API." }
     ],
-    "correct": ["a"],
+    "correct": ["c"],
     "multi": false,
-    "explanation": "Tree-shaking removes unused code from bundles."
+    "explanation": "WebSockets maintain a persistent connection between client and server, allowing for full-duplex (bi-directional) communication. This is ideal for applications like chat apps, online gaming, and live sports tickers."
   },
   {
-    "id": "q10-5",
-    "level": 10,
-    "question": "What is the difference between recursion and iteration?",
+    "id": "node-8-4",
+    "level": 8,
+    "question": "How can you handle uncaught exceptions in a Node.js application to prevent it from crashing?",
     "options": [
-      { "id": "a", "text": "Recursion is a function calling itself; iteration is looping." },
-      { "id": "b", "text": "They are the same." },
-      { "id": "c", "text": "Iteration is only in functional programming." },
-      { "id": "d", "text": "Recursion is only in OOP." }
+      { "id": "a", "text": "By wrapping the entire application in a single `try...catch` block." },
+      {
+        "id": "b",
+        "text": "Using `process.on('uncaughtException', (err) => { ... });` to listen for the event globally."
+      },
+      { "id": "c", "text": "Node.js applications cannot crash from uncaught exceptions." },
+      { "id": "d", "text": "By deleting the `node_modules` folder." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "While it's best to handle errors where they occur, the `process.on('uncaughtException', ...)` event can be used as a last resort to log the error and perform a graceful shutdown, though it's not recommended to resume normal operation after it."
+  },
+  {
+    "id": "js-8-5",
+    "level": 8,
+    "question": "What are higher-order functions in JavaScript?",
+    "options": [
+      { "id": "a", "text": "Functions that use a lot of CPU resources." },
+      { "id": "b", "text": "Functions that are defined using the `class` keyword." },
+      {
+        "id": "c",
+        "text": "Functions that operate on other functions, either by taking them as arguments or by returning them."
+      },
+      {
+        "id": "d",
+        "text": "Functions that are built-in to the JavaScript language, like `Math.max()`."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "A function that receives another function as an argument or returns a function is known as a higher-order function. Examples include `map`, `filter`, `reduce`, and `setTimeout`."
+  },
+  {
+    "id": "sd-9-1",
+    "level": 9,
+    "question": "What is an API Gateway?",
+    "options": [
+      { "id": "a", "text": "A physical server that hosts all APIs." },
+      {
+        "id": "b",
+        "text": "A management tool that sits between a client and a collection of backend services, acting as a reverse proxy to accept all API calls."
+      },
+      { "id": "c", "text": "A client-side library for making API requests." },
+      { "id": "d", "text": "A security standard for APIs, similar to OAuth." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "An API Gateway is a common pattern in microservices architecture. It provides a single, unified entry point for all clients and can handle tasks like routing, authentication, rate limiting, and logging."
+  },
+  {
+    "id": "js-9-2",
+    "level": 9,
+    "question": "What is the difference between `Promise.all()` and `Promise.race()`?",
+    "options": [
+      {
+        "id": "a",
+        "text": "`Promise.all` resolves when all promises resolve, while `Promise.race` resolves as soon as any one of the promises resolves or rejects."
+      },
+      {
+        "id": "b",
+        "text": "`Promise.all` is for an array of promises, `Promise.race` is for a single promise."
+      },
+      {
+        "id": "c",
+        "text": "`Promise.all` returns a single value, `Promise.race` returns an array of values."
+      },
+      { "id": "d", "text": "There is no functional difference; they are aliases." }
     ],
     "correct": ["a"],
     "multi": false,
-    "explanation": "Recursion is when a function calls itself; iteration uses loops."
+    "explanation": "`Promise.all` is used when you need to wait for multiple asynchronous operations to complete. `Promise.race` is used when you only care about the first promise to settle (either fulfill or reject)."
+  },
+  {
+    "id": "node-9-3",
+    "level": 9,
+    "question": "What is the role of `libuv` in the Node.js architecture?",
+    "options": [
+      { "id": "a", "text": "It is the JavaScript engine that executes the JS code." },
+      {
+        "id": "b",
+        "text": "It is a C library that provides the event loop and handles asynchronous I/O operations."
+      },
+      { "id": "c", "text": "It is the package manager for Node.js." },
+      { "id": "d", "text": "It is a built-in module for creating web servers." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Node.js's non-blocking nature is powered by `libuv`, a multi-platform C library that handles the event loop, worker threads, and all the asynchronous I/O operations, abstracting away the differences between operating systems."
+  },
+  {
+    "id": "sd-9-4",
+    "level": 9,
+    "question": "What is the primary purpose of database indexing?",
+    "options": [
+      { "id": "a", "text": "To reduce the physical storage size of the database." },
+      { "id": "b", "text": "To encrypt sensitive data within the database tables." },
+      { "id": "c", "text": "To provide a backup of the database tables." },
+      {
+        "id": "d",
+        "text": "To speed up the performance of data retrieval operations on a database table."
+      }
+    ],
+    "correct": ["d"],
+    "multi": false,
+    "explanation": "An index is a data structure that improves the speed of data retrieval operations at the cost of additional writes and storage space. It allows the database to find data without searching every row."
+  },
+  {
+    "id": "js-9-5",
+    "level": 9,
+    "question": "What is the difference between microtasks and macrotasks in the context of the JavaScript Event Loop?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Microtasks are higher priority and are always executed before the next macrotask."
+      },
+      {
+        "id": "b",
+        "text": "Macrotasks are for I/O operations, while microtasks are for UI rendering."
+      },
+      { "id": "c", "text": "Microtasks and macrotasks are two names for the same concept." },
+      { "id": "d", "text": "Macrotasks are synchronous, while microtasks are asynchronous." }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "The event loop has two task queues. Macrotasks (like `setTimeout`, `setInterval`) are handled in one queue. Microtasks (like `Promise.then()`, `process.nextTick`) have a separate, higher-priority queue. All microtasks in the queue are executed before the event loop processes the next macrotask."
+  },
+  {
+    "id": "sd-10-1",
+    "level": 10,
+    "question": "What does the CAP theorem state in distributed systems?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A distributed system can be Correct, Available, and Performant all at once."
+      },
+      {
+        "id": "b",
+        "text": "It is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees: Consistency, Availability, and Partition Tolerance."
+      },
+      {
+        "id": "c",
+        "text": "All data in a distributed system must be Consistent And Protected (CAP)."
+      },
+      {
+        "id": "d",
+        "text": "The capacity of a system is limited by its CPU, Access time, and Power."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The CAP theorem is a fundamental principle in distributed system design. It forces architects to make a tradeoff between Consistency (all nodes see the same data at the same time) and Availability (every request receives a response) in the presence of a Network Partition."
+  },
+  {
+    "id": "node-10-2",
+    "level": 10,
+    "question": "What is a `Buffer` in Node.js and why is it used?",
+    "options": [
+      { "id": "a", "text": "A cache to store frequently accessed data in memory." },
+      {
+        "id": "b",
+        "text": "A class that provides a way of handling streams of binary data directly in memory."
+      },
+      { "id": "c", "text": "A temporary holding area for Promises waiting to be resolved." },
+      { "id": "d", "text": "A security feature to prevent buffer overflow attacks." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "JavaScript traditionally doesn't handle binary data well. `Buffer` is a Node.js specific class that allows for interaction with octet streams in contexts like TCP streams, file system operations, etc., without needing to convert to other formats."
+  },
+  {
+    "id": "sd-10-3",
+    "level": 10,
+    "question": "What is database sharding?",
+    "options": [
+      { "id": "a", "text": "A technique for encrypting a database." },
+      {
+        "id": "b",
+        "text": "The process of breaking up a large database into smaller, faster, more easily managed parts called shards."
+      },
+      { "id": "c", "text": "A method of creating indexes for a database." },
+      { "id": "d", "text": "A way to replicate a database across multiple geographic locations." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Sharding is a type of horizontal partitioning where rows of a database table are held separately, on different servers. It's a scaling technique used when a single database server can no longer handle the load."
+  },
+  {
+    "id": "js-10-4",
+    "level": 10,
+    "question": "How does JavaScript's garbage collection work at a high level?",
+    "options": [
+      {
+        "id": "a",
+        "text": "It requires the developer to manually allocate and deallocate memory."
+      },
+      {
+        "id": "b",
+        "text": "It uses a reference-counting algorithm to immediately free memory when an object has no references."
+      },
+      {
+        "id": "c",
+        "text": "It primarily uses a mark-and-sweep algorithm to periodically find and free unreachable objects."
+      },
+      {
+        "id": "d",
+        "text": "JavaScript does not have garbage collection; memory leaks are impossible."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Modern JavaScript engines use a 'mark-and-sweep' garbage collection algorithm. It periodically traverses the object graph starting from root objects (like the global object) and marks all reachable objects. In the 'sweep' phase, it frees the memory of all unmarked (unreachable) objects."
+  },
+  {
+    "id": "sd-10-5",
+    "level": 10,
+    "question": "What is the role of a Message Queue (like RabbitMQ or Kafka) in a distributed system?",
+    "options": [
+      { "id": "a", "text": "To act as a primary data store, replacing a traditional database." },
+      {
+        "id": "b",
+        "text": "To enable asynchronous communication between different services, improving scalability and decoupling."
+      },
+      { "id": "c", "text": "To cache API responses and reduce latency." },
+      { "id": "d", "text": "To manage user authentication and authorization tokens." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "A message queue is a form of asynchronous service-to-service communication used in serverless and microservices architectures. It allows services to communicate without being directly connected, improving fault tolerance and scalability by buffering requests."
   }
 ]
