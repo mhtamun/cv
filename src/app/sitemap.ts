@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
 
+// Required for SSG with output: export
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const currentDate = new Date();
@@ -27,13 +30,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Fetch dynamic content and add to sitemap
   try {
-    const posts = await fetchBlogPosts() // Your data fetching function
-    const dynamicPages = posts.map(post => ({
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(post.updatedAt),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
+    const posts = await fetchBlogPosts() // your data fetching method
+    posts.forEach((post) => {
+      dynamicPages.push({
+        url: `${baseUrl}/blog/${post.slug}`,
+        lastModified: new Date(post.updatedAt),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      })
+    })
   } catch (error) {
     console.error('Error fetching dynamic pages for sitemap:', error)
   }
@@ -41,6 +46,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
-    // ...dynamicPages, // Uncomment when you have dynamic pages
+    // ...dynamicPages, // uncomment when you have dynamic pages
   ];
 }
