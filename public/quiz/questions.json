@@ -1,0 +1,143 @@
+[
+  {
+    "id": "q1",
+    "level": 1,
+    "question": "What's the output?\n\nfunction sayHi() {\n  console.log(name);\n  console.log(age);\n  var name = 'Lydia';\n  let age = 21;\n}\n\nsayHi();",
+    "options": [
+      { "id": "a", "text": "Lydia and undefined" },
+      { "id": "b", "text": "Lydia and ReferenceError" },
+      { "id": "c", "text": "ReferenceError and 21" },
+      { "id": "d", "text": "undefined and ReferenceError" }
+    ],
+    "correct": ["d"],
+    "multi": false,
+    "explanation": "'name' is hoisted as undefined, 'age' (let) throws ReferenceError before declaration."
+  },
+  {
+    "id": "q2",
+    "level": 1,
+    "question": "Which of the following are valid ways to declare a variable in JavaScript?",
+    "options": [
+      { "id": "a", "text": "var x = 1;" },
+      { "id": "b", "text": "let x = 1;" },
+      { "id": "c", "text": "const x = 1;" },
+      { "id": "d", "text": "int x = 1;" }
+    ],
+    "correct": ["a", "b", "c"],
+    "multi": true,
+    "explanation": "JavaScript uses var, let, and const. 'int' is not valid."
+  },
+  {
+    "id": "q3",
+    "level": 2,
+    "question": "What is the output of the following code?\n\nfor (var i = 0; i < 3; i++) { setTimeout(() => console.log(i), 1); }\nfor (let i = 0; i < 3; i++) { setTimeout(() => console.log(i), 1); }",
+    "options": [
+      { "id": "a", "text": "0 1 2 and 0 1 2" },
+      { "id": "b", "text": "0 1 2 and 3 3 3" },
+      { "id": "c", "text": "3 3 3 and 0 1 2" }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "'var' is function-scoped, so all timeouts log 3. 'let' is block-scoped, so logs 0 1 2."
+  },
+  {
+    "id": "q4",
+    "level": 2,
+    "question": "Which HTML elements are semantic?",
+    "options": [
+      { "id": "a", "text": "<section>" },
+      { "id": "b", "text": "<div>" },
+      { "id": "c", "text": "<article>" },
+      { "id": "d", "text": "<span>" },
+      { "id": "e", "text": "<header>" }
+    ],
+    "correct": ["a", "c", "e"],
+    "multi": true,
+    "explanation": "section, article, header are semantic; div and span are not."
+  },
+  {
+    "id": "q5",
+    "level": 3,
+    "question": "Which of the following CSS selectors will select all <p> elements inside a <div>?",
+    "options": [
+      { "id": "a", "text": "div p" },
+      { "id": "b", "text": "div > p" },
+      { "id": "c", "text": "div + p" },
+      { "id": "d", "text": "div ~ p" }
+    ],
+    "correct": ["a", "b"],
+    "multi": true,
+    "explanation": "'div p' selects all descendants, 'div > p' selects direct children."
+  },
+  {
+    "id": "q6",
+    "level": 3,
+    "question": "What is the output?\n\nconst shape = { radius: 10, diameter() { return this.radius * 2; }, perimeter: () => 2 * Math.PI * this.radius };\nconsole.log(shape.diameter());\nconsole.log(shape.perimeter());",
+    "options": [
+      { "id": "a", "text": "20 and 62.83185307179586" },
+      { "id": "b", "text": "20 and NaN" },
+      { "id": "c", "text": "20 and 63" },
+      { "id": "d", "text": "NaN and 63" }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Arrow functions don't bind 'this', so 'perimeter' is NaN."
+  },
+  {
+    "id": "q7",
+    "level": 4,
+    "question": "Which HTTP methods are idempotent?",
+    "options": [
+      { "id": "a", "text": "GET" },
+      { "id": "b", "text": "POST" },
+      { "id": "c", "text": "PUT" },
+      { "id": "d", "text": "DELETE" },
+      { "id": "e", "text": "PATCH" }
+    ],
+    "correct": ["a", "c", "d"],
+    "multi": true,
+    "explanation": "GET, PUT, DELETE are idempotent; POST and PATCH are not."
+  },
+  {
+    "id": "q8",
+    "level": 4,
+    "question": "Which of the following are valid ways to center a div horizontally in CSS?",
+    "options": [
+      { "id": "a", "text": "margin: 0 auto;" },
+      { "id": "b", "text": "display: flex; justify-content: center;" },
+      { "id": "c", "text": "text-align: center;" },
+      { "id": "d", "text": "position: absolute; left: 50%; transform: translateX(-50%);" }
+    ],
+    "correct": ["a", "b", "d"],
+    "multi": true,
+    "explanation": "text-align: center only works for inline/inline-block. Others work for block elements."
+  },
+  {
+    "id": "q9",
+    "level": 5,
+    "question": "Which of the following are valid HTTP status codes for a successful response?",
+    "options": [
+      { "id": "a", "text": "200" },
+      { "id": "b", "text": "201" },
+      { "id": "c", "text": "204" },
+      { "id": "d", "text": "400" }
+    ],
+    "correct": ["a", "b", "c"],
+    "multi": true,
+    "explanation": "200, 201, 204 are successful; 400 is client error."
+  },
+  {
+    "id": "q10",
+    "level": 5,
+    "question": "What is the output?\n\nlet number = 0;\nconsole.log(number++);\nconsole.log(++number);\nconsole.log(number);",
+    "options": [
+      { "id": "a", "text": "1 1 2" },
+      { "id": "b", "text": "1 2 2" },
+      { "id": "c", "text": "0 2 2" },
+      { "id": "d", "text": "0 1 2" }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Postfix ++ returns value before increment, prefix ++ increments then returns."
+  }
+]

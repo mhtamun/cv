@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface NavItem {
   label: string;
@@ -31,6 +31,9 @@ const Navbar = ({ navItems }: NavbarProps) => {
     window.print();
   };
 
+  const quizNavItem = { label: "Quiz", href: "/quiz" };
+  const allNavItems = [...navItems, quizNavItem];
+
   return (
     <nav
       id="navbar"
@@ -42,7 +45,7 @@ const Navbar = ({ navItems }: NavbarProps) => {
         </Link>
 
         <div className="hidden md:flex items-center space-x-6">
-          {navItems.map((item, index) => (
+          {allNavItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
@@ -77,7 +80,7 @@ const Navbar = ({ navItems }: NavbarProps) => {
         } md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg overflow-hidden`}
       >
         <div className="container mx-auto py-4 px-6 flex flex-col space-y-4">
-          {navItems.map((item, index) => (
+          {allNavItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
