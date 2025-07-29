@@ -208,7 +208,8 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
 
   const q = questions[current];
   const total = questions.length;
-  const progress = ((current + 1) / total) * 100;
+  const answeredCount = Object.keys(answers).length;
+  const progress = (answeredCount / total) * 100;
   const isAnswered = selectedAnswers.length > 0;
 
   return (
