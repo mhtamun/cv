@@ -7,7 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { AlertCircle, CheckCircle, ChevronRight, Circle, Clock, RotateCcw } from "lucide-react";
+import { AlertCircle, ChevronRight, Clock, RotateCcw } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 // Type definitions
@@ -247,30 +247,17 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
 
         {/* Main Quiz Card */}
         <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-          <CardHeader className="pb-6">
+          <CardHeader className="space-y-2">
+            <Badge variant="outline" className="w-fit flex items-center justify-center gap-2">
+              <span className="text-sm">Level {q.level}</span>
+            </Badge>
             <CardTitle
               ref={questionRef}
-              className="text-xl sm:text-2xl font-bold leading-relaxed text-gray-900"
               tabIndex={-1}
-              id="current-question"
+              className="text-xl md:text-2xl font-medium text-gray-800 whitespace-pre-line"
             >
               {q.question}
             </CardTitle>
-
-            {/* Question Type Indicator */}
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              {q.multi ? (
-                <>
-                  <CheckCircle className="h-4 w-4" />
-                  <span>Multiple answers allowed</span>
-                </>
-              ) : (
-                <>
-                  <Circle className="h-4 w-4" />
-                  <span>Single answer</span>
-                </>
-              )}
-            </div>
           </CardHeader>
 
           <CardContent className="space-y-4">
@@ -328,7 +315,7 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
                       />
                       <span
                         id={`option-${opt.id}-text`}
-                        className="flex-1 text-gray-700 group-hover:text-gray-900 leading-relaxed"
+                        className="flex-1 text-gray-700 group-hover:text-gray-900 leading-relaxed whitespace-pre-line"
                       >
                         {opt.text}
                       </span>
@@ -368,7 +355,7 @@ export default function QuizGameClient({ onComplete }: QuizGameClientProps) {
                       />
                       <span
                         id={`option-${opt.id}-text`}
-                        className="flex-1 text-gray-700 group-hover:text-gray-900 leading-relaxed"
+                        className="flex-1 text-gray-700 group-hover:text-gray-900 leading-relaxed whitespace-pre-line"
                       >
                         {opt.text}
                       </span>

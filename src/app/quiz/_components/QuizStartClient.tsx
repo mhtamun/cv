@@ -271,7 +271,7 @@ function ResultCard({ result, onBack }: { result: any; onBack: () => void }) {
                         <span
                           className={`text-left flex-1 ${
                             d.isCorrect ? "text-green-700" : "text-red-700"
-                          }`}
+                          } whitespace-normal`}
                         >
                           {d.question.slice(0, 80)}
                           {d.question.length > 80 ? "..." : ""}
@@ -302,7 +302,10 @@ function ResultCard({ result, onBack }: { result: any; onBack: () => void }) {
                                 d.user.map((id: string) => {
                                   const opt = d.options.find((o: any) => o.id === id);
                                   return (
-                                    <div key={id} className="text-gray-700 bg-gray-50 p-2 rounded">
+                                    <div
+                                      key={id}
+                                      className="text-gray-700 bg-gray-50 p-2 rounded whitespace-pre-line"
+                                    >
                                       {opt ? opt.text : id}
                                     </div>
                                   );
@@ -319,7 +322,7 @@ function ResultCard({ result, onBack }: { result: any; onBack: () => void }) {
                                 return (
                                   <div
                                     key={id}
-                                    className="text-green-700 bg-green-50 p-2 rounded font-medium"
+                                    className="text-green-700 bg-green-50 p-2 rounded font-medium whitespace-pre-line"
                                   >
                                     {opt ? opt.text : id}
                                   </div>
@@ -331,7 +334,7 @@ function ResultCard({ result, onBack }: { result: any; onBack: () => void }) {
 
                         <div>
                           <h4 className="font-medium text-gray-900 mb-2">Explanation:</h4>
-                          <p className="text-gray-600 bg-blue-50 p-3 rounded-lg text-sm">
+                          <p className="text-gray-600 bg-blue-50 p-3 rounded-lg text-sm whitespace-pre-line">
                             {d.explanation}
                           </p>
                         </div>
@@ -762,21 +765,19 @@ export default function QuizStartClient() {
                                   className="border border-gray-100 rounded"
                                 >
                                   <AccordionTrigger className="px-3 py-2 text-sm hover:no-underline">
-                                    <span
-                                      className={`text-left flex-1 ${
-                                        d.isCorrect ? "text-green-700" : "text-red-700"
-                                      }`}
-                                    >
+                                    <div className="text-sm font-medium whitespace-normal">
                                       Q{i + 1}: {d.question.slice(0, 50)}
                                       {d.question.length > 50 ? "..." : ""}
-                                    </span>
+                                    </div>
                                   </AccordionTrigger>
 
                                   <AccordionContent className="px-3 pb-3 text-xs">
                                     <div className="space-y-2">
                                       <div>
                                         <div className="font-medium text-gray-700">Question:</div>
-                                        <div className="text-gray-600">{d.question}</div>
+                                        <div className="text-gray-600 whitespace-pre-line">
+                                          {d.question}
+                                        </div>
                                       </div>
 
                                       <div className="grid sm:grid-cols-2 gap-2">
@@ -817,7 +818,7 @@ export default function QuizStartClient() {
                                         <div className="font-medium text-gray-700">
                                           Explanation:
                                         </div>
-                                        <div className="text-gray-600 bg-gray-50 p-2 rounded">
+                                        <div className="text-gray-600 text-sm bg-blue-50 p-2 rounded whitespace-pre-line">
                                           {d.explanation}
                                         </div>
                                       </div>
