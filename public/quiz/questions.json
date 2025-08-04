@@ -2,836 +2,1866 @@
   {
     "id": "js-1-1",
     "level": 1,
-    "question": "Which of the following is a correct way to declare a variable in JavaScript that can be reassigned?",
+    "question": "What is the primary difference between `let` and `const` in JavaScript?",
     "options": [
-      { "id": "a", "text": "let x = 10;" },
-      { "id": "b", "text": "int x = 10;" },
-      { "id": "c", "text": "const x = 10;" },
-      { "id": "d", "text": "variable x = 10;" }
+      { "id": "a", "text": "`let` is for numbers, `const` is for strings." },
+      {
+        "id": "b",
+        "text": "Variables declared with `let` can be reassigned, while `const` variables cannot."
+      },
+      { "id": "c", "text": "`let` is function-scoped, `const` is block-scoped." },
+      { "id": "d", "text": "There is no difference; they are interchangeable." }
     ],
-    "correct": ["a"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "'let' is used to declare block-scoped variables that can be reassigned. 'const' declares constants that cannot be reassigned. 'int' and 'variable' are not valid keywords."
+    "explanation": "`let` allows you to declare variables that can be reassigned. `const` declares variables that are block-scoped and cannot be reassigned after their initial declaration, making them constants."
   },
   {
     "id": "web-1-2",
     "level": 1,
-    "question": "What does HTML stand for?",
-    "options": [
-      { "id": "a", "text": "HyperText Markup Language" },
-      { "id": "b", "text": "High-level Text Machine Language" },
-      { "id": "c", "text": "Hyperlink and Text Markup Language" },
-      { "id": "d", "text": "Home Tool Markup Language" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "HTML stands for HyperText Markup Language and is the standard markup language for creating web pages."
-  },
-  {
-    "id": "web-1-3",
-    "level": 1,
-    "question": "What does CSS stand for?",
-    "options": [
-      { "id": "a", "text": "Creative Style Sheets" },
-      { "id": "b", "text": "Computer Style Sheets" },
-      { "id": "c", "text": "Colorful Style Sheets" },
-      { "id": "d", "text": "Cascading Style Sheets" }
-    ],
-    "correct": ["d"],
-    "multi": false,
-    "explanation": "CSS stands for Cascading Style Sheets. It's used to describe the presentation of a document written in a markup language like HTML."
-  },
-  {
-    "id": "node-1-4",
-    "level": 1,
-    "question": "What is Node.js?",
-    "options": [
-      { "id": "a", "text": "A JavaScript framework for front-end development." },
-      { "id": "b", "text": "A web browser." },
-      { "id": "c", "text": "A JavaScript runtime environment for server-side development." },
-      { "id": "d", "text": "A database management system." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "Node.js is a back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser."
-  },
-  {
-    "id": "js-1-5",
-    "level": 1,
-    "question": "How do you write a single-line comment in JavaScript?",
-    "options": [
-      { "id": "a", "text": "" },
-      { "id": "b", "text": "// This is a comment" },
-      { "id": "c", "text": "/* This is a comment */" },
-      { "id": "d", "text": "# This is a comment" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "Single-line comments in JavaScript start with `//`. `/* ... */` is for multi-line comments. `` is for HTML, and `#` is for languages like Python."
-  },
-  {
-    "id": "js-2-1",
-    "level": 2,
-    "question": "What is the result of `\"5\" == 5` in JavaScript?",
-    "options": [
-      { "id": "a", "text": "true" },
-      { "id": "b", "text": "false" },
-      { "id": "c", "text": "TypeError" },
-      { "id": "d", "text": "undefined" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "The `==` operator performs type coercion, converting the string '5' to a number before comparing. The `===` operator would return `false` because it checks for both value and type."
-  },
-  {
-    "id": "web-2-2",
-    "level": 2,
-    "question": "Which method is used to get an HTML element by its ID in JavaScript?",
-    "options": [
-      { "id": "a", "text": "document.getElement('myId')" },
-      { "id": "b", "text": "document.querySelector('#myId')" },
-      { "id": "c", "text": "document.getElementsByClassName('myId')" },
-      { "id": "d", "text": "window.getById('myId')" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "`document.querySelector('#myId')` is a modern way to select an element by its ID. `document.getElementById('myId')` is another correct, older method. Option 'b' uses a CSS selector, which is versatile."
-  },
-  {
-    "id": "node-2-3",
-    "level": 2,
-    "question": "What is `npm`?",
-    "options": [
-      { "id": "a", "text": "Node Project Manager" },
-      { "id": "b", "text": "Node Package Manager" },
-      { "id": "c", "text": "New Project Manager" },
-      { "id": "d", "text": "Node Programming Module" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "`npm` stands for Node Package Manager. It is the default package manager for Node.js and is used to install and manage dependencies in Node.js projects."
-  },
-  {
-    "id": "sd-2-4",
-    "level": 2,
-    "question": "In web architecture, what is a 'client'?",
-    "options": [
-      { "id": "a", "text": "The computer that stores the website's files." },
-      {
-        "id": "b",
-        "text": "The software or hardware that requests services from a server, like a web browser."
-      },
-      { "id": "c", "text": "The database where user information is stored." },
-      { "id": "d", "text": "The network connection between a user and the internet." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "A client is an application or system that accesses a service made available by a server. In web development, the most common client is a web browser."
-  },
-  {
-    "id": "js-2-5",
-    "level": 2,
-    "question": "Which of the following correctly defines a function in JavaScript?",
-    "options": [
-      { "id": "a", "text": "function myFunction() { ... }" },
-      { "id": "b", "text": "const myFunction = () => { ... };" },
-      { "id": "c", "text": "def myFunction(): ..." },
-      { "id": "d", "text": "method myFunction() { ... }" }
-    ],
-    "correct": ["a", "b"],
-    "multi": true,
-    "explanation": "JavaScript supports both traditional function declarations (function keyword) and arrow function expressions. 'def' is used in Python, and 'method' is not a keyword for defining functions."
-  },
-  {
-    "id": "web-3-1",
-    "level": 3,
-    "question": "Which HTTP method is typically used to request data from a server?",
-    "options": [
-      { "id": "a", "text": "POST" },
-      { "id": "b", "text": "GET" },
-      { "id": "c", "text": "PUT" },
-      { "id": "d", "text": "DELETE" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "The `GET` method is used to request data from a specified resource. It should not be used for operations that cause side-effects on the server."
-  },
-  {
-    "id": "node-3-2",
-    "level": 3,
-    "question": "How do you include a module in a Node.js file (using CommonJS syntax)?",
-    "options": [
-      { "id": "a", "text": "import fs from 'fs';" },
-      { "id": "b", "text": "#include <fs>" },
-      { "id": "c", "text": "const fs = require('fs');" },
-      { "id": "d", "text": "using fs;" }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "In CommonJS, which is the traditional module system in Node.js, the `require` function is used to import modules. `import` is used in ES Modules (ESM)."
-  },
-  {
-    "id": "js-3-3",
-    "level": 3,
-    "question": "What will `console.log(typeof [1, 2, 3]);` output?",
-    "options": [
-      { "id": "a", "text": "'array'" },
-      { "id": "b", "text": "'object'" },
-      { "id": "c", "text": "'array_object'" },
-      { "id": "d", "text": "'list'" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "In JavaScript, arrays are a special type of object. Therefore, the `typeof` operator returns 'object' for arrays."
-  },
-  {
-    "id": "sd-3-4",
-    "level": 3,
-    "question": "What is the primary purpose of a database?",
-    "options": [
-      { "id": "a", "text": "To execute application logic." },
-      { "id": "b", "text": "To style the user interface." },
-      { "id": "c", "text": "To store, retrieve, and manage data efficiently." },
-      { "id": "d", "text": "To handle network requests." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "A database is an organized collection of data, generally stored and accessed electronically from a computer system. Its primary purpose is to manage data."
-  },
-  {
-    "id": "js-3-5",
-    "level": 3,
-    "question": "How can you add an element to the end of an array named `myArray`?",
-    "options": [
-      { "id": "a", "text": "myArray.add('newElement');" },
-      { "id": "b", "text": "myArray.append('newElement');" },
-      { "id": "c", "text": "myArray.push('newElement');" },
-      { "id": "d", "text": "myArray[myArray.length] = 'newElement';" }
-    ],
-    "correct": ["c", "d"],
-    "multi": true,
-    "explanation": "The `push()` method is the standard way to add an element to the end of an array. Assigning a value to the index equal to the array's length also works but is less common."
-  },
-  {
-    "id": "js-4-1",
-    "level": 4,
-    "question": "What is variable scope in JavaScript?",
-    "options": [
-      { "id": "a", "text": "The data type of a variable." },
-      { "id": "b", "text": "The context in which a variable is accessible." },
-      { "id": "c", "text": "The maximum value a variable can hold." },
-      { "id": "d", "text": "A special object containing all global variables." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "Scope determines the accessibility (visibility) of variables. JavaScript has global scope, function scope, and block scope (with `let` and `const`)."
-  },
-  {
-    "id": "web-4-2",
-    "level": 4,
     "question": "What is a REST API?",
     "options": [
       { "id": "a", "text": "A specific software library for making API calls." },
       { "id": "b", "text": "A programming language for servers." },
-      { "id": "c", "text": "An architectural style for designing networked applications." },
+      {
+        "id": "c",
+        "text": "An architectural style for designing networked applications, typically over HTTP."
+      },
       { "id": "d", "text": "A protocol for secure data transfer." }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "REST (Representational State Transfer) is an architectural style that defines a set of constraints to be used for creating web services. It's not a protocol or a library."
+    "explanation": "REST (Representational State Transfer) is a set of architectural constraints for creating web services. It uses standard HTTP methods (GET, POST, PUT, PATCH, DELETE) and is stateless."
   },
   {
-    "id": "node-4-3",
-    "level": 4,
-    "question": "What is the purpose of the `package.json` file?",
+    "id": "js-1-3",
+    "level": 1,
+    "question": "What is the difference between `==` and `===` in JavaScript?",
     "options": [
-      { "id": "a", "text": "It contains the main Node.js application code." },
-      { "id": "b", "text": "It is a log file generated by npm." },
-      { "id": "c", "text": "It holds metadata about the project and its dependencies." },
-      { "id": "d", "text": "It is a configuration file for the Node.js runtime." }
+      { "id": "a", "text": "`===` is faster than `==`." },
+      { "id": "b", "text": "They are identical." },
+      {
+        "id": "c",
+        "text": "`==` compares only values with type coercion, while `===` compares both value and type without coercion."
+      },
+      { "id": "d", "text": "`==` is for numbers, `===` is for strings." }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "The `package.json` file is the heart of a Node.js project. It records project metadata (name, version, license) and lists the packages it depends on."
+    "explanation": "The `===` operator (strict equality) returns true only if the operands are of the same type and have the same value. The `==` operator (loose equality) will convert operands to the same type before making the comparison."
   },
   {
-    "id": "sd-4-4",
-    "level": 4,
-    "question": "What is a key difference between SQL and NoSQL databases?",
+    "id": "react-1-4",
+    "level": 1,
+    "question": "What is the significance of the `key` prop in React lists?",
     "options": [
-      { "id": "a", "text": "SQL is for web applications, NoSQL is for mobile applications." },
+      { "id": "a", "text": "It is used to style the list items." },
       {
         "id": "b",
-        "text": "SQL databases are relational (table-based), while NoSQL databases are non-relational (document, key-value, etc.)."
+        "text": "It provides a unique identity for each element, helping React identify which items have changed, are added, or are removed."
       },
-      { "id": "c", "text": "SQL is free, while NoSQL databases require a license." },
-      { "id": "d", "text": "SQL uses JavaScript for queries, NoSQL uses Python." }
+      { "id": "c", "text": "It is a required prop for all HTML tags in React." },
+      { "id": "d", "text": "It sets the encryption key for the component's data." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "The primary distinction is their data model. SQL databases use a structured schema with tables and rows (relational), whereas NoSQL databases have flexible schemas and use various models like document, key-value, or graph."
+    "explanation": "Keys help React's reconciliation algorithm efficiently update the UI by identifying specific elements in a list. Without keys, React may have to re-render the entire list, which is inefficient."
   },
   {
-    "id": "js-4-5",
-    "level": 4,
-    "question": "What does the `this` keyword refer to in a global context (outside any function)?",
+    "id": "web-1-5",
+    "level": 1,
+    "question": "What is the difference between `localStorage` and `sessionStorage`?",
     "options": [
-      { "id": "a", "text": "The `document` object" },
-      { "id": "b", "text": "The `window` object (in browsers)" },
-      { "id": "c", "text": "`null`" },
-      { "id": "d", "text": "The `Math` object" }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "In the global execution context (outside any function), `this` refers to the global object. In a web browser environment, the global object is `window`."
-  },
-  {
-    "id": "js-5-1",
-    "level": 5,
-    "question": "What is a 'callback function' in JavaScript?",
-    "options": [
-      { "id": "a", "text": "A function that is called automatically when the script loads." },
+      { "id": "a", "text": "`localStorage` is faster than `sessionStorage`." },
       {
         "id": "b",
-        "text": "A function passed as an argument to another function, to be executed later."
+        "text": "`localStorage` persists after the browser is closed, while `sessionStorage` is cleared when the page session ends."
       },
-      { "id": "c", "text": "A function that can only be called once." },
-      { "id": "d", "text": "A function that returns another function." }
+      { "id": "c", "text": "`localStorage` is secure, while `sessionStorage` is not." },
+      { "id": "d", "text": "They are the same, but `sessionStorage` is the newer standard." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. It's a cornerstone of asynchronous programming in JS."
+    "explanation": "Both store key-value pairs. `localStorage` data has no expiration time. `sessionStorage` data gets cleared when the page session ends (i.e., when the browser tab is closed)."
   },
   {
-    "id": "node-5-2",
-    "level": 5,
-    "question": "Which `fs` module method is used to read a file asynchronously in Node.js?",
+    "id": "css-1-6",
+    "level": 1,
+    "question": "What is CSS used for in web development?",
     "options": [
-      { "id": "a", "text": "fs.readFileSync()" },
-      { "id": "b", "text": "fs.read()" },
-      { "id": "c", "text": "fs.readFile()" },
-      { "id": "d", "text": "fs.openFileAsync()" }
+      { "id": "a", "text": "To define the structure and content of a web page." },
+      { "id": "b", "text": "To handle server-side logic and database interactions." },
+      {
+        "id": "c",
+        "text": "To describe the presentation and styling of a document written in HTML."
+      },
+      { "id": "d", "text": "To manage user authentication." }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "`fs.readFile()` reads a file asynchronously and invokes a callback function when done. `fs.readFileSync()` is its synchronous counterpart, which blocks execution until the file is read."
+    "explanation": "CSS (Cascading Style Sheets) is a stylesheet language used to control the visual appearance of web pages, including layout, colors, and fonts."
   },
   {
-    "id": "js-5-3",
-    "level": 5,
-    "question": "A JavaScript `Promise` can be in one of three states. What are they?",
+    "id": "dsa-1-7",
+    "level": 1,
+    "question": "What is the main difference between recursion and iteration?",
     "options": [
-      { "id": "a", "text": "pending, fulfilled, rejected" },
-      { "id": "b", "text": "waiting, complete, error" },
-      { "id": "c", "text": "started, running, finished" },
-      { "id": "d", "text": "async, await, done" }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "A `Promise` starts in the `pending` state, and from there can transition to either the `fulfilled` state (representing success) or the `rejected` state (representing failure)."
-  },
-  {
-    "id": "node-5-4",
-    "level": 5,
-    "question": "What is Express.js?",
-    "options": [
-      { "id": "a", "text": "A database for Node.js." },
-      { "id": "b", "text": "A template engine." },
-      { "id": "c", "text": "A core module built into Node.js." },
-      { "id": "d", "text": "A minimal and flexible Node.js web application framework." }
-    ],
-    "correct": ["d"],
-    "multi": false,
-    "explanation": "Express.js is a popular, unopinionated web framework for Node.js, used to build web applications and APIs. It is not part of the Node.js core."
-  },
-  {
-    "id": "sd-5-5",
-    "level": 5,
-    "question": "In system design, what is caching?",
-    "options": [
-      { "id": "a", "text": "The process of encrypting data." },
+      {
+        "id": "a",
+        "text": "Recursion always uses a `for` loop, while iteration uses a `while` loop."
+      },
       {
         "id": "b",
-        "text": "Storing copies of files or data in a temporary storage location so they can be accessed more quickly."
+        "text": "Iteration involves repeating a set of instructions, while recursion is a process where a function calls itself."
       },
-      { "id": "c", "text": "Distributing network traffic across multiple servers." },
-      { "id": "d", "text": "A method for securing APIs." }
+      { "id": "c", "text": "Recursion is always more performant than iteration." },
+      { "id": "d", "text": "They are the same concept with different names." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "Caching involves storing frequently accessed data closer to the user (e.g., in a browser cache or a CDN) to reduce latency, server load, and network traffic."
+    "explanation": "Iteration uses loops to repeat a block of code. Recursion solves a problem by having a function call itself with smaller inputs until it reaches a base case. Recursion can be more expressive but may lead to stack overflow errors."
   },
   {
-    "id": "js-6-1",
-    "level": 6,
-    "question": "What is the primary benefit of using `async/await` syntax?",
+    "id": "node-1-8",
+    "level": 1,
+    "question": "What is NodeJS?",
     "options": [
-      { "id": "a", "text": "It makes asynchronous code execute faster." },
+      { "id": "a", "text": "A front-end JavaScript framework like React or Angular." },
       {
         "id": "b",
-        "text": "It allows you to write asynchronous code that looks and behaves more like synchronous code."
+        "text": "A JavaScript runtime environment that lets you run JavaScript on the server."
       },
-      { "id": "c", "text": "It is the only way to handle errors in asynchronous operations." },
-      { "id": "d", "text": "It removes the need for Promises entirely." }
+      { "id": "c", "text": "A database specifically designed for JavaScript applications." },
+      { "id": "d", "text": "A web browser created by Google." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "`async/await` is syntactic sugar built on top of Promises. It makes asynchronous, promise-based code easier to write and read by avoiding long `.then()` chains."
+    "explanation": "Node.js is a back-end JavaScript runtime environment that executes JavaScript code outside a web browser, enabling server-side scripting."
   },
   {
-    "id": "node-6-2",
-    "level": 6,
-    "question": "What is middleware in the context of Express.js?",
+    "id": "web-1-9",
+    "level": 1,
+    "question": "Which of these are standard HTTP request methods?",
     "options": [
-      { "id": "a", "text": "Software that connects the database to the server." },
+      { "id": "a", "text": "GET, POST, FETCH, SEND" },
+      { "id": "b", "text": "REQUEST, RECEIVE, PUSH, PULL" },
+      { "id": "c", "text": "GET, POST, PUT, DELETE" },
+      { "id": "d", "text": "START, STOP, PAUSE, RESUME" }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "GET, POST, PUT, PATCH, and DELETE are the most common HTTP methods used in REST APIs to perform CRUD (Create, Read, Update, Delete) operations."
+  },
+  {
+    "id": "git-1-10",
+    "level": 1,
+    "question": "What is the purpose of Git in software development?",
+    "options": [
+      { "id": "a", "text": "To write and execute code." },
+      { "id": "b", "text": "To deploy applications to a server." },
+      { "id": "c", "text": "To manage and track changes in source code over time." },
+      { "id": "d", "text": "To design user interfaces." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Git is a distributed version control system (VCS) that helps developers track changes, collaborate on projects, and manage different versions of their codebase."
+  },
+  {
+    "id": "js-2-1",
+    "level": 2,
+    "question": "What is a closure in JavaScript? Provide the best description.",
+    "options": [
+      { "id": "a", "text": "A function that has been executed and removed from memory." },
       {
         "id": "b",
-        "text": "Functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle."
+        "text": "A feature that allows an inner function to access variables from its outer (enclosing) function's scope, even after the outer function has returned."
       },
-      { "id": "c", "text": "A special type of route handler for the root URL." },
+      { "id": "c", "text": "A special type of object that can't be modified." },
+      { "id": "d", "text": "The process of closing a web browser tab." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "A closure is created when a function is defined inside another function, allowing the inner function to maintain access to the outer function's environment (variables, parameters)."
+  },
+  {
+    "id": "js-2-2",
+    "level": 2,
+    "question": "What is the difference between a `function declaration` and an `arrow function` regarding the `this` keyword?",
+    "options": [
+      { "id": "a", "text": "There is no difference." },
+      { "id": "b", "text": "Arrow functions cannot use the `this` keyword." },
+      {
+        "id": "c",
+        "text": "A regular function has its own `this` context, while an arrow function inherits `this` from its parent scope."
+      },
+      { "id": "d", "text": "A regular function's `this` is always the window object." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Arrow functions are lexically scoped; they do not have their own `this` binding. Instead, `this` is resolved from the scope in which the arrow function was defined. Regular functions have their own `this` context determined by how they are called."
+  },
+  {
+    "id": "react-2-3",
+    "level": 2,
+    "question": "What is JSX in React?",
+    "options": [
+      { "id": "a", "text": "A new version of JavaScript." },
+      { "id": "b", "text": "A templating engine for Node.js." },
+      {
+        "id": "c",
+        "text": "A syntax extension for JavaScript that looks similar to HTML, used with React to describe what the UI should look like."
+      },
+      { "id": "d", "text": "A CSS-in-JS library." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "JSX (JavaScript XML) allows developers to write HTML-like code inside JavaScript files. It is compiled by tools like Babel into `React.createElement()` calls."
+  },
+  {
+    "id": "node-2-4",
+    "level": 2,
+    "question": "What are middleware functions in the context of Express.js?",
+    "options": [
+      { "id": "a", "text": "Functions that connect the database to the server." },
+      {
+        "id": "b",
+        "text": "Functions that have access to the request (`req`), response (`res`), and the `next` function in the application’s request-response cycle."
+      },
+      { "id": "c", "text": "Front-end functions that run in the browser." },
       { "id": "d", "text": "A tool for managing npm packages." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "Middleware functions are a core concept in Express. They can execute code, make changes to the request and response objects, and end the cycle or pass control to the next middleware."
+    "explanation": "Middleware functions can execute code, make changes to the request and response objects, end the request-response cycle, or call the next middleware function in the stack. They are used for tasks like logging, authentication, and parsing request bodies."
   },
   {
-    "id": "sd-6-3",
-    "level": 6,
-    "question": "What is the difference between vertical and horizontal scaling?",
-    "options": [
-      {
-        "id": "a",
-        "text": "Vertical scaling adds more machines, while horizontal scaling increases the resources (CPU, RAM) of a single machine."
-      },
-      {
-        "id": "b",
-        "text": "Vertical scaling increases the resources (CPU, RAM) of a single machine, while horizontal scaling adds more machines to the system."
-      },
-      {
-        "id": "c",
-        "text": "Vertical scaling is for databases, horizontal scaling is for web servers."
-      },
-      { "id": "d", "text": "There is no difference; they are interchangeable terms." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "Vertical scaling (scaling up) means increasing the capacity of a single server. Horizontal scaling (scaling out) means adding more servers to your pool of resources."
-  },
-  {
-    "id": "js-6-4",
-    "level": 6,
-    "question": "What is the JavaScript `prototype` chain?",
-    "options": [
-      { "id": "a", "text": "A list of all methods available on an object." },
-      {
-        "id": "b",
-        "text": "A mechanism for one object to inherit properties and methods from another object."
-      },
-      { "id": "c", "text": "An array that holds the object's parent and child elements." },
-      { "id": "d", "text": "A security feature to prevent object modification." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "When trying to access a property on an object, if it's not found on the object itself, the JavaScript engine looks at the object's prototype, then the prototype's prototype, and so on, until the property is found or the chain ends at `null`."
-  },
-  {
-    "id": "web-6-5",
-    "level": 6,
-    "question": "What is the key difference between `localStorage` and `sessionStorage`?",
-    "options": [
-      { "id": "a", "text": "`localStorage` is faster than `sessionStorage`." },
-      { "id": "b", "text": "`localStorage` can store more data than `sessionStorage`." },
-      {
-        "id": "c",
-        "text": "`localStorage` data persists even after the browser is closed and reopened, while `sessionStorage` data is cleared when the page session ends."
-      },
-      { "id": "d", "text": "`localStorage` is secure, while `sessionStorage` is not." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "The main difference is persistence. `localStorage` data has no expiration time. `sessionStorage` data gets cleared when the page session ends (when the browser tab is closed)."
-  },
-  {
-    "id": "js-7-1",
-    "level": 7,
-    "question": "What is a closure in JavaScript?",
-    "options": [
-      { "id": "a", "text": "The final `return` statement in a function." },
-      { "id": "b", "text": "An object that contains all global variables." },
-      { "id": "c", "text": "A function that has been executed and is no longer in memory." },
-      {
-        "id": "d",
-        "text": "A function's ability to remember and access its lexical scope even when that function is executing outside its lexical scope."
-      }
-    ],
-    "correct": ["d"],
-    "multi": false,
-    "explanation": "A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment). It gives you access to an outer function's scope from an inner function."
-  },
-  {
-    "id": "sd-7-2",
-    "level": 7,
-    "question": "What is the primary function of a Load Balancer?",
-    "options": [
-      { "id": "a", "text": "To cache static assets like images and CSS." },
-      { "id": "b", "text": "To encrypt traffic between the client and the server." },
-      {
-        "id": "c",
-        "text": "To distribute incoming network traffic across multiple backend servers."
-      },
-      { "id": "d", "text": "To serve as a primary database for an application." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "A load balancer acts as a reverse proxy and distributes network or application traffic across a number of servers to improve reliability, availability, and performance."
-  },
-  {
-    "id": "node-7-3",
-    "level": 7,
-    "question": "In Node.js, what is the Event Loop?",
-    "options": [
-      { "id": "a", "text": "A `for` loop that listens for DOM events." },
-      {
-        "id": "b",
-        "text": "A security mechanism that loops through requests to check for malicious code."
-      },
-      {
-        "id": "c",
-        "text": "A design pattern that allows a single thread to handle many concurrent operations by offloading I/O to system kernels."
-      },
-      { "id": "d", "text": "A built-in function for creating custom events." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "The event loop is what allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded. It offloads operations and runs their callbacks on the main thread when they are complete."
-  },
-  {
-    "id": "web-7-4",
-    "level": 7,
+    "id": "web-2-5",
+    "level": 2,
     "question": "What is CORS (Cross-Origin Resource Sharing)?",
     "options": [
       { "id": "a", "text": "A JavaScript library for styling web pages." },
       {
         "id": "b",
-        "text": "A security mechanism that restricts how a resource on a different origin (domain, protocol, or port) can be requested."
+        "text": "A browser security feature that restricts how a web page can request resources from a different domain (origin)."
       },
       { "id": "c", "text": "A data compression technique for faster web loading." },
       { "id": "d", "text": "A protocol for real-time, bi-directional communication." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "CORS is an HTTP-header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading of resources."
+    "explanation": "CORS is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin access to selected resources from a different origin. Without proper CORS headers, browsers block such requests."
   },
   {
-    "id": "node-7-5",
-    "level": 7,
-    "question": "What is a Stream in Node.js?",
+    "id": "dsa-2-6",
+    "level": 2,
+    "question": "Which data structure is typically used to implement a Last-In, First-Out (LIFO) behavior?",
     "options": [
-      { "id": "a", "text": "A live video feed API." },
-      { "id": "b", "text": "A collection of data, similar to an array but with a fixed size." },
-      {
-        "id": "c",
-        "text": "Objects that let you read data from a source or write data to a destination in continuous chunks, without keeping it all in memory."
-      },
-      {
-        "id": "d",
-        "text": "A specific type of Promise for handling multiple asynchronous results."
-      }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "Streams are a fundamental concept in Node.js for handling I/O. They enable processing large amounts of data piece-by-piece, making them very memory efficient."
-  },
-  {
-    "id": "sd-8-1",
-    "level": 8,
-    "question": "What is the primary difference between a monolithic and a microservices architecture?",
-    "options": [
-      { "id": "a", "text": "Monoliths are for front-end, microservices are for back-end." },
-      {
-        "id": "b",
-        "text": "A monolith is a single, unified application, while microservices structure an application as a collection of loosely coupled, independently deployable services."
-      },
-      { "id": "c", "text": "Monoliths use SQL databases, microservices use NoSQL databases." },
-      {
-        "id": "d",
-        "text": "Monoliths are written in one language, while microservices must be written in multiple languages."
-      }
+      { "id": "a", "text": "Queue" },
+      { "id": "b", "text": "Stack" },
+      { "id": "c", "text": "Linked List" },
+      { "id": "d", "text": "Tree" }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "The core idea of microservices is to break down a large application into smaller, manageable, and independent services. A monolith, in contrast, is built as a single, indivisible unit."
+    "explanation": "A Stack follows the LIFO principle, where the last element added is the first one to be removed. Think of a stack of plates. A Queue, on the other hand, is FIFO (First-In, First-Out)."
   },
   {
-    "id": "js-8-2",
-    "level": 8,
-    "question": "What is the purpose of the `Array.prototype.reduce()` method?",
+    "id": "js-2-7",
+    "level": 2,
+    "question": "What does it mean for a language to be 'dynamically typed' like JavaScript?",
     "options": [
-      {
-        "id": "a",
-        "text": "To create a new array with the results of calling a provided function on every element."
-      },
+      { "id": "a", "text": "The language is constantly being updated with new features." },
       {
         "id": "b",
-        "text": "To execute a function for each array element and reduce the array to a single output value."
-      },
-      { "id": "c", "text": "To filter the array elements based on a condition." },
-      { "id": "d", "text": "To reduce the amount of memory the array uses." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "The `reduce()` method applies a 'reducer' function against an accumulator and each element in the array (from left-to-right) to reduce it to a single value."
-  },
-  {
-    "id": "web-8-3",
-    "level": 8,
-    "question": "When would you prefer WebSockets over traditional HTTP?",
-    "options": [
-      { "id": "a", "text": "For retrieving static content like a web page." },
-      { "id": "b", "text": "For submitting a form that only needs to be sent once." },
-      {
-        "id": "c",
-        "text": "For applications requiring low-latency, real-time, bi-directional communication."
-      },
-      { "id": "d", "text": "For making a one-time request to a REST API." }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "WebSockets maintain a persistent connection between client and server, allowing for full-duplex (bi-directional) communication. This is ideal for applications like chat apps, online gaming, and live sports tickers."
-  },
-  {
-    "id": "node-8-4",
-    "level": 8,
-    "question": "How can you handle uncaught exceptions in a Node.js application to prevent it from crashing?",
-    "options": [
-      { "id": "a", "text": "By wrapping the entire application in a single `try...catch` block." },
-      {
-        "id": "b",
-        "text": "Using `process.on('uncaughtException', (err) => { ... });` to listen for the event globally."
-      },
-      { "id": "c", "text": "Node.js applications cannot crash from uncaught exceptions." },
-      { "id": "d", "text": "By deleting the `node_modules` folder." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "While it's best to handle errors where they occur, the `process.on('uncaughtException', ...)` event can be used as a last resort to log the error and perform a graceful shutdown, though it's not recommended to resume normal operation after it."
-  },
-  {
-    "id": "js-8-5",
-    "level": 8,
-    "question": "What are higher-order functions in JavaScript?",
-    "options": [
-      { "id": "a", "text": "Functions that use a lot of CPU resources." },
-      { "id": "b", "text": "Functions that are defined using the `class` keyword." },
-      {
-        "id": "c",
-        "text": "Functions that operate on other functions, either by taking them as arguments or by returning them."
-      },
-      {
-        "id": "d",
-        "text": "Functions that are built-in to the JavaScript language, like `Math.max()`."
-      }
-    ],
-    "correct": ["c"],
-    "multi": false,
-    "explanation": "A function that receives another function as an argument or returns a function is known as a higher-order function. Examples include `map`, `filter`, `reduce`, and `setTimeout`."
-  },
-  {
-    "id": "sd-9-1",
-    "level": 9,
-    "question": "What is an API Gateway?",
-    "options": [
-      { "id": "a", "text": "A physical server that hosts all APIs." },
-      {
-        "id": "b",
-        "text": "A management tool that sits between a client and a collection of backend services, acting as a reverse proxy to accept all API calls."
-      },
-      { "id": "c", "text": "A client-side library for making API requests." },
-      { "id": "d", "text": "A security standard for APIs, similar to OAuth." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "An API Gateway is a common pattern in microservices architecture. It provides a single, unified entry point for all clients and can handle tasks like routing, authentication, rate limiting, and logging."
-  },
-  {
-    "id": "js-9-2",
-    "level": 9,
-    "question": "What is the difference between `Promise.all()` and `Promise.race()`?",
-    "options": [
-      {
-        "id": "a",
-        "text": "`Promise.all` resolves when all promises resolve, while `Promise.race` resolves as soon as any one of the promises resolves or rejects."
-      },
-      {
-        "id": "b",
-        "text": "`Promise.all` is for an array of promises, `Promise.race` is for a single promise."
+        "text": "Variables can hold values of any type, and their type can change during execution."
       },
       {
         "id": "c",
-        "text": "`Promise.all` returns a single value, `Promise.race` returns an array of values."
+        "text": "You must explicitly declare the type of a variable (e.g., `int`, `string`)."
       },
-      { "id": "d", "text": "There is no functional difference; they are aliases." }
-    ],
-    "correct": ["a"],
-    "multi": false,
-    "explanation": "`Promise.all` is used when you need to wait for multiple asynchronous operations to complete. `Promise.race` is used when you only care about the first promise to settle (either fulfill or reject)."
-  },
-  {
-    "id": "node-9-3",
-    "level": 9,
-    "question": "What is the role of `libuv` in the Node.js architecture?",
-    "options": [
-      { "id": "a", "text": "It is the JavaScript engine that executes the JS code." },
-      {
-        "id": "b",
-        "text": "It is a C library that provides the event loop and handles asynchronous I/O operations."
-      },
-      { "id": "c", "text": "It is the package manager for Node.js." },
-      { "id": "d", "text": "It is a built-in module for creating web servers." }
+      { "id": "d", "text": "It can only be used for dynamic and interactive websites." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "Node.js's non-blocking nature is powered by `libuv`, a multi-platform C library that handles the event loop, worker threads, and all the asynchronous I/O operations, abstracting away the differences between operating systems."
+    "explanation": "In dynamically typed languages like JavaScript, type checking is performed at runtime. This is in contrast to statically typed languages (like Java or C#) where types are checked at compile time."
   },
   {
-    "id": "sd-9-4",
-    "level": 9,
-    "question": "What is the primary purpose of database indexing?",
+    "id": "db-2-8",
+    "level": 2,
+    "question": "What is the primary difference between a SQL and a NoSQL database?",
     "options": [
-      { "id": "a", "text": "To reduce the physical storage size of the database." },
-      { "id": "b", "text": "To encrypt sensitive data within the database tables." },
-      { "id": "c", "text": "To provide a backup of the database tables." },
+      { "id": "a", "text": "SQL is for web apps, NoSQL is for mobile apps." },
+      {
+        "id": "b",
+        "text": "SQL databases are relational (table-based with a fixed schema), while NoSQL databases are non-relational (document, key-value, etc.) and often have a dynamic schema."
+      },
+      { "id": "c", "text": "SQL databases are free, while NoSQL databases are paid." },
+      { "id": "d", "text": "SQL uses JavaScript for queries, NoSQL uses Python." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The main distinction is their data model. SQL databases (like MySQL, PostgreSQL) use structured data with predefined schemas. NoSQL databases (like MongoDB, Redis) are more flexible and are built for scalability and handling unstructured data."
+  },
+  {
+    "id": "react-2-9",
+    "level": 2,
+    "question": "In React, what is the purpose of `setState()`?",
+    "options": [
+      { "id": "a", "text": "To directly modify the component's state object." },
+      {
+        "id": "b",
+        "text": "To schedule an update to a component's state and tell React to re-render the component and its children."
+      },
+      { "id": "c", "text": "To set the initial state of a component." },
+      { "id": "d", "text": "To delete a component's state." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`setState()` is the correct way to update state in React class components. It informs React about the change, which then triggers a re-render to update the DOM. Direct mutation of `this.state` will not work."
+  },
+  {
+    "id": "web-2-10",
+    "level": 2,
+    "question": "What is the Box Model in CSS?",
+    "options": [
+      { "id": "a", "text": "A 3D model used for creating web graphics." },
+      { "id": "b", "text": "A JavaScript object for storing data." },
+      { "id": "c", "text": "A design paradigm for responsive layouts." },
       {
         "id": "d",
-        "text": "To speed up the performance of data retrieval operations on a database table."
+        "text": "A model that describes the rectangular boxes generated for elements, consisting of content, padding, border, and margin."
       }
     ],
     "correct": ["d"],
     "multi": false,
-    "explanation": "An index is a data structure that improves the speed of data retrieval operations at the cost of additional writes and storage space. It allows the database to find data without searching every row."
+    "explanation": "The CSS Box Model is fundamental to layout on the web. Every element can be considered a box, and understanding its components (margin, border, padding, content) is crucial for sizing and spacing."
   },
   {
-    "id": "js-9-5",
-    "level": 9,
-    "question": "What is the difference between microtasks and macrotasks in the context of the JavaScript Event Loop?",
+    "id": "js-3-1",
+    "level": 3,
+    "question": "What are JavaScript Promises?",
     "options": [
-      {
-        "id": "a",
-        "text": "Microtasks are higher priority and are always executed before the next macrotask."
-      },
+      { "id": "a", "text": "A guarantee that a function will not have any bugs." },
       {
         "id": "b",
-        "text": "Macrotasks are for I/O operations, while microtasks are for UI rendering."
+        "text": "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value."
       },
-      { "id": "c", "text": "Microtasks and macrotasks are two names for the same concept." },
-      { "id": "d", "text": "Macrotasks are synchronous, while microtasks are asynchronous." }
+      { "id": "c", "text": "A way to write synchronous code in JavaScript." },
+      { "id": "d", "text": "A variable that can only hold boolean values." }
     ],
-    "correct": ["a"],
+    "correct": ["b"],
     "multi": false,
-    "explanation": "The event loop has two task queues. Macrotasks (like `setTimeout`, `setInterval`) are handled in one queue. Microtasks (like `Promise.then()`, `process.nextTick`) have a separate, higher-priority queue. All microtasks in the queue are executed before the event loop processes the next macrotask."
+    "explanation": "Promises are a core part of asynchronous JavaScript. A Promise can be in one of three states: pending, fulfilled, or rejected. They help manage async operations without deeply nested callbacks (callback hell)."
   },
   {
-    "id": "sd-10-1",
-    "level": 10,
-    "question": "What does the CAP theorem state in distributed systems?",
+    "id": "react-3-2",
+    "level": 3,
+    "question": "What is the purpose of the `useEffect` hook in React?",
     "options": [
+      { "id": "a", "text": "To perform network requests only." },
+      { "id": "b", "text": "To replace the need for state in a component." },
       {
-        "id": "a",
-        "text": "A distributed system can be Correct, Available, and Performant all at once."
+        "id": "c",
+        "text": "To let you perform side effects in function components, such as data fetching, subscriptions, or manually changing the DOM."
       },
+      { "id": "d", "text": "To handle user click events." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "`useEffect` runs after every render (by default). It serves the same purpose as `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` in React class components, but unified into a single API."
+  },
+  {
+    "id": "js-3-3",
+    "level": 3,
+    "question": "Explain the difference between shallow and deep copying in JavaScript.",
+    "options": [
+      { "id": "a", "text": "Deep copying is faster but less accurate than shallow copying." },
       {
         "id": "b",
-        "text": "It is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees: Consistency, Availability, and Partition Tolerance."
+        "text": "Shallow copy duplicates the top-level properties, but nested objects are shared by reference. Deep copy recursively duplicates all properties and nested objects, creating a completely independent clone."
       },
       {
         "id": "c",
-        "text": "All data in a distributed system must be Consistent And Protected (CAP)."
+        "text": "Shallow copying only works for arrays, while deep copying works for objects."
       },
       {
         "id": "d",
-        "text": "The capacity of a system is limited by its CPU, Access time, and Power."
+        "text": "They are the same; the terms are used in different programming communities."
       }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "The CAP theorem is a fundamental principle in distributed system design. It forces architects to make a tradeoff between Consistency (all nodes see the same data at the same time) and Availability (every request receives a response) in the presence of a Network Partition."
+    "explanation": "A shallow copy (e.g., using `...spread` or `Object.assign`) will not clone nested objects. Modifying a nested object in the copy will also affect the original. A deep copy ensures that the original and the copy are completely separate."
   },
   {
-    "id": "node-10-2",
-    "level": 10,
-    "question": "What is a `Buffer` in Node.js and why is it used?",
+    "id": "node-3-4",
+    "level": 3,
+    "question": "How does NodeJS handle asynchronous operations?",
     "options": [
-      { "id": "a", "text": "A cache to store frequently accessed data in memory." },
-      {
-        "id": "b",
-        "text": "A class that provides a way of handling streams of binary data directly in memory."
-      },
-      { "id": "c", "text": "A temporary holding area for Promises waiting to be resolved." },
-      { "id": "d", "text": "A security feature to prevent buffer overflow attacks." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "JavaScript traditionally doesn't handle binary data well. `Buffer` is a Node.js specific class that allows for interaction with octet streams in contexts like TCP streams, file system operations, etc., without needing to convert to other formats."
-  },
-  {
-    "id": "sd-10-3",
-    "level": 10,
-    "question": "What is database sharding?",
-    "options": [
-      { "id": "a", "text": "A technique for encrypting a database." },
-      {
-        "id": "b",
-        "text": "The process of breaking up a large database into smaller, faster, more easily managed parts called shards."
-      },
-      { "id": "c", "text": "A method of creating indexes for a database." },
-      { "id": "d", "text": "A way to replicate a database across multiple geographic locations." }
-    ],
-    "correct": ["b"],
-    "multi": false,
-    "explanation": "Sharding is a type of horizontal partitioning where rows of a database table are held separately, on different servers. It's a scaling technique used when a single database server can no longer handle the load."
-  },
-  {
-    "id": "js-10-4",
-    "level": 10,
-    "question": "How does JavaScript's garbage collection work at a high level?",
-    "options": [
-      {
-        "id": "a",
-        "text": "It requires the developer to manually allocate and deallocate memory."
-      },
-      {
-        "id": "b",
-        "text": "It uses a reference-counting algorithm to immediately free memory when an object has no references."
-      },
+      { "id": "a", "text": "By creating a new thread for every request." },
+      { "id": "b", "text": "By using a multi-threaded event loop." },
       {
         "id": "c",
-        "text": "It primarily uses a mark-and-sweep algorithm to periodically find and free unreachable objects."
+        "text": "Through a single-threaded event loop and a worker pool (libuv) to offload I/O-bound tasks."
       },
       {
         "id": "d",
-        "text": "JavaScript does not have garbage collection; memory leaks are impossible."
+        "text": "Node.js cannot handle asynchronous operations; it is purely synchronous."
       }
     ],
     "correct": ["c"],
     "multi": false,
-    "explanation": "Modern JavaScript engines use a 'mark-and-sweep' garbage collection algorithm. It periodically traverses the object graph starting from root objects (like the global object) and marks all reachable objects. In the 'sweep' phase, it frees the memory of all unmarked (unreachable) objects."
+    "explanation": "Node.js uses a non-blocking, event-driven architecture. The event loop runs on a single thread. When an async operation (like a database query or file read) is started, it's offloaded to the C++ library `libuv`, which uses a thread pool. When the operation completes, its callback is placed in a queue to be executed by the event loop."
   },
   {
-    "id": "sd-10-5",
-    "level": 10,
-    "question": "What is the role of a Message Queue (like RabbitMQ or Kafka) in a distributed system?",
+    "id": "dsa-3-5",
+    "level": 3,
+    "question": "How would you find the first non-repeating character in a string?",
     "options": [
-      { "id": "a", "text": "To act as a primary data store, replacing a traditional database." },
+      {
+        "id": "a",
+        "text": "Sort the string and find the first character that is different from its neighbor."
+      },
       {
         "id": "b",
-        "text": "To enable asynchronous communication between different services, improving scalability and decoupling."
+        "text": "Use a hash map to store character counts. Iterate through the string a second time to find the first character with a count of 1."
       },
-      { "id": "c", "text": "To cache API responses and reduce latency." },
-      { "id": "d", "text": "To manage user authentication and authorization tokens." }
+      {
+        "id": "c",
+        "text": "Compare every character with every other character using nested loops."
+      },
+      { "id": "d", "text": "This is an impossible problem to solve efficiently." }
     ],
     "correct": ["b"],
     "multi": false,
-    "explanation": "A message queue is a form of asynchronous service-to-service communication used in serverless and microservices architectures. It allows services to communicate without being directly connected, improving fault tolerance and scalability by buffering requests."
+    "explanation": "The most efficient approach is to make a single pass to build a frequency map (e.g., a hash map or an array for ASCII characters). Then, make a second pass over the original string to check the map and return the first character with a frequency of 1. This gives a time complexity of O(n)."
+  },
+  {
+    "id": "react-3-6",
+    "level": 3,
+    "question": "What is the difference between controlled and uncontrolled components in React?",
+    "options": [
+      { "id": "a", "text": "Controlled components are faster." },
+      { "id": "b", "text": "Uncontrolled components are more secure." },
+      {
+        "id": "c",
+        "text": "In a controlled component, form data is handled by React state. In an uncontrolled component, form data is handled by the DOM itself."
+      },
+      {
+        "id": "d",
+        "text": "Controlled components are for class components, and uncontrolled are for functional components."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "With a controlled component, the form input's value is driven by React state (`value` prop and `onChange` handler). With an uncontrolled component, you typically use a `ref` to pull the value from the DOM when needed."
+  },
+  {
+    "id": "ts-3-7",
+    "level": 3,
+    "question": "In TypeScript, what is the key difference between the `any` and `unknown` types?",
+    "options": [
+      { "id": "a", "text": "`any` and `unknown` are identical." },
+      {
+        "id": "b",
+        "text": "`any` allows you to access any property without type checking, effectively turning off TypeScript's safety. `unknown` is also a type-safe counterpart; you must perform type checking before performing operations on it."
+      },
+      { "id": "c", "text": "`any` is for objects, `unknown` is for primitive types." },
+      { "id": "d", "text": "`unknown` is an older, deprecated version of `any`." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`any` sacrifices type safety for flexibility. `unknown` is a better choice when you don't know the type of a value but want to maintain type safety, as TypeScript will force you to narrow the type (e.g., with `typeof` checks) before using it."
+  },
+  {
+    "id": "web-3-8",
+    "level": 3,
+    "question": "What is the difference between the `PUT` and `PATCH` HTTP methods?",
+    "options": [
+      { "id": "a", "text": "`PUT` is for creating resources, `PATCH` is for updating them." },
+      {
+        "id": "b",
+        "text": "`PUT` replaces the entire target resource with the request payload. `PATCH` applies a partial modification to the resource."
+      },
+      { "id": "c", "text": "`PATCH` is more secure than `PUT`." },
+      { "id": "d", "text": "They are functionally identical and can be used interchangeably." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`PUT` is idempotent and requires the client to send the entire updated object. `PATCH` is not necessarily idempotent and only requires the client to send the specific fields that need to be changed."
+  },
+  {
+    "id": "db-3-9",
+    "level": 3,
+    "question": "What is the purpose of database indexing?",
+    "options": [
+      { "id": "a", "text": "To reduce the physical storage size of the database." },
+      { "id": "b", "text": "To encrypt sensitive data within the database tables." },
+      {
+        "id": "c",
+        "text": "To speed up the performance of data retrieval (read) operations on a database table."
+      },
+      { "id": "d", "text": "To provide a backup of the database tables." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "An index is a data structure (commonly a B-Tree) that improves the speed of data retrieval at the cost of slower writes and more storage space. It allows the database to find rows matching query criteria without performing a full table scan."
+  },
+  {
+    "id": "css-3-10",
+    "level": 3,
+    "question": "What are SCSS modules or CSS Modules?",
+    "options": [
+      { "id": "a", "text": "A set of pre-defined CSS classes like Bootstrap." },
+      { "id": "b", "text": "A way to write CSS directly inside JavaScript files." },
+      {
+        "id": "c",
+        "text": "A system where CSS class names are automatically scoped locally to a specific component, preventing style conflicts."
+      },
+      { "id": "d", "text": "A new version of the CSS language." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "CSS Modules solve the problem of global scope in CSS. When you use a CSS Module, the build tool transforms the class names to be unique for that component, so you can use simple names like `.container` without worrying about them clashing with other components' styles."
+  },
+  {
+    "id": "js-4-1",
+    "level": 4,
+    "question": "What is the difference between Promises and `async/await` in JavaScript?",
+    "options": [
+      { "id": "a", "text": "`async/await` is a completely new system that replaces Promises." },
+      {
+        "id": "b",
+        "text": "`async/await` is syntactic sugar built on top of Promises, making asynchronous code look and behave more like synchronous code."
+      },
+      { "id": "c", "text": "Promises can handle errors, but `async/await` cannot." },
+      { "id": "d", "text": "`async/await` runs faster than using raw Promises." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "An `async` function implicitly returns a Promise. The `await` keyword pauses the execution of the async function until the awaited Promise is settled. This allows for cleaner, more readable async logic compared to long `.then()` chains."
+  },
+  {
+    "id": "react-4-2",
+    "level": 4,
+    "question": "What is the virtual DOM (VDOM), and how does React use it?",
+    "options": [
+      { "id": "a", "text": "A shadow copy of the DOM stored on the server for security." },
+      { "id": "b", "text": "A direct link to the browser's DOM for faster manipulation." },
+      {
+        "id": "c",
+        "text": "A programming concept where the entire DOM is virtualized and doesn't actually render."
+      },
+      {
+        "id": "d",
+        "text": "An in-memory representation of the real DOM. React creates a VDOM tree, and when state changes, it creates a new one, compares it with the old one (diffing), and then updates the real DOM only where necessary."
+      }
+    ],
+    "correct": ["d"],
+    "multi": false,
+    "explanation": "Direct DOM manipulation is slow. The VDOM acts as a lightweight copy. React's reconciliation algorithm efficiently calculates the minimal changes needed and batches them to update the real DOM, improving performance."
+  },
+  {
+    "id": "web-4-3",
+    "level": 4,
+    "question": "Explain what happens when you type a URL into your browser and press Enter.",
+    "options": [
+      {
+        "id": "a",
+        "text": "The browser sends a request directly to the web server's IP address, which sends back the HTML."
+      },
+      {
+        "id": "b",
+        "text": "The browser checks its cache, performs a DNS lookup to get the IP, establishes a TCP connection, sends an HTTP request, the server processes it and sends a response, and the browser renders the content."
+      },
+      {
+        "id": "c",
+        "text": "The URL is sent to your Internet Service Provider, which finds the website and downloads it for you."
+      },
+      {
+        "id": "d",
+        "text": "The browser encrypts the URL and sends it through a secure tunnel to the destination."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a classic web fundamentals question. The full process involves multiple steps: DNS resolution, TCP handshake, TLS handshake (for HTTPS), the HTTP request/response cycle, and finally browser rendering (parsing HTML, executing JS, etc.)."
+  },
+  {
+    "id": "node-4-4",
+    "level": 4,
+    "question": "How does authentication typically work in a Node.js application? Explain the role of JWT.",
+    "options": [
+      { "id": "a", "text": "By storing user passwords directly in browser cookies." },
+      { "id": "b", "text": "The server checks the user's IP address on every request." },
+      {
+        "id": "c",
+        "text": "A user logs in with credentials, the server validates them and issues a signed JSON Web Token (JWT). The client sends this JWT in the header of subsequent requests, and the server verifies its signature to authorize the user."
+      },
+      {
+        "id": "d",
+        "text": "Node.js has a built-in authentication system that works automatically."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "JWT is a popular stateless authentication mechanism. The token contains claims (user data) and is digitally signed by the server. Because it's stateless, the server doesn't need to store session information, which is great for scalability."
+  },
+  {
+    "id": "dsa-4-5",
+    "level": 4,
+    "question": "How can you detect if a linked list contains a cycle?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Iterate through the list and store every node in a hash set. If you encounter a node already in the set, there is a cycle."
+      },
+      {
+        "id": "b",
+        "text": "Use two pointers, a 'slow' one moving one step at a time and a 'fast' one moving two steps. If they ever meet, there is a cycle."
+      },
+      {
+        "id": "c",
+        "text": "Iterate until you reach the 1000th node; if the list is longer, assume there is a cycle."
+      },
+      { "id": "d", "text": "Try to reverse the list; if it fails, there is a cycle." }
+    ],
+    "correct": ["a", "b"],
+    "multi": true,
+    "explanation": "Both methods work. The two-pointer approach (Floyd's Tortoise and Hare algorithm) is often preferred because it has a space complexity of O(1), whereas the hash set approach has a space complexity of O(n)."
+  },
+  {
+    "id": "ts-4-6",
+    "level": 4,
+    "question": "What are some common TypeScript utility types you have used?",
+    "options": [
+      { "id": "a", "text": "`String`, `Number`, `Boolean`" },
+      { "id": "b", "text": "`Promise`, `Array`, `Object`" },
+      { "id": "c", "text": "`if`, `else`, `switch`" },
+      { "id": "d", "text": "`Partial<T>`, `Required<T>`, `Pick<T, K>`, `Omit<T, K>`" }
+    ],
+    "correct": ["d"],
+    "multi": false,
+    "explanation": "TypeScript provides several utility types to facilitate common type transformations. For example, `Partial<T>` makes all properties of `T` optional, and `Pick<T, K>` creates a new type by picking a set of properties `K` from `T`."
+  },
+  {
+    "id": "web-4-7",
+    "level": 4,
+    "question": "What can cause a website's rendering to be blocked?",
+    "options": [
+      { "id": "a", "text": "Images that are too large." },
+      {
+        "id": "b",
+        "text": "Synchronous JavaScript or CSS files in the `<head>` of an HTML document."
+      },
+      { "id": "c", "text": "Too many comments in the HTML." },
+      { "id": "d", "text": "Using `let` instead of `const`." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "When a browser encounters a `<script>` tag (that is not `async` or `defer`) or a `<link rel=\"stylesheet\">` in the `<head>`, it must pause HTML parsing, download, and execute the file before it can continue building the DOM and rendering the page. This is known as render-blocking."
+  },
+  {
+    "id": "db-4-8",
+    "level": 4,
+    "question": "What are ACID properties in the context of database transactions?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A set of properties for making databases faster: Acceleration, Caching, Indexing, Distribution."
+      },
+      {
+        "id": "b",
+        "text": "A security standard for databases: Authorized, Controlled, Immutable, Defensive."
+      },
+      {
+        "id": "c",
+        "text": "A set of properties ensuring reliability: Atomicity, Consistency, Isolation, Durability."
+      },
+      { "id": "d", "text": "A design pattern for NoSQL databases." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "ACID properties are a set of guarantees for database transactions: **Atomicity** (all operations in a transaction succeed or none do), **Consistency** (the database remains in a valid state), **Isolation** (concurrent transactions do not affect each other), and **Durability** (committed transactions are permanent)."
+  },
+  {
+    "id": "react-4-9",
+    "level": 4,
+    "question": "What is 'prop drilling' in React and how can it be avoided?",
+    "options": [
+      { "id": "a", "text": "A performance optimization technique." },
+      {
+        "id": "b",
+        "text": "The process of passing props down through multiple layers of nested components that do not need the props themselves. It can be avoided using the Context API or state management libraries like Redux."
+      },
+      { "id": "c", "text": "An error that occurs when props are not defined correctly." },
+      { "id": "d", "text": "A method for securely passing data between components." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Prop drilling can make components less reusable and code harder to maintain. The Context API provides a way to pass data through the component tree without having to pass props down manually at every level."
+  },
+  {
+    "id": "js-4-10",
+    "level": 4,
+    "question": "What is the `this` keyword in JavaScript and how is its value determined?",
+    "options": [
+      { "id": "a", "text": "It always refers to the global `window` object." },
+      {
+        "id": "b",
+        "text": "Its value is determined by how a function is called (the call-site). In the global scope it's the global object; as an object method, it's the object; with `new`, it's the new instance; with arrow functions, it's the lexical scope's `this`."
+      },
+      { "id": "c", "text": "It refers to the function itself." },
+      { "id": "d", "text": "It is an older keyword that has been replaced by `self`." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The value of `this` is one of the most confusing parts of JavaScript. It is determined dynamically at runtime based on the execution context, not where the function is defined."
+  },
+  {
+    "id": "js-5-1",
+    "level": 5,
+    "question": "How does the JavaScript event loop work? Explain the roles of the call stack, callback queue, and web APIs.",
+    "options": [
+      {
+        "id": "a",
+        "text": "It's a `for` loop that the browser uses to listen for user events like clicks."
+      },
+      {
+        "id": "b",
+        "text": "It's a security feature that loops through code to find vulnerabilities."
+      },
+      {
+        "id": "c",
+        "text": "The call stack executes functions. When an async operation (via a Web API) is called, it runs outside the stack. Once complete, its callback is placed in the callback queue. The event loop moves callbacks from the queue to the stack only when the stack is empty."
+      },
+      {
+        "id": "d",
+        "text": "It manages memory by looping through objects and garbage collecting them."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "This mechanism is what allows JavaScript, a single-threaded language, to perform non-blocking asynchronous operations. The event loop's continuous process of checking the call stack and the callback queue is fundamental to the language's concurrency model."
+  },
+  {
+    "id": "node-5-2",
+    "level": 5,
+    "question": "What is event-driven architecture, and how does it relate to NodeJS?",
+    "options": [
+      { "id": "a", "text": "An architecture where every user action fires a browser event." },
+      {
+        "id": "b",
+        "text": "A design pattern where components communicate through firing and listening for events. Node.js is fundamentally built on this, with its `EventEmitter` class and asynchronous, non-blocking I/O model."
+      },
+      { "id": "c", "text": "A way to drive a UI using only events, with no state." },
+      { "id": "d", "text": "An older architecture that has been replaced by microservices." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "In an event-driven architecture, services are decoupled. A service emits an event when something happens (e.g., 'user_created'), and other services can subscribe to these events to perform actions. Node.js's core is designed around this pattern."
+  },
+  {
+    "id": "sys-5-3",
+    "level": 5,
+    "question": "What is caching, and what are some common caching strategies?",
+    "options": [
+      { "id": "a", "text": "A method of encrypting data for secure storage." },
+      {
+        "id": "b",
+        "text": "The process of storing copies of data in a temporary, fast-access location to reduce latency. Strategies include Cache-Aside, Read-Through, and Write-Back."
+      },
+      { "id": "c", "text": "A technique for deleting old data from a database." },
+      { "id": "d", "text": "The process of validating user input." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Caching is a critical performance optimization technique. Common places to cache include the client browser, a CDN, a dedicated cache server (like Redis or Memcached), and the database itself."
+  },
+  {
+    "id": "web-5-4",
+    "level": 5,
+    "question": "What are WebSockets, and when would you use them over traditional HTTP?",
+    "options": [
+      { "id": "a", "text": "A more secure version of HTTP." },
+      {
+        "id": "b",
+        "text": "A protocol that provides a persistent, full-duplex communication channel over a single TCP connection. Use them for real-time applications like chat apps, live notifications, or online gaming."
+      },
+      { "id": "c", "text": "A technology for downloading large files." },
+      { "id": "d", "text": "An older protocol that has been replaced by HTTP/2." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "While HTTP is a request-response protocol, WebSockets keep the connection open, allowing the server to push data to the client at any time. This drastically reduces latency for real-time features."
+  },
+  {
+    "id": "dsa-5-5",
+    "level": 5,
+    "question": "Given an array of integers, find the maximum sum of any contiguous subarray. (Kadane's Algorithm)",
+    "options": [
+      { "id": "a", "text": "Find the sum of all positive numbers in the array." },
+      { "id": "b", "text": "Sort the array and sum the largest elements." },
+      {
+        "id": "c",
+        "text": "Iterate through the array, keeping track of the maximum sum ending at the current position and the overall maximum sum found so far."
+      },
+      {
+        "id": "d",
+        "text": "Use nested loops to check every possible subarray, calculate its sum, and find the maximum."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Kadane's Algorithm is a dynamic programming approach that solves this problem in O(n) time. It efficiently tracks the best possible sum ending at each index, updating a global maximum along the way."
+  },
+  {
+    "id": "node-5-6",
+    "level": 5,
+    "question": "What is the difference between OAuth and JWT for authentication?",
+    "options": [
+      {
+        "id": "a",
+        "text": "JWT is a token format; OAuth is an authorization protocol. OAuth can use JWTs as one way to issue access tokens."
+      },
+      { "id": "b", "text": "They are competing standards that do the exact same thing." },
+      {
+        "id": "c",
+        "text": "OAuth is for authentication (who you are), while JWT is for authorization (what you can do)."
+      },
+      {
+        "id": "d",
+        "text": "JWT is used for back-end services, while OAuth is used for front-end applications."
+      }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "This is a common point of confusion. OAuth 2.0 is a framework for delegating access (e.g., allowing a third-party app to access your Google profile). JWT is a standard for creating self-contained, signed access tokens. OAuth servers often provide clients with JWTs."
+  },
+  {
+    "id": "sys-5-7",
+    "level": 5,
+    "question": "What is the difference between monolithic and microservices architectures?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Monoliths are for small projects, microservices are for large projects."
+      },
+      {
+        "id": "b",
+        "text": "Monoliths are single, tightly-coupled applications where all components are deployed together. Microservices structure an application as a collection of small, independent, loosely-coupled services."
+      },
+      { "id": "c", "text": "Monoliths use SQL databases, while microservices use NoSQL." },
+      { "id": "d", "text": "Monolithic architectures are outdated and no longer used." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Microservices offer benefits like independent deployment, technology diversity, and resilience, but come with increased operational complexity (service discovery, distributed data, etc.). Monoliths are simpler to develop and deploy initially but can become difficult to scale and maintain."
+  },
+  {
+    "id": "react-5-8",
+    "level": 5,
+    "question": "How can you optimize the performance of a React application?",
+    "options": [
+      {
+        "id": "a",
+        "text": "By using `React.memo`, `useCallback`, and `useMemo` to prevent unnecessary re-renders. Other techniques include code-splitting, windowing for large lists, and optimizing image loading."
+      },
+      { "id": "b", "text": "By avoiding the use of functional components." },
+      { "id": "c", "text": "By writing all CSS inline in the component files." },
+      { "id": "d", "text": "By increasing the server's RAM." }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "React performance optimization often revolves around memoization to skip expensive calculations and re-renders. `React.memo` is a higher-order component for functional components, while `useCallback` and `useMemo` are hooks that memoize functions and values, respectively."
+  },
+  {
+    "id": "js-5-9",
+    "level": 5,
+    "question": "What is event delegation in JavaScript?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A pattern where you attach a single event listener to a parent element to manage events for multiple child elements."
+      },
+      { "id": "b", "text": "The process of delegating JavaScript execution to a web worker." },
+      { "id": "c", "text": "A way to trigger custom events." },
+      { "id": "d", "text": "An old technique that is no longer needed with modern frameworks." }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "Instead of adding an event listener to every child, you add one to the parent. This pattern leverages event bubbling. It is more performant and simplifies code, especially for dynamically added elements."
+  },
+  {
+    "id": "web-5-10",
+    "level": 5,
+    "question": "What is the purpose of the `OPTIONS` HTTP request method?",
+    "options": [
+      { "id": "a", "text": "To request optional, non-essential data from the server." },
+      { "id": "b", "text": "To check the performance and response time of a server." },
+      {
+        "id": "c",
+        "text": "It's used by the browser to determine which HTTP methods and headers are allowed by a server for a specific URL, often as part of a CORS preflight request."
+      },
+      { "id": "d", "text": "It is a deprecated method that has been replaced by `GET`." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Before a browser sends a 'complex' cross-origin request (e.g., one with a `Content-Type` other than standard ones, or a `PUT`/`PATCH`/`DELETE` request), it first sends an `OPTIONS` request to the target server to see if the actual request is safe to send."
+  },
+  {
+    "id": "web-6-1",
+    "level": 6,
+    "question": "What is tree shaking and how does it work?",
+    "options": [
+      { "id": "a", "text": "A CSS animation that makes elements shake." },
+      { "id": "b", "text": "A debugging technique to 'shake out' bugs from code." },
+      {
+        "id": "c",
+        "text": "A dead code elimination process used by bundlers like Webpack or Rollup. It analyzes `import` and `export` statements to detect which code is not actually being used and excludes it from the final bundle."
+      },
+      { "id": "d", "text": "A way to structure data in a tree format for faster access." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "Tree shaking relies on the static structure of ES2015 modules (`import`/`export`). It is a crucial optimization for reducing the final bundle size of web applications, leading to faster load times."
+  },
+  {
+    "id": "web-6-2",
+    "level": 6,
+    "question": "What are the main differences between HTTP/1.1 and HTTP/2?",
+    "options": [
+      { "id": "a", "text": "HTTP/2 is more secure but slower than HTTP/1.1." },
+      {
+        "id": "b",
+        "text": "HTTP/2 is a binary protocol, supports multiplexing (multiple requests/responses over a single TCP connection), and uses header compression (HPACK). HTTP/1.1 is text-based and suffers from head-of-line blocking."
+      },
+      { "id": "c", "text": "HTTP/1.1 is for static sites, HTTP/2 is for dynamic applications." },
+      {
+        "id": "d",
+        "text": "There are no major differences; HTTP/2 is just a newer version number."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The key advantage of HTTP/2 is multiplexing, which allows the browser to download many resources in parallel over one connection, eliminating the head-of-line blocking problem of HTTP/1.1 and improving page load performance significantly."
+  },
+  {
+    "id": "ts-6-3",
+    "level": 6,
+    "question": "What is the difference between `interface` and `type` in TypeScript?",
+    "options": [
+      {
+        "id": "a",
+        "text": "`interface` can only be used for objects, while `type` can be used for any data type."
+      },
+      {
+        "id": "b",
+        "text": "`interface` supports declaration merging (can be defined multiple times and are combined), while `type` aliases cannot."
+      },
+      { "id": "c", "text": "`type` is the modern syntax, and `interface` is deprecated." },
+      {
+        "id": "d",
+        "text": "Functionally, there is almost no difference, but `interface` is generally preferred for defining object shapes and `type` for unions, intersections, or primitives."
+      }
+    ],
+    "correct": ["a", "b", "d"],
+    "multi": true,
+    "explanation": "While they are very similar and often interchangeable for object shapes, key differences exist. Interfaces support declaration merging, which is useful for augmenting existing interfaces. Type aliases are more versatile and can represent unions, intersections, or tuples. The general convention is to use `interface` for object shapes and `class` contracts, and `type` for everything else."
+  },
+  {
+    "id": "dsa-6-4",
+    "level": 6,
+    "question": "Given an array and a number `k`, return the maximum value in every sliding window of size `k`.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Use nested loops. The outer loop iterates through the windows, and the inner loop finds the max in the current window."
+      },
+      {
+        "id": "b",
+        "text": "Use a self-balancing binary search tree to maintain the elements in the window."
+      },
+      {
+        "id": "c",
+        "text": "Use a double-ended queue (deque) to store indices of useful elements in the current window, maintaining them in decreasing order of value. This provides an O(n) solution."
+      },
+      { "id": "d", "text": "Sort the entire array first." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The naive nested loop approach is O(n*k). The optimal solution uses a deque to keep track of the maximum element at the front of the queue for each window in amortized O(1) time, leading to an overall O(n) time complexity."
+  },
+  {
+    "id": "soft-6-5",
+    "level": 6,
+    "question": "How do you approach fixing a bug reported by a user?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Immediately write a patch based on my best guess and deploy it to production."
+      },
+      {
+        "id": "b",
+        "text": "First, replicate the bug reliably. Then, use debugging tools to isolate the root cause. After that, write a fix and, crucially, a regression test to ensure it doesn't happen again. Finally, get the fix code-reviewed before merging."
+      },
+      { "id": "c", "text": "Ask the user to clear their cache and try again." },
+      { "id": "d", "text": "Blame the user for using the software incorrectly." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This question assesses your problem-solving process and professionalism. A structured approach involving replication, isolation, fixing, testing, and reviewing is the hallmark of a good engineer."
+  },
+  {
+    "id": "web-6-6",
+    "level": 6,
+    "question": "How can you achieve real-time communication in a chat application?",
+    "options": [
+      { "id": "a", "text": "Using only standard REST API calls." },
+      {
+        "id": "b",
+        "text": "Short polling: The client repeatedly asks the server for new messages every few seconds."
+      },
+      {
+        "id": "c",
+        "text": "Long polling: The client makes a request, and the server holds it open until a new message is available."
+      },
+      {
+        "id": "d",
+        "text": "WebSockets: Establish a persistent, bi-directional connection between the client and server for instant message passing."
+      }
+    ],
+    "correct": ["b", "c", "d"],
+    "multi": true,
+    "explanation": "While polling techniques work, WebSockets (option D) are the modern, most efficient solution for true real-time communication, as they eliminate the overhead of constantly creating new HTTP requests."
+  },
+  {
+    "id": "js-6-7",
+    "level": 6,
+    "question": "What is the difference between `null` and `undefined` in JavaScript?",
+    "options": [
+      { "id": "a", "text": "They are strictly equal (`===`)." },
+      {
+        "id": "b",
+        "text": "`undefined` typically means a variable has been declared but not yet assigned a value. `null` is an assignment value, intentionally used to represent 'no value' or an empty object reference."
+      },
+      { "id": "c", "text": "`null` is a number, while `undefined` is an object." },
+      { "id": "d", "text": "`null` is a language error, while `undefined` is expected behavior." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`undefined` is the default value for uninitialized variables, missing object properties, or functions that don't return anything. `null` must be explicitly assigned by a developer to indicate the intentional absence of a value."
+  },
+  {
+    "id": "node-6-8",
+    "level": 6,
+    "question": "What is the purpose of the `package-lock.json` file in a Node.js project?",
+    "options": [
+      { "id": "a", "text": "It's a backup of the `package.json` file." },
+      { "id": "b", "text": "It locks the project so no new packages can be installed." },
+      {
+        "id": "c",
+        "text": "It records the exact versions of all dependencies (including sub-dependencies) that were installed, ensuring deterministic builds across different machines and environments."
+      },
+      { "id": "d", "text": "It contains the documentation for all installed packages." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The `package.json` file might have version ranges (e.g., `^1.2.3`). `package-lock.json` ensures that every time `npm install` is run, the exact same dependency tree is generated, preventing bugs from unexpected dependency updates."
+  },
+  {
+    "id": "css-6-9",
+    "level": 6,
+    "question": "Explain the difference between `position: absolute`, `relative`, and `fixed` in CSS.",
+    "options": [
+      {
+        "id": "a",
+        "text": "`relative` positions an element relative to itself, `absolute` positions it relative to its nearest positioned ancestor, and `fixed` positions it relative to the browser viewport."
+      },
+      { "id": "b", "text": "They are all used to center elements on the page." },
+      {
+        "id": "c",
+        "text": "`absolute` is for text, `relative` is for images, and `fixed` is for headers."
+      },
+      { "id": "d", "text": "There is no functional difference; they are for semantic purposes." }
+    ],
+    "correct": ["a"],
+    "multi": false,
+    "explanation": "An element with `position: relative` can be moved with `top`/`left` etc., without changing the layout around it. An `absolute` element is removed from the normal document flow and positioned relative to a parent with `position` other than `static`. A `fixed` element is also removed from the flow and stays in the same place even when the page is scrolled."
+  },
+  {
+    "id": "react-6-10",
+    "level": 6,
+    "question": "What is a Higher-Order Component (HOC) in React?",
+    "options": [
+      { "id": "a", "text": "A component with a high z-index." },
+      { "id": "b", "text": "The most parent component in the application tree." },
+      {
+        "id": "c",
+        "text": "A function that takes a component and returns a new component, used for reusing component logic."
+      },
+      { "id": "d", "text": "A component that renders other components using `props.children`." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "HOCs are an advanced React pattern for logic reuse. While custom Hooks are now often preferred for this, HOCs are still prevalent in many codebases. A common example is a `withAuth` HOC that wraps a component to add authentication logic."
+  },
+  {
+    "id": "web-7-1",
+    "level": 7,
+    "question": "What is web accessibility (a11y) and what does WCAG stand for?",
+    "options": [
+      { "id": "a", "text": "Making websites load faster. WCAG: World Class Animation Graphics." },
+      {
+        "id": "b",
+        "text": "The practice of ensuring websites and tools are designed and developed so that people with disabilities can use them. WCAG: Web Content Accessibility Guidelines."
+      },
+      {
+        "id": "c",
+        "text": "A security standard to prevent hacking. WCAG: Web Cryptography and Authentication Group."
+      },
+      {
+        "id": "d",
+        "text": "A new framework for building web applications. WCAG: Web Component Application Generator."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Accessibility is crucial for creating inclusive web experiences. WCAG provides a shared standard with testable success criteria, organized under four principles: Perceivable, Operable, Understandable, and Robust (POUR)."
+  },
+  {
+    "id": "js-7-2",
+    "level": 7,
+    "question": "How does JavaScript's garbage collection work, and what is a common cause of memory leaks?",
+    "options": [
+      { "id": "a", "text": "Developers must manually allocate and deallocate memory." },
+      {
+        "id": "b",
+        "text": "It primarily uses a mark-and-sweep algorithm to find and free unreachable objects. A common leak source is uncleared event listeners or closures holding onto references to DOM elements that have been removed."
+      },
+      { "id": "c", "text": "It uses a reference-counting system that is completely foolproof." },
+      { "id": "d", "text": "JavaScript doesn't have garbage collection." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Modern JS engines use mark-and-sweep. The collector starts from root objects (like the global object) and marks all reachable objects. In the sweep phase, it frees unmarked objects. Leaks happen when unwanted references keep objects from being marked as unreachable."
+  },
+  {
+    "id": "dsa-7-3",
+    "level": 7,
+    "question": "Given a string `s`, find the longest palindromic substring in `s`.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Generate all substrings, check if each is a palindrome, and keep track of the longest one."
+      },
+      {
+        "id": "b",
+        "text": "Use the 'Expand from Center' approach. Iterate through each character and treat it as a potential center of a palindrome, expanding outwards to find the longest palindrome."
+      },
+      {
+        "id": "c",
+        "text": "Sort the characters of the string and find the longest repeating sequence."
+      },
+      {
+        "id": "d",
+        "text": "Reverse the string and find the longest common substring between the original and the reversed string."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The brute-force approach (A) is O(n^3). The 'Expand from Center' approach (B) is much more efficient at O(n^2), as it avoids redundant checks. The longest common substring approach (D) seems clever but fails on certain edge cases (e.g., \"abacaba\" reversed is \"abacaba\", but \"abacaba\" itself is the palindrome, whereas another string might have a non-palindromic common substring with its reverse)."
+  },
+  {
+    "id": "sys-7-4",
+    "level": 7,
+    "question": "At a high level, how would you design a rate limiter?",
+    "options": [
+      { "id": "a", "text": "Block users after their first request to prevent abuse." },
+      {
+        "id": "b",
+        "text": "Use a key-value store (like Redis). For each incoming request (keyed by IP address or API key), increment a counter. If the counter exceeds a threshold within a time window, reject the request. Use a sliding window algorithm for more accuracy."
+      },
+      { "id": "c", "text": "Add a `setTimeout` to every API endpoint to slow it down." },
+      { "id": "d", "text": "This can only be done with specialized hardware." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a classic system design question. The core idea is to count requests per client in a given timeframe. Algorithms like Token Bucket or Sliding Window Log are common implementations. Using a fast, in-memory store like Redis is crucial for performance."
+  },
+  {
+    "id": "web-7-5",
+    "level": 7,
+    "question": "What is Incremental Static Regeneration (ISR) in a framework like Next.js?",
+    "options": [
+      { "id": "a", "text": "A way to slowly and incrementally add CSS to a page." },
+      {
+        "id": "b",
+        "text": "A feature that allows you to update existing statically generated pages after the site has been built, without needing a full rebuild. It combines the benefits of static sites (speed) with the freshness of server-rendered pages."
+      },
+      { "id": "c", "text": "A database feature for regenerating indexes." },
+      { "id": "d", "text": "A method for partially reloading a page in the browser." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "With ISR, you can specify a revalidation time for a static page. The first user gets the cached static page. If a request comes in after the revalidation time, the user still gets the cached page, but Next.js triggers a rebuild in the background. Subsequent users will get the newly generated page."
+  },
+  {
+    "id": "soft-7-6",
+    "level": 7,
+    "question": "How do you introduce a new technology or library to your team?",
+    "options": [
+      { "id": "a", "text": "Start using it immediately in a critical production service." },
+      {
+        "id": "b",
+        "text": "Research the technology, build a small Proof of Concept (PoC) to demonstrate its value and solve a real problem. Prepare a document or presentation on its pros, cons, and integration costs. Discuss it with the team to get buy-in before wider adoption."
+      },
+      { "id": "c", "text": "Demand that everyone on the team starts using it immediately." },
+      { "id": "d", "text": "Wait for a manager to tell you what technology to use." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This question assesses your technical leadership, communication, and risk management skills. A thoughtful, data-driven approach that involves the team is much more likely to succeed than a unilateral decision."
+  },
+  {
+    "id": "node-7-7",
+    "level": 7,
+    "question": "What are streams in Node.js and why are they useful?",
+    "options": [
+      { "id": "a", "text": "They are for streaming video content only." },
+      {
+        "id": "b",
+        "text": "They are objects that let you read data from a source or write data to a destination in continuous chunks. They are memory-efficient because you don't need to load the entire data into memory at once."
+      },
+      { "id": "c", "text": "They are an alternative to Promises for handling asynchronous code." },
+      { "id": "d", "text": "They are a way to organize code into a continuous flow." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Streams are a fundamental concept in Node.js for handling I/O. For example, when reading a large file, a stream allows you to process it piece by piece instead of buffering the entire file in RAM, which could crash the application."
+  },
+  {
+    "id": "css-7-8",
+    "level": 7,
+    "question": "Describe the difference between a CSS `transition` and a CSS `animation`.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Transitions are for simple effects, animations are for complex effects."
+      },
+      {
+        "id": "b",
+        "text": "`transition` is triggered by a state change (like `:hover`), defining a smooth change from a start state to an end state. `animation` is more powerful, allowing for multiple keyframes (`@keyframes`) and can run without a state change trigger."
+      },
+      {
+        "id": "c",
+        "text": "Transitions are performed by JavaScript, while animations are native to CSS."
+      },
+      { "id": "d", "text": "They are the same, but `animation` is the newer syntax." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Use `transition` for simple, two-state animations. Use `animation` when you need more control, such as defining intermediate steps, iteration counts, or animation direction."
+  },
+  {
+    "id": "db-7-9",
+    "level": 7,
+    "question": "When would you choose a NoSQL database like MongoDB over a SQL database like PostgreSQL?",
+    "options": [
+      { "id": "a", "text": "Always, because NoSQL is newer and better." },
+      {
+        "id": "b",
+        "text": "When your data is highly relational and requires complex, multi-table joins and transactions."
+      },
+      {
+        "id": "c",
+        "text": "For applications with unstructured or rapidly changing data schemas, requiring high scalability and horizontal scaling, and when complex transactions are not the primary concern."
+      },
+      { "id": "d", "text": "When you need to store only small amounts of data." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The choice depends on the use case. SQL databases excel at enforcing data consistency and handling complex relationships. NoSQL databases offer flexibility, performance at scale for certain workloads (e.g., big data, real-time apps), and simpler horizontal scaling."
+  },
+  {
+    "id": "js-7-10",
+    "level": 7,
+    "question": "What is the `prototype` chain in JavaScript?",
+    "options": [
+      { "id": "a", "text": "A list of all methods available on an object." },
+      {
+        "id": "b",
+        "text": "A mechanism for one object to inherit properties and methods from another object. When a property is accessed, the engine checks the object, then its prototype, then the prototype's prototype, and so on."
+      },
+      { "id": "c", "text": "An array that holds an object's parent and child elements." },
+      { "id": "d", "text": "A security feature to prevent object modification." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Prototypal inheritance is a core concept in JavaScript. Every object has a link to a prototype object. This chain is how JavaScript implements inheritance, allowing objects to share properties and methods."
+  },
+  {
+    "id": "sys-8-1",
+    "level": 8,
+    "question": "How would you design a simple pastebin-like service (e.g., Pastebin, Gist)?",
+    "options": [
+      { "id": "a", "text": "Store all pastes in a single text file on the server." },
+      {
+        "id": "b",
+        "text": "A web client submits text to an API. The API generates a unique short URL (e.g., using a hash of the content or a counter), stores the text content in a NoSQL database (like DynamoDB or MongoDB) with the short URL as the key, and returns the URL. A separate GET endpoint retrieves the content by its key."
+      },
+      {
+        "id": "c",
+        "text": "Use a relational SQL database with an auto-incrementing integer ID as the URL."
+      },
+      { "id": "d", "text": "Build it entirely on the client-side using localStorage." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This system design question tests your understanding of basic API design, data modeling, and trade-offs. A NoSQL database is a good fit for this key-value type of data. Generating a non-sequential, unique short URL is a key component."
+  },
+  {
+    "id": "dsa-8-2",
+    "level": 8,
+    "question": "How would you merge `k` sorted linked lists into one sorted linked list?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Concatenate all lists into one and then sort the entire resulting list."
+      },
+      { "id": "b", "text": "Iteratively merge two lists at a time until only one remains." },
+      {
+        "id": "c",
+        "text": "Use a Min-Heap. Insert the first element of each of the `k` lists into the heap. Then, repeatedly extract the minimum element from the heap, add it to the result list, and insert the next element from the same list the minimum element came from."
+      },
+      {
+        "id": "d",
+        "text": "Use nested loops to find the smallest element among all lists in each step."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "The naive approach (A) is inefficient. Iterative merging (B) works but is O(n*k) where n is the total number of nodes. The Min-Heap approach (C) is the most optimal, with a time complexity of O(n * log(k)), as extracting from the heap takes log(k) time."
+  },
+  {
+    "id": "node-8-3",
+    "level": 8,
+    "question": "What is the difference between concurrent programming and parallel programming, and how does Node.js fit in?",
+    "options": [
+      { "id": "a", "text": "They are the same thing." },
+      {
+        "id": "b",
+        "text": "Parallelism is doing multiple things at the same time (requires multiple cores). Concurrency is dealing with multiple things at once (can be done on a single core). Node.js is concurrent (via the event loop) but not truly parallel in its main thread, though it can achieve parallelism using worker threads."
+      },
+      { "id": "c", "text": "Node.js is parallel but not concurrent." },
+      { "id": "d", "text": "Concurrency is about front-end, parallelism is about back-end." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This tests a nuanced understanding of performance concepts. Node.js's event loop model is a perfect example of concurrency on a single thread. For CPU-bound tasks that require true parallelism, the `worker_threads` module should be used."
+  },
+  {
+    "id": "web-8-4",
+    "level": 8,
+    "question": "What is HTTP/3, and what problem does it solve?",
+    "options": [
+      { "id": "a", "text": "It's a simpler version of HTTP/2." },
+      {
+        "id": "b",
+        "text": "It runs over the QUIC protocol (which uses UDP), primarily to solve the head-of-line blocking problem that can still occur in HTTP/2 at the TCP level. If one packet is lost, it doesn't block other independent streams."
+      },
+      { "id": "c", "text": "It's a new version of HTTP that only supports JSON data." },
+      { "id": "d", "text": "It's a text-based protocol, unlike the binary HTTP/2." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "HTTP/2 solved head-of-line blocking at the HTTP stream level but was still vulnerable at the transport (TCP) level. HTTP/3 moves to QUIC/UDP to eliminate this, leading to better performance, especially on lossy networks."
+  },
+  {
+    "id": "db-8-5",
+    "level": 8,
+    "question": "What is the N+1 query problem, and how can you solve it?",
+    "options": [
+      { "id": "a", "text": "A security vulnerability where an attacker can run N+1 queries." },
+      {
+        "id": "b",
+        "text": "A performance issue where code first fetches a list of N items (1 query), and then loops through them to fetch related data for each item (N additional queries). It can be solved by 'eager loading' the related data in the initial query using a JOIN or a subquery."
+      },
+      {
+        "id": "c",
+        "text": "A feature of databases that automatically runs an extra query for caching."
+      },
+      { "id": "d", "text": "When a query returns N+1 results instead of the expected N." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The N+1 problem is a common performance bottleneck in applications using ORMs. Instead of `SELECT * FROM posts;` followed by N queries like `SELECT * FROM comments WHERE post_id = ?;`, you should do something like `SELECT * FROM posts JOIN comments ON posts.id = comments.post_id;` to fetch everything at once."
+  },
+  {
+    "id": "dsa-8-6",
+    "level": 8,
+    "question": "Given a list of course prerequisites (e.g., `[course, prerequisite]`), determine if it is possible to finish all courses.",
+    "options": [
+      {
+        "id": "a",
+        "text": "Count the number of courses and prerequisites; if they are equal, it's possible."
+      },
+      {
+        "id": "b",
+        "text": "This problem can be modeled as a directed graph where courses are nodes and prerequisites are edges. The problem is equivalent to detecting if the graph has a cycle. This can be solved using Depth First Search (DFS) or topological sort (Kahn's algorithm)."
+      },
+      { "id": "c", "text": "Sort the courses alphabetically." },
+      { "id": "d", "text": "Use a queue to process courses one by one." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a classic graph theory problem. If there is a cycle in the prerequisite graph (e.g., A depends on B, and B depends on A), it's impossible to complete all courses. Topological sorting is the standard way to solve this."
+  },
+  {
+    "id": "js-8-7",
+    "level": 8,
+    "question": "What is a `WeakMap` in JavaScript and how does it differ from a regular `Map`?",
+    "options": [
+      { "id": "a", "text": "It's a `Map` that is less secure." },
+      {
+        "id": "b",
+        "text": "A `WeakMap` only accepts objects as keys. Crucially, it holds 'weak' references to its keys, meaning if an object key has no other references in the program, it can be garbage collected. This prevents memory leaks."
+      },
+      { "id": "c", "text": "It's a simplified version of `Map` with fewer methods." },
+      { "id": "d", "text": "There is no difference; `WeakMap` is an alias." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "`WeakMap` is useful for associating metadata with an object without preventing that object from being garbage collected when it's no longer needed. Unlike `Map`, you cannot iterate over the keys of a `WeakMap`."
+  },
+  {
+    "id": "react-8-8",
+    "level": 8,
+    "question": "How does server-side rendering (SSR) work in a framework like Next.js, and what are its pros and cons?",
+    "options": [
+      { "id": "a", "text": "SSR renders the entire application in the browser." },
+      {
+        "id": "b",
+        "text": "With SSR, the React components are rendered into an HTML string on the server for each request. Pros: Better SEO and faster First Contentful Paint (FCP). Cons: Higher server load and slower Time to First Byte (TTFB)."
+      },
+      { "id": "c", "text": "SSR is a way to cache static pages on a server." },
+      { "id": "d", "text": "SSR means the server only sends JSON data to the client." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "SSR is a trade-off. It provides a fully rendered HTML page to the browser, which is great for search engine crawlers and perceived performance. However, it requires a Node.js server to be running and can be more resource-intensive than serving a static site."
+  },
+  {
+    "id": "sys-8-9",
+    "level": 8,
+    "question": "What is the role of a CDN (Content Delivery Network) in a web architecture?",
+    "options": [
+      { "id": "a", "text": "It is the primary web server for the application." },
+      {
+        "id": "b",
+        "text": "A geographically distributed network of proxy servers that cache static content (like images, CSS, JS) close to end-users, reducing latency and offloading traffic from the origin server."
+      },
+      { "id": "c", "text": "A tool for managing DNS records." },
+      { "id": "d", "text": "A database for storing user content." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Using a CDN is a fundamental step in scaling a web application. By serving assets from servers physically closer to the user, it drastically improves load times and reduces the load on your main application servers."
+  },
+  {
+    "id": "node-8-10",
+    "level": 8,
+    "question": "What is the `Buffer` class in Node.js used for?",
+    "options": [
+      { "id": "a", "text": "To temporarily store log messages before writing them to a file." },
+      { "id": "b", "text": "A performance buffer to make CPU-bound tasks run faster." },
+      {
+        "id": "c",
+        "text": "To handle and interact with streams of binary data. It allows Node.js to work with raw data from sources like TCP streams or the file system."
+      },
+      { "id": "d", "text": "A cache for database query results." }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "JavaScript itself doesn't have a good way to handle raw binary data. The `Buffer` class is a Node.js specific global that provides a memory-allocated slab of data for manipulating octet streams."
+  },
+  {
+    "id": "sys-9-1",
+    "level": 9,
+    "question": "How would you design a distributed logging system for a large-scale microservices application?",
+    "options": [
+      { "id": "a", "text": "Have each microservice write its logs to the local filesystem." },
+      {
+        "id": "b",
+        "text": "Have each service `console.log` its output and monitor the standard output."
+      },
+      {
+        "id": "c",
+        "text": "Use a dedicated logging agent (like Fluentd or Logstash) on each host to collect logs, ship them to a centralized message queue (like Kafka), and then process and store them in a searchable data store (like Elasticsearch). Provide a UI (like Kibana) for searching and visualization."
+      },
+      {
+        "id": "d",
+        "text": "Write all logs directly from each service to a single, central SQL database."
+      }
+    ],
+    "correct": ["c"],
+    "multi": false,
+    "explanation": "This demonstrates a common architecture (the ELK/EFK stack). The key principles are decoupling log collection from processing, ensuring logs are not lost if a service crashes, and providing a scalable, centralized way to search and analyze logs from many sources."
+  },
+  {
+    "id": "sys-9-2",
+    "level": 9,
+    "question": "How would you design a parking lot system?",
+    "options": [
+      { "id": "a", "text": "Use a single boolean variable `isFull`." },
+      {
+        "id": "b",
+        "text": "Model the system with classes: `ParkingLot`, `Level`, `ParkingSpot` (with types like `Compact`, `Large`), `Vehicle`, and `Ticket`. Implement methods like `findAvailableSpot(vehicle)`, `parkVehicle(vehicle)`, and `unparkVehicle(ticket)` which handles calculating fees. The system needs to handle concurrency for multiple entries/exits."
+      },
+      { "id": "c", "text": "Store car license plates in a simple array." },
+      { "id": "d", "text": "Focus only on the UI for the parking attendant." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This object-oriented design question tests your ability to break down a real-world problem into logical components, define their properties and behaviors, and consider constraints like different vehicle sizes and concurrent operations."
+  },
+  {
+    "id": "react-9-3",
+    "level": 9,
+    "question": "What is React Fiber, and what problem does it solve?",
+    "options": [
+      { "id": "a", "text": "A new component type for rendering 3D graphics." },
+      {
+        "id": "b",
+        "text": "A complete rewrite of the React core reconciliation algorithm. Its main goal is to enable incremental rendering, allowing rendering work to be split into chunks and spread out over multiple frames. This prevents blocking the main thread and improves perceived performance for complex UIs."
+      },
+      { "id": "c", "text": "A state management library that replaces Redux." },
+      { "id": "d", "text": "A tool for bundling React applications." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Before Fiber (React 16), the reconciliation algorithm was recursive and synchronous. If an update was large, it could block the main thread, making the UI unresponsive. Fiber allows React to pause, abort, or reuse work, enabling features like suspense and concurrent mode."
+  },
+  {
+    "id": "node-9-4",
+    "level": 9,
+    "question": "How does Node.js manage its memory, and what are the V8 Heap memory segments?",
+    "options": [
+      { "id": "a", "text": "Memory is manually managed by the developer." },
+      {
+        "id": "b",
+        "text": "Node.js uses the V8 engine's garbage collector. The heap is divided into segments like New Space (for new, short-lived objects, garbage collected quickly) and Old Space (for objects that survive New Space, garbage collected less frequently via mark-sweep)."
+      },
+      { "id": "c", "text": "Node.js stores everything on the stack." },
+      { "id": "d", "text": "Memory management is handled entirely by the operating system." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Understanding V8's generational garbage collector is key to diagnosing memory issues in Node.js. Knowing about the different spaces (and others like the Large Object Space and Code Space) shows a deep understanding of the runtime's internals."
+  },
+  {
+    "id": "sys-9-5",
+    "level": 9,
+    "question": "What is the CAP Theorem in distributed systems?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A theorem stating a system can be Correct, Available, and Performant."
+      },
+      {
+        "id": "b",
+        "text": "A theorem stating it is impossible for a distributed data store to simultaneously provide more than two out of three guarantees: Consistency, Availability, and Partition Tolerance."
+      },
+      { "id": "c", "text": "A guideline for CPU, Access time, and Power management." },
+      { "id": "d", "text": "A security principle for APIs." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The CAP theorem is fundamental to distributed system design. Since network partitions are a fact of life, a system must choose between strong consistency (all nodes see the same data) and high availability (every request gets a response). This leads to categorizing systems as CP (like many SQL DBs) or AP (like many NoSQL DBs)."
+  },
+  {
+    "id": "arch-9-6",
+    "level": 9,
+    "question": "You have different vendors with different store UI requirements. How do you maintain the styling for them in a scalable way?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Create a separate, complete CSS file for each vendor and load it based on the URL."
+      },
+      {
+        "id": "b",
+        "text": "Use a Theming approach. Define a base set of UI components. Create theme objects (e.g., in JSON) that define design tokens (colors, fonts, spacing). A Theme Provider component injects the correct theme based on the vendor, and components consume these tokens. This allows for massive reuse while maintaining distinct visual identities."
+      },
+      {
+        "id": "c",
+        "text": "Write a lot of `if/else` statements inside each component to render different styles."
+      },
+      { "id": "d", "text": "Tell the vendors they all have to use the same UI." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This question tests architectural thinking for front-end. A token-based theming system (often using CSS-in-JS libraries or CSS Custom Properties) is the modern, scalable solution for building white-labeled or multi-tenant applications."
+  },
+  {
+    "id": "dsa-9-7",
+    "level": 9,
+    "question": "You need to implement a feature that suggests the top 5 most frequently purchased items. How would you design this?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Query the entire sales database and count every item every time a user visits the page."
+      },
+      {
+        "id": "b",
+        "text": "Use a combination of a hash map to store frequencies and a min-heap of size `k` (in this case, 5). When processing sales, update the frequency in the map. If the item's frequency is greater than the smallest frequency in the heap, replace it. This keeps track of the top k items efficiently."
+      },
+      { "id": "c", "text": "Manually set the top 5 items and never change them." },
+      {
+        "id": "d",
+        "text": "Store all purchase events in a simple array and sort it by frequency on each request."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a classic 'Top K Frequent Elements' problem. The hash map + min-heap approach is very efficient, with a time complexity of O(N log k) where N is the number of items, which is much better than sorting the entire frequency map (O(M log M) where M is the number of unique items)."
+  },
+  {
+    "id": "web-9-8",
+    "level": 9,
+    "question": "What is the 'critical rendering path' and how do you optimize for it?",
+    "options": [
+      { "id": "a", "text": "The path a user takes to a critical feature on your site." },
+      {
+        "id": "b",
+        "text": "The sequence of steps the browser goes through to convert HTML, CSS, and JavaScript into pixels on the screen. Optimization involves minimizing the number of critical resources, reducing their size, and optimizing the order in which they are loaded (e.g., inlining critical CSS, deferring non-critical JS)."
+      },
+      { "id": "c", "text": "A security path that must be encrypted." },
+      { "id": "d", "text": "The most important API endpoint in your backend." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Optimizing the critical rendering path is key to achieving a fast Time to Interactive (TTI). It's about getting the most important content to the user as quickly as possible by removing any render-blocking resources from the path."
+  },
+  {
+    "id": "node-9-9",
+    "level": 9,
+    "question": "How can a Node.js server take advantage of a multi-core CPU?",
+    "options": [
+      { "id": "a", "text": "It does this automatically without any specific code." },
+      {
+        "id": "b",
+        "text": "By using the built-in `cluster` module to fork the main process into multiple worker processes, each running on a separate core, all sharing the same server port. Alternatively, for CPU-bound tasks, use the `worker_threads` module."
+      },
+      {
+        "id": "c",
+        "text": "By rewriting the application in a different language like Go or Rust."
+      },
+      { "id": "d", "text": "A single Node.js process cannot use more than one core." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "While a single Node.js process runs on a single thread, the `cluster` module allows you to easily create a load-balanced cluster of Node.js processes, dramatically improving the throughput of the server on multi-core machines."
+  },
+  {
+    "id": "db-9-10",
+    "level": 9,
+    "question": "What is database sharding and when is it necessary?",
+    "options": [
+      { "id": "a", "text": "A technique for encrypting a database." },
+      {
+        "id": "b",
+        "text": "The process of horizontally partitioning a large database into smaller, faster, more manageable parts called shards. It's necessary when a single database server can no longer handle the load (CPU, RAM, or storage), a problem that vertical scaling can't solve cost-effectively."
+      },
+      { "id": "c", "text": "A method of creating indexes for a database." },
+      { "id": "d", "text": "A way to replicate a database for backups." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Sharding is a technique for extreme scaling. Each shard is its own database, and data is partitioned across them based on a shard key. It adds significant complexity to the application (e.g., cross-shard joins are difficult) and is usually a last resort after optimizing queries and considering other scaling options."
+  },
+  {
+    "id": "sys-10-1",
+    "level": 10,
+    "question": "How would you design a system like Twitter's feed, considering the 'celebrity problem' (e.g., a user with millions of followers)?",
+    "options": [
+      {
+        "id": "a",
+        "text": "When a user tweets, iterate through all their followers and insert the tweet into each follower's timeline table in a database."
+      },
+      {
+        "id": "b",
+        "text": "Use a hybrid approach. For regular users, use a 'fan-out-on-write' approach (push the tweet to followers' timelines). For celebrities, don't fan out. Instead, when a user requests their feed, pull the celebrity's recent tweets and merge them with their regular feed ('fan-out-on-read')."
+      },
+      {
+        "id": "c",
+        "text": "When a user requests their feed, query all the people they follow, get all their tweets, sort them by time, and return the result."
+      },
+      { "id": "d", "text": "Limit users to a maximum of 1000 followers to avoid the problem." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The naive push approach (A) would overwhelm the system when a celebrity tweets. The naive pull approach (C) would be too slow for users who follow many people. The hybrid approach is a classic system design pattern that balances write-time and read-time complexity to create a scalable and performant system."
+  },
+  {
+    "id": "sys-10-2",
+    "level": 10,
+    "question": "How would you design a system to handle millions of requests per second for a read-heavy API?",
+    "options": [
+      { "id": "a", "text": "Buy a single, very powerful server." },
+      {
+        "id": "b",
+        "text": "Implement a multi-layered caching strategy: use a CDN for edge caching, a distributed in-memory cache (like Redis) for API responses, and database-level caching. Use horizontal scaling with load balancers to distribute traffic across many stateless application servers. Use read replicas for the database to handle the read load."
+      },
+      { "id": "c", "text": "Use WebSockets for all communication." },
+      { "id": "d", "text": "Optimize the database queries by adding more indexes." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This high-level question requires combining multiple scaling techniques. A single technique is not enough. The key is to handle requests as far away from the database as possible, using aggressive caching at every layer, and to scale horizontally at both the application and database tiers."
+  },
+  {
+    "id": "sys-10-3",
+    "level": 10,
+    "question": "Design an elevator system for a 100-story building.",
+    "options": [
+      { "id": "a", "text": "Use a single elevator that stops at every floor." },
+      {
+        "id": "b",
+        "text": "This involves object-oriented design (Elevator, Request, Controller classes) and a scheduling algorithm. The controller manages requests from inside and outside elevators. A good algorithm (like SCAN or LOOK) would optimize elevator movement to minimize wait times, considering direction and current load. The system needs to be distributed and fault-tolerant."
+      },
+      { "id": "c", "text": "Install 100 separate elevators, one for each floor." },
+      {
+        "id": "d",
+        "text": "Implement a simple queue for all requests and process them in First-In, First-Out order."
+      }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a classic design question that assesses your ability to model a complex real-world system, consider algorithms for optimization, and think about concurrency, state management, and fault tolerance. There is no single 'right' answer, but the quality of the discussion about trade-offs is what matters."
+  },
+  {
+    "id": "dsa-10-4",
+    "level": 10,
+    "question": "You are given `n` stalls and `k` cows. You must assign the cows to stalls to maximize the minimum distance between any two cows. What is the optimal approach?",
+    "options": [
+      {
+        "id": "a",
+        "text": "Try every possible placement of cows, calculate the minimum distance for each, and find the maximum. (Brute Force)."
+      },
+      {
+        "id": "b",
+        "text": "This is a search problem that can be solved efficiently using binary search on the answer. The search space for the minimum distance is from 0 to the maximum distance between stalls. For a given distance `x`, greedily check if it's possible to place `k` cows with at least `x` distance between them."
+      },
+      { "id": "c", "text": "Place the cows in the first `k` stalls." },
+      { "id": "d", "text": "Use dynamic programming to solve the problem." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This is a famous competitive programming problem ('Aggressive Cows'). The key insight is that the feasibility function (can we place `k` cows with at least distance `x`?) is monotonic. This allows you to binary search for the largest possible value of `x` that is still feasible, leading to an efficient O(N log D) solution, where D is the maximum distance."
+  },
+  {
+    "id": "arch-10-5",
+    "level": 10,
+    "question": "What is eventual consistency, and in what scenarios is it an acceptable trade-off?",
+    "options": [
+      {
+        "id": "a",
+        "text": "A system that will eventually become consistent after a few bugs are fixed."
+      },
+      {
+        "id": "b",
+        "text": "A consistency model where, given no new updates, all replicas of a piece of data will eventually converge to the same value. It's acceptable in systems where high availability is critical and immediate, strong consistency is not required, like social media feeds, view counters, or shopping cart contents."
+      },
+      { "id": "c", "text": "A database that is only consistent during evenings." },
+      { "id": "d", "text": "A model where data is never consistent." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Eventual consistency is a foundational concept in many highly available, distributed NoSQL databases (AP systems in CAP theorem). Accepting that a user might see a slightly stale 'like' count for a few seconds is a reasonable trade-off to ensure the service remains up and responsive."
+  },
+  {
+    "id": "soft-10-6",
+    "level": 10,
+    "question": "As a technical lead, how do you make a major architectural decision?",
+    "options": [
+      { "id": "a", "text": "Make the decision alone based on my gut feeling and enforce it." },
+      {
+        "id": "b",
+        "text": "Identify the problem and constraints clearly. Research and prototype multiple potential solutions. Document the trade-offs of each (e.g., in an Architecture Decision Record - ADR). Present the findings to the team and stakeholders, facilitate a discussion to build consensus, and then make a final, well-justified decision."
+      },
+      { "id": "c", "text": "Let the junior engineers decide to give them experience." },
+      { "id": "d", "text": "Choose the newest, most popular technology available." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "This question assesses leadership, process, and strategic thinking. A good leader facilitates a collaborative and data-driven process, ensuring decisions are well-understood, documented, and aligned with business and technical goals, rather than imposing their will."
+  },
+  {
+    "id": "web-10-7",
+    "level": 10,
+    "question": "Excluding the common GET/POST/PUT/PATCH/DELETE, name and describe two other HTTP methods.",
+    "options": [
+      { "id": "a", "text": "SEND and RECEIVE" },
+      {
+        "id": "b",
+        "text": "OPTIONS: Used to describe the communication options for the target resource (e.g., in CORS preflight). HEAD: Asks for a response identical to a GET request, but without the response body, useful for checking if a resource exists or getting its metadata."
+      },
+      { "id": "c", "text": "PUSH and PULL" },
+      { "id": "d", "text": "START and STOP" }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Knowing less common but important HTTP methods like HEAD, OPTIONS, CONNECT, or TRACE demonstrates a deeper understanding of the protocol beyond typical REST API usage."
+  },
+  {
+    "id": "db-10-8",
+    "level": 10,
+    "question": "What is database replication and what is the difference between single-leader and multi-leader replication?",
+    "options": [
+      { "id": "a", "text": "Replication is another word for backing up a database." },
+      {
+        "id": "b",
+        "text": "Replication is the process of keeping copies of data on multiple machines. In single-leader, all writes go to one primary node and are then replicated to read-only followers. In multi-leader, multiple nodes can accept writes, which then must be synchronized, introducing conflict resolution challenges."
+      },
+      { "id": "c", "text": "Single-leader is for SQL, multi-leader is for NoSQL." },
+      { "id": "d", "text": "Replication is when a database copies itself to use more memory." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "Replication is key for high availability and read scalability. Single-leader is the most common model, providing strong consistency. Multi-leader replication can offer better performance for geographically distributed systems but requires complex logic to handle write conflicts."
+  },
+  {
+    "id": "sys-10-9",
+    "level": 10,
+    "question": "What is Idempotency in the context of APIs and why is it important?",
+    "options": [
+      { "id": "a", "text": "An API that returns a unique ID for every request." },
+      {
+        "id": "b",
+        "text": "An operation is idempotent if making the same request multiple times produces the same result as making it once. It's important for building reliable systems, as it allows clients to safely retry requests after network failures without causing unintended side effects (like charging a customer twice)."
+      },
+      { "id": "c", "text": "An API that has no side effects." },
+      { "id": "d", "text": "A security feature that makes an API immune to attacks." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "HTTP methods like GET, HEAD, PUT, and DELETE are expected to be idempotent. POST is not. For non-idempotent operations that need retry safety (like payments), developers often implement an idempotency key that the client sends with the request."
+  },
+  {
+    "id": "arch-10-10",
+    "level": 10,
+    "question": "What is the 'Strangler Fig' pattern?",
+    "options": [
+      { "id": "a", "text": "A design pattern for optimizing database queries." },
+      {
+        "id": "b",
+        "text": "An architectural pattern for incrementally migrating a legacy monolithic system to a microservices architecture. A new system is built around the old one, gradually intercepting and replacing pieces of functionality until the old system is 'strangled' and can be decommissioned."
+      },
+      { "id": "c", "text": "A security pattern to 'strangle' malicious requests." },
+      { "id": "d", "text": "A front-end pattern for managing complex state." }
+    ],
+    "correct": ["b"],
+    "multi": false,
+    "explanation": "The Strangler Fig pattern is a pragmatic and lower-risk approach to modernizing large, critical systems. Instead of a high-risk 'big bang' rewrite, it allows for a gradual, controlled transition, delivering value incrementally."
   }
 ]
