@@ -1,10 +1,12 @@
 interface SummaryData {
-  text: string;
+  textBig: string;
+  textSmall: string;
   contactInfo: {
     location: string;
     email: string;
-    linkedin: string;
     github: string;
+    portfolio: string;
+    linkedin: string;
   };
 }
 
@@ -20,7 +22,7 @@ const Summary = ({ data }: SummaryProps) => {
           <span className="gradient-text">About Me</span>
         </h2>
         <div className="card p-8 max-w-4xl mx-auto animate-on-scroll">
-          <p className="text-gray-700 leading-relaxed text-lg">{data.text}</p>
+          <p className="text-gray-700 leading-relaxed text-lg">{data.textBig}</p>
           <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
               <i className="fas fa-map-marker-alt text-cyan-600 mr-2"></i>
@@ -33,17 +35,6 @@ const Summary = ({ data }: SummaryProps) => {
               </a>
             </div>
             <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
-              <i className="fab fa-linkedin text-cyan-600 mr-2"></i>
-              <a
-                href={`${data.contactInfo.linkedin}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-cyan-700"
-              >
-                {data.contactInfo.linkedin}
-              </a>
-            </div>
-            <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
               <i className="fab fa-github text-cyan-600 mr-2"></i>
               <a
                 href={`${data.contactInfo.github}`}
@@ -52,6 +43,28 @@ const Summary = ({ data }: SummaryProps) => {
                 className="hover:text-cyan-700"
               >
                 {data.contactInfo.github}
+              </a>
+            </div>
+            <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
+              <i className="fas fa-globe text-cyan-600 mr-2"></i>
+              <a
+                href={`${data.contactInfo.portfolio}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-700"
+              >
+                {data.contactInfo.portfolio}
+              </a>
+            </div>
+            <div className="flex items-center bg-cyan-50 px-4 py-2 rounded-full">
+              <i className="fab fa-linkedin text-cyan-600 mr-2"></i>
+              <a
+                href={`${data.contactInfo.linkedin}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-700"
+              >
+                {data.contactInfo.linkedin}
               </a>
             </div>
           </div>

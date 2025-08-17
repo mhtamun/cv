@@ -36,7 +36,7 @@ export default function PrintView() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "flex-start",
+          alignItems: "center",
           marginBottom: "12px",
           borderBottom: "1px solid #d1d5db",
           paddingBottom: "8px",
@@ -64,11 +64,43 @@ export default function PrintView() {
             {portfolioData.hero.title}
           </p>
         </div>
-        <div style={{ textAlign: "right", fontSize: "9pt", color: "#4b5563", minWidth: "160px" }}>
+        <div
+          style={{
+            fontSize: "9pt",
+            color: "#4b5563",
+            minWidth: "160px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-end",
+            gap: "2px",
+            textAlign: "right",
+          }}
+        >
           <div>{portfolioData.summary.contactInfo.location}</div>
-          <div>{portfolioData.summary.contactInfo.email}</div>
-          <div>linkedin.com/in/mhtamun</div>
-          <div>github.com/mhtamun</div>
+          <a
+            href={`mailto:${portfolioData.summary.contactInfo.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2563eb", textDecoration: "none" }}
+          >
+            {portfolioData.summary.contactInfo.email}
+          </a>
+          <a
+            href={portfolioData.summary.contactInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2563eb", textDecoration: "none" }}
+          >
+            {portfolioData.summary.contactInfo.github}
+          </a>
+          <a
+            href={portfolioData.summary.contactInfo.portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2563eb", textDecoration: "none" }}
+          >
+            {portfolioData.summary.contactInfo.portfolio}
+          </a>
         </div>
       </div>
 
@@ -87,7 +119,7 @@ export default function PrintView() {
           Summary
         </h2>
         <p style={{ color: "#374151", lineHeight: 1.4, fontSize: "10.5pt" }}>
-          {portfolioData.summary.text}
+          {portfolioData.summary.textSmall}
         </p>
       </div>
 

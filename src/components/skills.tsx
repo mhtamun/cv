@@ -1,7 +1,17 @@
-import { portfolioData } from "@/data/portfolio-data";
+interface SkillsData {
+  categories: {
+    title: string;
+    mainSkills: { name: string }[];
+    otherSkills: { name: string }[];
+  }[];
+}
 
-const Skills = () => {
-  const { categories } = portfolioData.skills;
+interface SkillsProps {
+  data: SkillsData;
+}
+
+const Skills = ({ data }: SkillsProps) => {
+  const { categories } = data;
   return (
     <section id="skills" className="py-20 px-4 bg-gradient-to-b from-cyan-50 to-white">
       <div className="container mx-auto">

@@ -28,14 +28,16 @@ export const portfolioData = {
   },
 
   summary: {
-    // text: "As a Senior Software Engineer with over nine years of experience, I specialize in building scalable, frontend focused full-stack web applications using JavaScript and TypeScript. My expertise is centered around the React and Node.js ecosystems, where I use frameworks like Next.js and Nest.js to create robust, user-first solutions with a focus on clean, performant code. Throughout my career, I've led development on enterprise SaaS platforms, e-commerce systems, and mission-critical government applications. I have a strong background in designing both microservice and microfrontend architectures, which has been key to improving team velocity and system scalability. I enjoy collaborating closely with product teams, mentoring fellow engineers, and championing modern development practices like CI/CD and test-driven development.",
-    text: "Senior Software Engineer with nine years of experience building scalable web applications using JavaScript and TypeScript. Skilled in React, Node.js, Next.js, and Nest.js, with a track record of leading projects across SaaS, e-commerce, and government platforms. Strong background in microservices, microfrontends, and modern practices like CI/CD and testing, with experience mentoring teams and working closely with product managers.",
+    textBig:
+      "As a Senior Software Engineer with over nine years of experience, I specialize in building scalable, frontend focused full-stack web applications using JavaScript and TypeScript. My expertise is centered around the React and Node.js ecosystems, where I use frameworks like Next.js and Nest.js to create robust, user-first solutions with a focus on clean, performant code. Throughout my career, I've led development on enterprise SaaS platforms, e-commerce systems, and mission-critical government applications. I have a strong background in designing both microservice and microfrontend architectures, which has been key to improving team velocity and system scalability. I enjoy collaborating closely with product teams, mentoring fellow engineers, and championing modern development practices like CI/CD and test-driven development.",
+    textSmall:
+      "Senior Software Engineer with nine years of experience building scalable web applications using JavaScript and TypeScript. Skilled in React, Node.js, Next.js, and Nest.js, with a track record of leading projects across SaaS, e-commerce, and government platforms. Strong background in microservices, microfrontends, and modern practices like CI/CD and testing, with experience mentoring teams and working closely with product managers.",
     contactInfo: {
       location: "Dhaka, Bangladesh",
       email: "mhtamun@gmail.com",
-      linkedin: "https://linkedin.com/in/mhtamun",
       github: "https://github.com/mhtamun",
       portfolio: "https://mhtamun.github.io",
+      linkedin: "https://linkedin.com/in/mhtamun",
     },
   },
 
