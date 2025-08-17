@@ -86,12 +86,12 @@ export default function PrintView() {
             {portfolioData.summary.contactInfo.email}
           </a>
           <a
-            href={portfolioData.summary.contactInfo.github}
+            href={`tel:${portfolioData.summary.contactInfo.phone}`}
             target="_blank"
             rel="noopener noreferrer"
             style={{ color: "#2563eb", textDecoration: "none" }}
           >
-            {portfolioData.summary.contactInfo.github}
+            {portfolioData.summary.contactInfo.phone}
           </a>
           <a
             href={portfolioData.summary.contactInfo.portfolio}

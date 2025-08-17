@@ -35,6 +35,7 @@ export const portfolioData = {
     contactInfo: {
       location: "Dhaka, Bangladesh",
       email: "mhtamun@gmail.com",
+      phone: "+8801671010143",
       github: "https://github.com/mhtamun",
       portfolio: "https://mhtamun.github.io",
       linkedin: "https://linkedin.com/in/mhtamun",
