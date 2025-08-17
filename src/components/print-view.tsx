@@ -20,81 +20,175 @@ export default function PrintView() {
   }
 
   return (
-    <div className="print-container p-6 max-w-[210mm] mx-auto bg-white text-sm font-sans">
+    <div
+      className="print-container"
+      style={{
+        padding: "16px",
+        maxWidth: "185mm",
+        margin: "0 auto",
+        background: "white",
+        fontSize: "10.5pt",
+        fontFamily: "Arial, Calibri, sans-serif",
+      }}
+    >
       {/* Header */}
-      <div className="mb-6 border-b border-gray-300 pb-4 text-left">
-        <h1 className="text-2xl font-bold mb-1 font-sans">{portfolioData.hero.name}</h1>
-        <p className="text-lg text-gray-600 mb-3 font-sans">{portfolioData.hero.title}</p>
-        <div className="mb-2 text-xs text-gray-600">
-          <div className="mb-1">
-            <span>{portfolioData.summary.contactInfo.location}</span>
-          </div>
-          <div className="mb-1">
-            <span>{portfolioData.summary.contactInfo.email}</span>
-          </div>
-          <div className="mb-1">
-            <span>linkedin.com/in/mhtamun</span>
-          </div>
-          <div className="mb-1">
-            <span>github.com/mhtamun</span>
-          </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          marginBottom: "12px",
+          borderBottom: "1px solid #d1d5db",
+          paddingBottom: "8px",
+        }}
+      >
+        <div>
+          <h1
+            style={{
+              fontSize: "18pt",
+              fontWeight: 700,
+              marginBottom: "2px",
+              fontFamily: "inherit",
+            }}
+          >
+            {portfolioData.hero.name}
+          </h1>
+          <p
+            style={{
+              fontSize: "12pt",
+              color: "#4b5563",
+              marginBottom: "6px",
+              fontFamily: "inherit",
+            }}
+          >
+            {portfolioData.hero.title}
+          </p>
+        </div>
+        <div style={{ textAlign: "right", fontSize: "9pt", color: "#4b5563", minWidth: "160px" }}>
+          <div>{portfolioData.summary.contactInfo.location}</div>
+          <div>{portfolioData.summary.contactInfo.email}</div>
+          <div>linkedin.com/in/mhtamun</div>
+          <div>github.com/mhtamun</div>
         </div>
       </div>
 
       {/* Summary */}
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-2 pb-1 font-sans">Summary</h2>
-        <p className="text-gray-700 leading-relaxed text-sm">{portfolioData.summary.text}</p>
+      <div style={{ marginBottom: "10px" }}>
+        <h2
+          style={{
+            fontSize: "12pt",
+            fontWeight: 700,
+            borderBottom: "1px solid #d1d5db",
+            marginBottom: "4px",
+            paddingBottom: "2px",
+            fontFamily: "inherit",
+          }}
+        >
+          Summary
+        </h2>
+        <p style={{ color: "#374151", lineHeight: 1.4, fontSize: "10.5pt" }}>
+          {portfolioData.summary.text}
+        </p>
       </div>
 
-      {/* Experience */}
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-3 pb-1 font-sans">
+      {/* Work Experience */}
+      <div style={{ marginBottom: "10px" }}>
+        <h2
+          style={{
+            fontSize: "12pt",
+            fontWeight: 700,
+            borderBottom: "1px solid #d1d5db",
+            marginBottom: "6px",
+            paddingBottom: "2px",
+            fontFamily: "inherit",
+          }}
+        >
           Work Experience
         </h2>
-        {portfolioData.experience.items.map((exp, index) => (
-          <div key={index} className="mb-4 avoid-break">
-            <div className="flex justify-between items-start mb-1">
+        {portfolioData.experiences.items.map((exp, index) => (
+          <div key={index} style={{ marginBottom: "8px", pageBreakInside: "avoid" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+                marginBottom: "2px",
+              }}
+            >
               <div>
-                <h3 className="text-base font-bold">{exp.title}</h3>
-                <p className="text-gray-600 font-medium text-sm">{exp.company}</p>
+                <h3 style={{ fontSize: "10.5pt", fontWeight: 700, margin: 0 }}>{exp.title}</h3>
+                <div style={{ color: "#4b5563", fontWeight: 500, fontSize: "10pt" }}>
+                  {exp.company}
+                </div>
               </div>
-              <p className="text-gray-600 font-medium text-sm">{formatPeriod(exp.period)}</p>
+              <div style={{ color: "#4b5563", fontWeight: 500, fontSize: "10pt" }}>
+                {formatPeriod(exp.period)}
+              </div>
             </div>
-            {exp.description && (
-              <p className="text-gray-700 leading-relaxed text-sm">{exp.description}</p>
+            {exp.description && Array.isArray(exp.description) && (
+              <ul
+                style={{
+                  marginLeft: "1.1em",
+                  marginTop: 0,
+                  marginBottom: 0,
+                  paddingLeft: 0,
+                  listStyleType: "disc",
+                }}
+              >
+                {exp.description.slice(0, 3).map((desc, idx) => (
+                  <li
+                    key={idx}
+                    style={{
+                      marginBottom: "0.15em",
+                      color: "#374151",
+                      fontSize: "10pt",
+                      lineHeight: "1.4",
+                    }}
+                  >
+                    {desc}
+                  </li>
+                ))}
+              </ul>
             )}
-          </div>
-        ))}
-      </div>
-
-      {/* Education */}
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-3 pb-1 font-sans">
-          Education
-        </h2>
-        {portfolioData.education.items.slice(0, 2).map((edu, index) => (
-          <div key={index} className="mb-3 avoid-break">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-sm font-bold flex items-center">{edu.degree}</h3>
-                <p className="text-gray-600 text-sm">{edu.institution}</p>
-              </div>
-              <p className="text-gray-600 text-sm">{formatPeriod(edu.period)}</p>
-            </div>
+            {/* Show related projects for this experience */}
+            {(() => {
+              const relatedProjects = portfolioData.projects.items.filter(
+                (project) => project.company === exp.company
+              );
+              if (relatedProjects.length > 0) {
+                return (
+                  <div style={{ marginTop: "0.2em", fontSize: "10pt", color: "#2563eb" }}>
+                    <span style={{ fontWeight: 500 }}>Projects:</span>{" "}
+                    {relatedProjects.map((p) => p.title).join(", ")}
+                  </div>
+                );
+              }
+              return null;
+            })()}
           </div>
         ))}
       </div>
 
       {/* Skills */}
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-2 pb-1 font-sans">Skills</h2>
-        <div className="text-xs">
+      <div style={{ marginBottom: "10px" }}>
+        <h2
+          style={{
+            fontSize: "12pt",
+            fontWeight: 700,
+            borderBottom: "1px solid #d1d5db",
+            marginBottom: "4px",
+            paddingBottom: "2px",
+            fontFamily: "inherit",
+          }}
+        >
+          Skills
+        </h2>
+        <div style={{ fontSize: "9.5pt" }}>
           {portfolioData.skills.categories.map((category, index) => {
             const mainSkills = category.mainSkills.map((skill) => skill.name);
             return (
-              <div key={index} className="mb-1">
-                <span className="font-semibold">{category.title}:</span> {mainSkills.join(", ")}
+              <div key={index} style={{ marginBottom: "1px" }}>
+                <span style={{ fontWeight: 600 }}>{category.title}:</span> {mainSkills.join(", ")}
               </div>
             );
           })}
@@ -104,74 +198,76 @@ export default function PrintView() {
               .flatMap((category) => category.otherSkills?.map((skill) => skill.name) || [])
               .filter(Boolean);
             return allOtherSkills.length > 0 ? (
-              <div className="mt-2">
-                <span className="font-semibold">Other Skills:</span> {allOtherSkills.join(", ")}
+              <div style={{ marginTop: "2px" }}>
+                <span style={{ fontWeight: 600 }}>Other Skills:</span> {allOtherSkills.join(", ")}
               </div>
             ) : null;
           })()}
         </div>
       </div>
 
-      {/* Projects */}
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-2 pb-1">Projects</h2>
-        <div className="grid grid-cols-1 gap-2">
-          {portfolioData.projects.items.map((project, index) => (
-            <div key={index} className="mb-1 avoid-break">
-              <h3 className="text-sm font-bold mb-1 flex items-center">{project.title}</h3>
-              <p className="text-gray-700 text-xs mb-1 leading-snug">{project.description}</p>
-              <div className="flex flex-wrap gap-1">
-                {project.tags.map((tag, idx) => (
-                  <span key={idx} className="px-1 py-0.5 bg-gray-100 text-gray-700 text-xs rounded">
-                    {tag}
+      {/* Projects (Other Projects only) */}
+      <div style={{ marginBottom: "10px" }}>
+        <h2
+          style={{
+            fontSize: "12pt",
+            fontWeight: 700,
+            borderBottom: "1px solid #d1d5db",
+            marginBottom: "4px",
+            paddingBottom: "2px",
+            fontFamily: "inherit",
+          }}
+        >
+          Projects
+        </h2>
+        <div>
+          {portfolioData.projects.items
+            .filter((project) => project.company === "Other Projects")
+            .map((project, index) => (
+              <div key={index} style={{ marginBottom: "4px", pageBreakInside: "avoid" }}>
+                <span style={{ fontWeight: 700, fontSize: "10pt" }}>{project.title}</span>
+                <span style={{ color: "#374151", fontSize: "9.5pt" }}>
+                  {project.description ? `: ${project.description}` : ""}
+                </span>
+                {project.tags && project.tags.length > 0 && (
+                  <span style={{ color: "#2563eb", fontSize: "9pt" }}>
+                    {" "}
+                    [{project.tags.join(", ")}]
                   </span>
-                ))}
+                )}
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
-      {/* Interests */}
-      {/*
-      <div className="mb-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-2 pb-1">Interests</h2>
-        <div className="flex flex-wrap gap-2">
-          {portfolioData.interests.items.map((interest, index) => (
-            <div key={index} className="flex items-center px-2 py-1 bg-gray-100 rounded text-xs">
-              <span className="text-gray-700">{interest.name}</span>
+      {/* Education */}
+      <div style={{ marginBottom: "10px" }}>
+        <h2
+          style={{
+            fontSize: "12pt",
+            fontWeight: 700,
+            borderBottom: "1px solid #d1d5db",
+            marginBottom: "6px",
+            paddingBottom: "2px",
+            fontFamily: "inherit",
+          }}
+        >
+          Education
+        </h2>
+        {portfolioData.education.items.slice(0, 2).map((edu, index) => (
+          <div key={index} style={{ marginBottom: "6px", pageBreakInside: "avoid" }}>
+            <div
+              style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}
+            >
+              <div>
+                <h3 style={{ fontSize: "10pt", fontWeight: 700, margin: 0 }}>{edu.degree}</h3>
+                <div style={{ color: "#4b5563", fontSize: "10pt" }}>{edu.institution}</div>
+              </div>
+              <div style={{ color: "#4b5563", fontSize: "10pt" }}>{formatPeriod(edu.period)}</div>
             </div>
-          ))}
-        </div>
-      </div>
-      */}
-
-      {/* References */}
-      {/*
-      <div className="mt-5">
-        <h2 className="text-lg font-bold border-b border-gray-300 mb-2 pb-1">References</h2>
-        <div className="space-y-3 text-gray-700 text-xs">
-          <div>
-            <span className="font-semibold">Moinul Islam</span>
-            <br />
-            Co-founder & CEO, Green Feather Technologies
-            <br />
-            P: +880 1711-325673
-            <br />
-            E: moinul.islam@greenfeather.tech
           </div>
-          <div>
-            <span className="font-semibold">Mushraful Haque (Anik)</span>
-            <br />
-            DoT, Dynamic Solution Innovators Ltd.
-            <br />
-            P: +880 1622-688231
-            <br />
-            E: mushraful.hoque@dsinnovators.com
-          </div>
-        </div>
+        ))}
       </div>
-      */}
     </div>
   );
 }

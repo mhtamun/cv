@@ -36,7 +36,7 @@ const uniqueKeywords = Array.from(
     ...portfolioData.skills.categories.map((cat) => cat.title),
     ...allSkills,
     ...allTechnologies,
-    ...portfolioData.experience.items.map((exp) => exp.company),
+    ...portfolioData.experiences.items.map((exp) => exp.company),
     ...portfolioData.projects.items.map((project) => project.title),
   ])
 );
@@ -173,7 +173,7 @@ export default function RootLayout({
               },
               worksFor: {
                 "@type": "Organization",
-                name: portfolioData.experience.items[0].company,
+                name: portfolioData.experiences.items[0].company,
               },
               knowsAbout: allSkills,
               hasCredential: portfolioData.education.items.map((edu) => ({

@@ -60,9 +60,9 @@ export default function Home() {
           <Navbar navItems={portfolioData.navItems} />
           <Hero data={portfolioData.hero} />
           <Summary data={portfolioData.summary} />
-          <Experience data={portfolioData.experience} />
-          <Projects data={portfolioData.projects} />
+          <Experience data={portfolioData.experiences} />
           <Skills data={portfolioData.skills} />
+          <Projects data={portfolioData.projects} />
           <Education data={portfolioData.education} />
           <Interests data={portfolioData.interests} />
           <Footer data={portfolioData.footer} />

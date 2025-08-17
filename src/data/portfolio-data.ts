@@ -12,7 +12,7 @@ export const portfolioData = {
     name: "Maruf Hossain",
     title: "Senior Software Engineer",
     description:
-      "Senior Software Engineer passionate about designing scalable frontend systems and leading cross-functional teams. Seeking impactful roles in SaaS or product-based companies.",
+      "Senior Software Engineer passionate about designing scalable frontend focused fullstack systems and leading cross-functional teams. Seeking impactful roles in SaaS or product-based companies.",
     ctaButtons: {
       primary: {
         text: "View Experiences",
@@ -28,7 +28,7 @@ export const portfolioData = {
   },
 
   summary: {
-    text: "Fullstack JavaScript Engineer with 9+ years of experience building scalable web platforms using React, Next.js, Node.js, Nest.js, and TypeScript. Proven track record leading frontend and backend teams in fast-paced SaaS and government projects. Skilled in designing microservice and microfrontend architectures, optimizing performance, and delivering high-quality code across the stack. Comfortable deploying apps on AWS, Docker, and serverless environments with hands-on experience in CI/CD, load testing, and infrastructure automation. Passionate about clean code, modern DevOps practices, and building impactful user-first solutions.",
+    text: "As a Senior Software Engineer with over nine years of experience, I specialize in building scalable, frontend focused full-stack web applications using JavaScript and TypeScript. My expertise is centered around the React and Node.js ecosystems, where I use frameworks like Next.js and Nest.js to create robust, user-first solutions with a focus on clean, performant code. Throughout my career, I've led development on enterprise SaaS platforms, e-commerce systems, and mission-critical government applications. I have a strong background in designing both microservice and microfrontend architectures, which has been key to improving team velocity and system scalability. I enjoy collaborating closely with product teams, mentoring fellow engineers, and championing modern development practices like CI/CD and test-driven development.",
     contactInfo: {
       location: "Dhaka, Bangladesh",
       email: "mhtamun@gmail.com",
@@ -38,75 +38,68 @@ export const portfolioData = {
     },
   },
 
-  experience: {
+  experiences: {
     items: [
       {
         title: "Senior Software Engineer L-III",
-        company: "Vivasoft Ltd.",
+        company: "Vivasoft Limited",
         period: "March 2024 – Present",
-        description:
-          "Led the frontend architecture of the PiHr SaaS platform using React, microfrontends, and C# integration, resulting in a 40% improvement in development speed. Currently developing scalable UI components for the Eniro project in a monorepo setup (Turborepo, Next.js, Tailwind). Focused on system maintainability and frontend performance.",
+        description: [
+          "Led the frontend architecture of the PiHr SaaS platform using React, microfrontends, and C# integration, resulting in a 40% improvement in development speed.",
+          "Currently developing scalable UI components for the Eniro project in a monorepo setup (Turborepo, Next.js, Tailwind).",
+          "Focused on system maintainability and frontend performance.",
+        ],
       },
       {
         title: "Tech Lead (Part-time Consultant)",
         company: "Ahsan Technologies Ltd.",
         period: "December 2020 – Present",
-        description:
-          "Designed system architecture and managed a distributed team using Agile methodologies. Mentored junior developers and implemented CI/CD pipelines for client projects using React.js, NestJS, and PostgreSQL. Championed adoption of scalable backend patterns and clean code principles.",
+        description: [
+          "Designed system architecture and managed a distributed team using Agile methodologies.",
+          "Mentored junior developers and implemented CI/CD pipelines for client projects using React.js, NestJS, and PostgreSQL.",
+          "Championed adoption of scalable backend patterns and clean code principles.",
+        ],
       },
       {
         title: "Senior Software Engineer",
         company: "Dynamic Solution Innovators Ltd.",
         period: "November 2016 – March 2024",
-        description:
-          "Delivered mission-critical applications for enterprise clients. Increased codebase stability by introducing TDD and refactoring legacy modules. Collaborated closely with product teams on solution architecture and business logic. Spearheaded team-wide adoption of Agile best practices.",
+        description: [
+          "Delivered mission-critical applications for enterprise clients.",
+          "Increased codebase stability by introducing TDD and refactoring legacy modules.",
+          "Collaborated closely with product teams on solution architecture and business logic.",
+          "Spearheaded team-wide adoption of Agile best practices.",
+        ],
       },
       {
         title: "Junior Software Engineer",
         company: "Dcastalia Limited",
         period: "September 2016 – November 2016",
-        description:
-          "Built Android applications for an educational platform using MVP architecture. Applied TDD and used Dagger, Room, Retrofit, and RxJava to ensure scalable and testable code.",
+        description: [
+          "Built Android applications for an educational platform using MVP architecture.",
+          "Applied TDD and used Dagger, Room, Retrofit, and RxJava to ensure scalable and testable code.",
+        ],
         isHidden: true,
       },
       {
         title: "Junior Software Engineer",
         company: "AB Software Limited",
         period: "October 2015 – August 2016",
-        description:
-          "Developed a restaurant review mobile app using PHP for the backend and Java for Android. Ensured intuitive user experience through iterative UI improvements and bug fixing.",
+        description: [
+          "Developed a restaurant review mobile app using PHP for the backend and Java for Android.",
+          "Ensured intuitive user experience through iterative UI improvements and bug fixing.",
+        ],
         isHidden: true,
       },
       {
         title: "Junior Web Developer (Intern)",
         company: "Aparajito Enabler Limited",
         period: "November 2014 – January 2016",
-        description:
-          "Contributed to client websites with a focus on front-end user experience. Worked closely with designers to build responsive, user-friendly UIs.",
+        description: [
+          "Contributed to client websites with a focus on front-end user experience.",
+          "Worked closely with designers to build responsive, user-friendly UIs.",
+        ],
         isHidden: true,
-      },
-    ],
-  },
-
-  education: {
-    items: [
-      {
-        degree: "B.Sc. in Computer Science and Engineering",
-        institution: "Ahsanullah University of Science and Technology",
-        period: "June 2012 – May 2016",
-        icon: "fa-university",
-      },
-      {
-        degree: "Higher Secondary Certificate (HSC)",
-        institution: "Dhaka College",
-        period: "April 2009 – May 2011",
-        icon: "fa-school",
-      },
-      {
-        degree: "Secondary School Certificate (SSC)",
-        institution: "Tanjimul Ummah Cadet Madrasah",
-        period: "January 2007 – March 2009",
-        icon: "fa-school",
       },
     ],
   },
@@ -662,6 +655,29 @@ export const portfolioData = {
           end: "Jan 2014",
         },
         company: "Ahsanullah University of Science and Technology",
+      },
+    ],
+  },
+
+  education: {
+    items: [
+      {
+        degree: "B.Sc. in Computer Science and Engineering",
+        institution: "Ahsanullah University of Science and Technology",
+        period: "June 2012 – May 2016",
+        icon: "fa-university",
+      },
+      {
+        degree: "Higher Secondary Certificate (HSC)",
+        institution: "Dhaka College",
+        period: "April 2009 – May 2011",
+        icon: "fa-school",
+      },
+      {
+        degree: "Secondary School Certificate (SSC)",
+        institution: "Tanjimul Ummah Cadet Madrasah",
+        period: "January 2007 – March 2009",
+        icon: "fa-school",
       },
     ],
   },

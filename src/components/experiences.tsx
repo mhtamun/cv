@@ -6,7 +6,7 @@ interface ExperienceItem {
   title: string;
   company: string;
   period: string;
-  description?: string;
+  description?: string[];
   responsibilities?: string[];
   isHidden?: boolean;
 }
@@ -46,7 +46,14 @@ const Experience = ({ data }: ExperienceProps) => {
                   </span>
                 </div>
                 {item.description && (
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  <ul className="space-y-2 text-gray-600 mb-2">
+                    {item.description.map((desc, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <i className="fas fa-check-circle text-cyan-500 mt-1 mr-2"></i>
+                        <span>{desc}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 {item.responsibilities && (
                   <ul className="space-y-2 text-gray-600">
@@ -78,7 +85,14 @@ const Experience = ({ data }: ExperienceProps) => {
                       </span>
                     </div>
                     {item.description && (
-                      <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                      <ul className="space-y-2 text-gray-600 mb-2">
+                        {item.description.map((desc, idx) => (
+                          <li key={idx} className="flex items-start">
+                            <i className="fas fa-check-circle text-cyan-500 mt-1 mr-2"></i>
+                            <span>{desc}</span>
+                          </li>
+                        ))}
+                      </ul>
                     )}
                     {item.responsibilities && (
                       <ul className="space-y-2 text-gray-600">
