@@ -55,7 +55,7 @@ export default function PrintView() {
           </h1>
           <p
             style={{
-              fontSize: "12pt",
+              fontSize: "11pt",
               color: "#4b5563",
               marginBottom: "6px",
               fontFamily: "inherit",
@@ -108,7 +108,7 @@ export default function PrintView() {
       <div style={{ marginBottom: "10px" }}>
         <h2
           style={{
-            fontSize: "12pt",
+            fontSize: "11pt",
             fontWeight: 700,
             borderBottom: "1px solid #d1d5db",
             marginBottom: "4px",
@@ -127,7 +127,7 @@ export default function PrintView() {
       <div style={{ marginBottom: "10px" }}>
         <h2
           style={{
-            fontSize: "12pt",
+            fontSize: "11pt",
             fontWeight: 700,
             borderBottom: "1px solid #d1d5db",
             marginBottom: "6px",
@@ -167,7 +167,7 @@ export default function PrintView() {
                   listStyleType: "disc",
                 }}
               >
-                {exp.description.slice(0, 3).map((desc, idx) => (
+                {exp.description.map((desc, idx) => (
                   <li
                     key={idx}
                     style={{
@@ -180,23 +180,56 @@ export default function PrintView() {
                     {desc}
                   </li>
                 ))}
+                {(exp.company === "Dynamic Solution Innovators Ltd." ||
+                  exp.company === "Ahsan Technologies Ltd." ||
+                  exp.company === "Vivasoft Limited") && (
+                  <li
+                    key={"projects"}
+                    style={{
+                      marginBottom: "0.15em",
+                      color: "#374151",
+                      fontSize: "10pt",
+                      lineHeight: "1.4",
+                    }}
+                  >
+                    {"Projects"}
+                  </li>
+                )}
+                {/* Related projects as sub-bullets */}
+                {(() => {
+                  const relatedProjects = portfolioData.projects.items.filter(
+                    (project) =>
+                      project.company === exp.company &&
+                      (exp.company === "Dynamic Solution Innovators Ltd." ||
+                        exp.company === "Ahsan Technologies Ltd." ||
+                        exp.company === "Vivasoft Limited")
+                  );
+                  if (relatedProjects.length > 0) {
+                    return relatedProjects.slice(0, 4).map((p, pidx) => (
+                      <li
+                        key={"proj-" + pidx}
+                        style={{
+                          marginBottom: "0.15em",
+                          fontSize: "8pt",
+                          lineHeight: "1.4",
+                          listStyleType: "circle",
+                          marginLeft: "1.2em",
+                        }}
+                      >
+                        <span style={{ fontWeight: 600 }}>{p.title}</span>
+                        {p.description ? `: ${p.description}` : ""}
+                        {p.tags && p.tags.length > 0 && (
+                          <span style={{ color: "#374151", fontSize: "8pt" }}>
+                            {` [${p.tags.join(", ")}]`}
+                          </span>
+                        )}
+                      </li>
+                    ));
+                  }
+                  return null;
+                })()}
               </ul>
             )}
-            {/* Show related projects for this experience */}
-            {(() => {
-              const relatedProjects = portfolioData.projects.items.filter(
-                (project) => project.company === exp.company
-              );
-              if (relatedProjects.length > 0) {
-                return (
-                  <div style={{ marginTop: "0.2em", fontSize: "10pt", color: "#2563eb" }}>
-                    <span style={{ fontWeight: 500 }}>Projects:</span>{" "}
-                    {relatedProjects.map((p) => p.title).join(", ")}
-                  </div>
-                );
-              }
-              return null;
-            })()}
           </div>
         ))}
       </div>
@@ -205,7 +238,7 @@ export default function PrintView() {
       <div style={{ marginBottom: "10px" }}>
         <h2
           style={{
-            fontSize: "12pt",
+            fontSize: "11pt",
             fontWeight: 700,
             borderBottom: "1px solid #d1d5db",
             marginBottom: "4px",
@@ -242,7 +275,7 @@ export default function PrintView() {
       <div style={{ marginBottom: "10px" }}>
         <h2
           style={{
-            fontSize: "12pt",
+            fontSize: "11pt",
             fontWeight: 700,
             borderBottom: "1px solid #d1d5db",
             marginBottom: "4px",
@@ -256,16 +289,13 @@ export default function PrintView() {
           {portfolioData.projects.items
             .filter((project) => project.company === "Other Projects")
             .map((project, index) => (
-              <div key={index} style={{ marginBottom: "4px", pageBreakInside: "avoid" }}>
+              <div key={index} style={{ marginBottom: "2px", pageBreakInside: "avoid" }}>
                 <span style={{ fontWeight: 700, fontSize: "10pt" }}>{project.title}</span>
                 <span style={{ color: "#374151", fontSize: "9.5pt" }}>
                   {project.description ? `: ${project.description}` : ""}
                 </span>
                 {project.tags && project.tags.length > 0 && (
-                  <span style={{ color: "#2563eb", fontSize: "9pt" }}>
-                    {" "}
-                    [{project.tags.join(", ")}]
-                  </span>
+                  <span style={{ fontSize: "9pt" }}> [{project.tags.join(", ")}]</span>
                 )}
               </div>
             ))}
@@ -276,7 +306,7 @@ export default function PrintView() {
       <div style={{ marginBottom: "10px" }}>
         <h2
           style={{
-            fontSize: "12pt",
+            fontSize: "11pt",
             fontWeight: 700,
             borderBottom: "1px solid #d1d5db",
             marginBottom: "6px",
