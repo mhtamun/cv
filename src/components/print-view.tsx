@@ -283,7 +283,7 @@ export default function PrintView() {
             fontFamily: "inherit",
           }}
         >
-          Projects
+          Personal Projects
         </h2>
         <div>
           {portfolioData.projects.items
